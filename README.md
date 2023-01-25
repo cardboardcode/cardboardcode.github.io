@@ -4,4 +4,4 @@ This is the source code for my personal website talking about all the stuff I ha
 
 ## **Website**
 
-Check the website here: cardboardcode.github.io
+Check the website here: https://cardboardcode.github.io/
