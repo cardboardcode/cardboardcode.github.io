@@ -6,3 +6,8 @@ layout: home
 ---
 
 ![](img/me.jpg)
+
+Robotic Vision Researcher. Specialized in ROS2 and Computer Vision. Concept Artist. Cartoonist
+
+A coffee a day, keeps the open-source contributions a-coming a-faster.
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P6I60ZX)
