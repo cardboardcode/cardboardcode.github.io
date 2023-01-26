@@ -7,9 +7,9 @@ layout: home
 
 ![](img/me.jpg)
 
-## A Robotic Vision Researcher, ...
-Specialized in ROS2 and Computer Vision. 
-## Also a Concept Artist. Cartoonist
+## **A Robotic Vision Researcher, ...**
+Specialized in **ROS2** (Robot Operating System) and **Computer Vision**. 
+## **Also a Concept Artist. Cartoonist**
 
 A coffee a day, keeps the open-source contributions a-coming a-faster.
 
