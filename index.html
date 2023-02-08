@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3D Cube Animation</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var angle = 0;
+        
+        function draw() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.save();
+          ctx.translate(canvas.width / 2, canvas.height / 2);
+          ctx.rotate(angle);
+          ctx.fillRect(-50, -50, 100, 100);
+          ctx.restore();
+          angle += 0.1;
+          requestAnimationFrame(draw);
+        }
+        
+        draw();
+        </script>
+
+  </body>
+</html>
