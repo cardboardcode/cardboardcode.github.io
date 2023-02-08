@@ -4,12 +4,12 @@
 
 layout: home
 ---
-![](img/me.jpg)
+![](img/me.gif)
 
 ## **A Robotic Vision Researcher, ...**
 Specialized in **ROS2** (Robot Operating System) and **Computer Vision**. 
 ## **Also a Concept Artist. Cartoonist**
 
-A coffee a day, keeps the open-source contributions a-coming a-faster.
+Support me with a cup of coffee, either as a donation or an actual cup of coffee. Always down to chill and talk over drinks.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P6I60ZX)
