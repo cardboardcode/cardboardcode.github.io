@@ -6,58 +6,68 @@
   <body>
     <canvas id="canvas"></canvas>
     <script>
-    
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-
-canvas.width = 780;
-canvas.height = 580;
-
-var x = canvas.width / 2;
-var y = canvas.height / 2;
-var radius = 50;
-var dx = 5;
-var dy = 3;
-
-var mouseX;
-var mouseY;
-
-canvas.addEventListener("mousemove", function(event) {
-  mouseX = event.clientX;
-  mouseY = event.clientY;
-});
-
-function drawBall() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.beginPath();
-  ctx.arc(x, y, radius, 0, Math.PI * 2);
-  ctx.fillStyle = "blue";
-  ctx.fill();
-  ctx.closePath();
-
-  if (x + radius > canvas.width || x - radius < 0) {
-    dx = -dx;
-  }
-
-  if (y + radius > canvas.height || y - radius < 0) {
-    dy = -dy;
-  }
-
-  if (mouseX && mouseY) {
-    if (x - mouseX < 50 && x - mouseX > -50 && y - mouseY < 50 && y - mouseY > -50) {
-      x += dx * 2;
-      y += dy * 2;
-    }
-  }
-
-  x += dx;
-  y += dy;
-
-  requestAnimationFrame(drawBall);
-}
-
-drawBall();
-</script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+  
+      canvas.width = 600;
+      canvas.height = 400;
+  
+      var sunRadius = 50;
+      var sunX = canvas.width / 2;
+      var sunY = canvas.height / 2;
+  
+      var planetRadius = 20;
+      var planetX = sunX + 100;
+      var planetY = sunY;
+      var angle = 0;
+      var speed = 0.05;
+  
+      var mouseX;
+      var mouseY;
+  
+      canvas.addEventListener("mousemove", function(event) {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+      });
+  
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+        ctx.beginPath();
+        ctx.arc(sunX, sunY, sunRadius, 0, Math.PI * 2);
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.closePath();
+  
+        planetX = sunX + Math.cos(angle) * 100;
+        planetY = sunY + Math.sin(angle) * 100;
+  
+        ctx.beginPath();
+        ctx.arc(planetX, planetY, planetRadius, 0, Math.PI * 2);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.closePath();
+  
+        if (mouseX && mouseY) {
+          if (
+            planetX - mouseX < 50 &&
+            planetX - mouseX > -50 &&
+            planetY - mouseY < 50 &&
+            planetY - mouseY > -50
+          ) {
+            speed = speed * 2;
+          } else {
+            speed = 0.05;
+          }
+        }
+  
+        angle += speed;
+  
+        requestAnimationFrame(draw);
+      }
+  
+      draw();
+    </script>
 
   </body>
 </html>
