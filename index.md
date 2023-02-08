@@ -4,7 +4,8 @@
 
 layout: home
 ---
-<a href="html/animation.html">3D Cube Animation</a>
+<iframe src="html/animation.html" width="600" height="400"></iframe>
+
 ![](img/me.jpg)
 
 ## **A Robotic Vision Researcher, ...**
