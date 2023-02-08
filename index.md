@@ -4,7 +4,7 @@
 
 layout: home
 ---
-
+<a href="html/animation.html">3D Cube Animation</a>
 ![](img/me.jpg)
 
 ## **A Robotic Vision Researcher, ...**
