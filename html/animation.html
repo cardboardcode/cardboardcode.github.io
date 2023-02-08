@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>3D Cube Animation</title>
+    <title>Solar System Simulation</title>
+    <style>
+      #canvas {
+        background-color: black;
+      }
+    </style>
   </head>
   <body>
     <canvas id="canvas"></canvas>
@@ -9,26 +14,23 @@
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
   
-      canvas.width = 600;
-      canvas.height = 400;
+      canvas.width = 780;
+      canvas.height = 580;
   
       var sunRadius = 50;
       var sunX = canvas.width / 2;
       var sunY = canvas.height / 2;
   
-      var planetRadius = 20;
-      var planetX = sunX + 100;
-      var planetY = sunY;
-      var angle = 0;
-      var speed = 0.05;
-  
-      var mouseX;
-      var mouseY;
-  
-      canvas.addEventListener("mousemove", function(event) {
-        mouseX = event.clientX;
-        mouseY = event.clientY;
-      });
+      var planets = [
+        { name: "Mercury", color: "gray", radius: 10, distance: 70, speed: 0.1 },
+        { name: "Venus", color: "yellow", radius: 20, distance: 100, speed: 0.09 },
+        { name: "Earth", color: "blue", radius: 25, distance: 130, speed: 0.08 },
+        { name: "Mars", color: "red", radius: 15, distance: 160, speed: 0.07 },
+        { name: "Jupiter", color: "orange", radius: 35, distance: 200, speed: 0.06 },
+        { name: "Saturn", color: "khaki", radius: 30, distance: 240, speed: 0.05 },
+        { name: "Uranus", color: "lightblue", radius: 25, distance: 280, speed: 0.04 },
+        { name: "Neptune", color: "darkblue", radius: 20, distance: 320, speed: 0.03 }
+      ];
   
       function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -39,29 +41,26 @@
         ctx.fill();
         ctx.closePath();
   
-        planetX = sunX + Math.cos(angle) * 100;
-        planetY = sunY + Math.sin(angle) * 100;
+        for (var i = 0; i < planets.length; i++) {
+          var planet = planets[i];
   
-        ctx.beginPath();
-        ctx.arc(planetX, planetY, planetRadius, 0, Math.PI * 2);
-        ctx.fillStyle = "blue";
-        ctx.fill();
-        ctx.closePath();
+          var planetX =
+            sunX +
+            Math.cos((planet.distance + i * 360 / planets.length) * (Math.PI / 180)) *
+              planet.distance;
+          var planetY =
+            sunY +
+            Math.sin((planet.distance + i * 360 / planets.length) * (Math.PI / 180)) *
+              planet.distance;
   
-        if (mouseX && mouseY) {
-          if (
-            planetX - mouseX < 50 &&
-            planetX - mouseX > -50 &&
-            planetY - mouseY < 50 &&
-            planetY - mouseY > -50
-          ) {
-            speed = speed * 2;
-          } else {
-            speed = 0.05;
-          }
+          ctx.beginPath();
+          ctx.arc(planetX, planetY, planet.radius, 0, Math.PI * 2);
+          ctx.fillStyle = planet.color;
+          ctx.fill();
+          ctx.closePath();
+  
+          planet.distance += planet.speed;
         }
-  
-        angle += speed;
   
         requestAnimationFrame(draw);
       }
