@@ -14,8 +14,8 @@
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
   
-      canvas.width = 780;
-      canvas.height = 580;
+      canvas.width = 600;
+      canvas.height = 400;
   
       var sunRadius = 50;
       var sunX = canvas.width / 2;
@@ -53,20 +53,33 @@
             Math.sin((planet.distance + i * 360 / planets.length) * (Math.PI / 180)) *
               planet.distance;
   
+          if (planetX + planet.radius > canvas.width) {
+            planetX = canvas.width - planet.radius;
+          } else if (planetX - planet.radius < 0) {
+            planetX = planet.radius;
+          }
+  
+          if (planetY + planet.radius > canvas.height) {
+            planetY = canvas.height - planet.radius;
+          } else if (planetY - planet.radius < 0) {
+            planetY = planet.radius;
+          }
+  
           ctx.beginPath();
           ctx.arc(planetX, planetY, planet.radius, 0, Math.PI * 2);
           ctx.fillStyle = planet.color;
-          ctx.fill();
-          ctx.closePath();
-  
-          planet.distance += planet.speed;
-        }
-  
-        requestAnimationFrame(draw);
+        ctx.fill();
+        ctx.closePath();
       }
-  
+    }
+
+    setInterval(function() {
+      for (var i = 0; i < planets.length; i++) {
+        planets[i].distance += planets[i].speed;
+      }
       draw();
-    </script>
+    }, 50);
+  </script>
 
   </body>
 </html>
