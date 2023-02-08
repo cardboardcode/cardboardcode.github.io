@@ -4,8 +4,6 @@
 
 layout: home
 ---
-<iframe src="html/animation.html" width="600" height="400"></iframe>
-
 ![](img/me.jpg)
 
 ## **A Robotic Vision Researcher, ...**

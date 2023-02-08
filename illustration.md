@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Illustrations
-permalink: /Illustrations/
+permalink: /illustrations/
 ---
 
 ![](img/20210720_portfolio_pic_1.png)
