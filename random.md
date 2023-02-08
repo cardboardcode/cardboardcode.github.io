@@ -5,4 +5,4 @@ permalink: /random/
 ---
 
 
-<iframe src="html/animation.html" width="600" height="400"></iframe>
+<iframe src="../html/animation.html" width="600" height="400"></iframe>
