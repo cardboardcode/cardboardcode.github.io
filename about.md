@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![](img/me.jpg)
+![](img/me.gif)
 
 Hi, I am **Bey Hao Yun** but just call me **Gary**.
 
