@@ -75,7 +75,7 @@ The `Dockerfile` example is verified to be working correctly if you access the a
 
 ![](/img/2023_02_09/todo_empty.png)
 
-If you started using, it should like something similar to what is shown below:
+If you started using, it should look like something similar to what is shown below:
 
 ![](/img/2023_02_09/todo_added.png)
 
@@ -98,10 +98,11 @@ wget https://github.com/docker/awesome-compose/raw/master/nextcloud-redis-mariad
 It creates a `nc` Docker container that is based on `nextcloud:apache` Docker image, a `redis` Docker container that is based on `redis:alpine` Docker image and a `db` that is based on `mariadb:10.5` Docker image. These 3 containers interact with one another to allow our home NextCloud server to work.
 
 
-### 2. Run the application:
+### 2. Run the application in the same folder as `compose.yaml`:
 
 
 ```bash
+# Open new terminal
 docker compose up 
 ```
 
@@ -126,5 +127,5 @@ If you install NextCloud application within the docker container as volumes, you
 
 ## **References**
 
-1. Awesome Compose: Examples to run Docker Compose - https://github.com/docker/awesome-compose
-2. Containerize An Application - https://docs.docker.com/get-started/02_our_app/ 
+1. [Awesome Compose: Examples to run Docker Compose](https://github.com/docker/awesome-compose)
+2. [Containerize An Application](https://docs.docker.com/get-started/02_our_app/ ) 
