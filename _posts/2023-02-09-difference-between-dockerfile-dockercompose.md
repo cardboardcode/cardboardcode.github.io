@@ -19,9 +19,9 @@ Generally speaking, if you want to **create a single Docker container**, you wou
 
 Here is an example that defines and runs a dockerized TODO management application.
 
-This application uses only 1 docker container:
+This application uses only 1 docker container.
 
-1. Download codebase for app:
+### 1. Download codebase for app:
 
 ```bash
 # Open new terminal
@@ -30,19 +30,17 @@ git clone https://github.com/docker/getting-started.git --depth 1
 
 This creates a folder called `getting-started`.
 
-2. Navigate into the application source code and create a `Dockerfile`:
+### 2. Navigate into the application source code and create a `Dockerfile`:
 
 ```bash
 cd getting-started/app
 touch Dockerfile
 ```
 
-Copy and paste the following content into `Dockerfile`:
+### 3. Copy and paste the following content into `Dockerfile`:
 
 ```text
-FROM
-Learn more about the "FROM" Dockerfile command.
- node:18-alpine
+FROM node:18-alpine
 WORKDIR /app
 COPY . .
 RUN yarn install --production
@@ -52,19 +50,19 @@ EXPOSE 3000
 
 Note that in `CMD`, it copies the application source code into Docker volume.
 
-3. Build the docker image with the app automatically integrated into the Docker image:
+### 4. Build the docker image with the app automatically integrated into the Docker image:
 
 ```bash
 docker build -t getting-started .
 ```
 
-4. Run the docker image as a container:
+### 5. Run the docker image as a container:
 
 ```bash
 docker run -p 3000:3000 getting-started
 ```
 
-5. Access your TODO application via your browser:
+### 6. Access your TODO application via your browser:
 
 ```bash
 http://localhost:3000/
@@ -86,71 +84,34 @@ If you started using, it should like something similar to what is shown below:
 
 Here is an example that sets up your own home "Google Drive" cloud server web application via NextCloud. 
 
-This application uses 3 docker containers:
+This application uses 3 docker containers.
 
-1. Create `compose.yaml` file:
 
-```yaml
-services:
-  nc:
-    image: nextcloud:apache
-    restart: always
-    ports:
-      - 80:80
-    volumes:
-      - nc_data:/var/www/html
-    networks:
-      - redisnet
-      - dbnet
-    environment:
-      - REDIS_HOST=redis
-      - MYSQL_HOST=db
-      - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=nextcloud
-      - MYSQL_PASSWORD=nextcloud
-  redis:
-    image: redis:alpine
-    restart: always
-    networks:
-      - redisnet
-    expose:
-      - 6379
-  db:
-    image: mariadb:10.5
-    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
-    restart: always
-    volumes:
-      - db_data:/var/lib/mysql
-    networks:
-      - dbnet
-    environment:
-      - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=nextcloud
-      - MYSQL_ROOT_PASSWORD=nextcloud
-      - MYSQL_PASSWORD=nextcloud
-    expose:
-      - 3306
-volumes:
-  db_data:
-  nc_data:
-networks:
-  dbnet:
-  redisnet:
+
+### 1. Download the example application's `compose.yaml` file:
+
+
+```bash
+wget https://github.com/docker/awesome-compose/raw/master/nextcloud-redis-mariadb/compose.yaml
 ```
 
 It creates a `nc` Docker container that is based on `nextcloud:apache` Docker image, a `redis` Docker container that is based on `redis:alpine` Docker image and a `db` that is based on `mariadb:10.5` Docker image. These 3 containers interact with one another to allow our home NextCloud server to work.
 
-2. Run the application:
+
+### 2. Run the application:
+
 
 ```bash
 docker compose up 
 ```
 
-3. Access your NextCloud server via your browser:
+
+### 3. Access your NextCloud server via your browser:
 
 ```bash
 http://localhost:80
 ```
+
 
 ### **Verify**
 
