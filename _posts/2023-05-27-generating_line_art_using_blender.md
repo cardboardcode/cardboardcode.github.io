@@ -7,15 +7,71 @@ categories: blender
 
 ![](/img/2023_05_27/lineart_result.png)
 
-# **Why**
+## **Why Learn This?**
 
-D
+Having traced over 3d models countless times manually, the process of creating good linework can be a tedious, mind-numbing and time-consuming process. While automatically-generated linework lacks the human touch and variety, it still helps save time by getting at least 80% of the way and reduce the risk of developing carpal tunnel syndrome for any poor starving artists.
+
+## **Requirements**
+
+1. [Blender `3.3.0`](https://www.blender.org/download/releases/3-3/)
+2. Windows 10/Ubuntu 22.04 (Operating System)
 
 ## **Instructions**
 
-D
+### Step 1. Create **Override** material.
+Create a `Cube` and select its **Material** tab:
 
-# **Verify**
+```
+Set Roughness to 1.000
+Set Emission Color to White
+Set Emission Strength to 100.000
+```
+
+Remove the cube once the above material properties has been set.
+
+### Step 2. Set **Override** material to Override.
+
+Set **Material Override** with **Override** material as shown below:
+
+### Step 3. Create and Configure **Scene Line Art** object for Contour Lines.
+
+Create a `Scene Line Art` and configure its **Modifier Properties** accordingly.
+
+> Author's Notes: Once created, name it LineArt HBO. Additionally, add to its own collection. Call it lines.
+
+```
+Disable Realtime to make viewport efficient.
+Enable only Contour and disable everything else under Edge Type.
+Set Line Thickness to 8.
+```
+
+Configure its **Object Data Properties** accordingly.
+
+```
+Set Stroke Thickness to Screen Space under Strokes <= Object Data.
+```
+
+### Step 3. Create and Configure **Scene Line Art** object for Inner Lines.
+
+Create a `Scene Line Art` and configure its **Modifier Properties** accordingly.
+
+> Author's Notes: Once created, name it LineArt Thin. Additionally, add to lines collection.
+
+```
+Set Line Thickness to 4. 
+```
+
+> Author's Notes: Generally, thin inner lines should have half the size of the contour lines.
+
+### Step 4. Render
+
+Press `F12` to render out the scene.
+
+> Author's Notes: Don't panic when you see a blank white screen in your render screen. The linework 
+should appear only once the rendering is done overall. 
+
+
+# **Configurables**
 
 D
 
@@ -26,4 +82,6 @@ The models are not my own. Please see below for proper attributions:
 
 ## **References**
 
-1. D
+1. [Quick Line Art Technique for Blender 2.93 by chippwalters](https://www.youtube.com/watch?v=HYs3mOV8mmo)
+2. [Warning message solution : To Render Grease Pencil enable combined and z passes (Blender) by Open Class](https://www.youtube.com/watch?v=aaVRrFmYY0k)
+3. 
