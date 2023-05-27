@@ -18,7 +18,7 @@ Having traced over 3d models countless times manually, the process of creating g
 
 ## **Instructions**
 
-### Step 1. Create **Override** material.
+### **Step 1**. Create **Override** material.
 Create a `Cube` and select its **Material** tab:
 
 ```
@@ -31,7 +31,7 @@ Set Emission Strength to 100.000
 
 Remove the cube once the above material properties has been set.
 
-### Step 2. Configure View Layer properties.
+### **Step 2**. Configure View Layer properties.
 
 Set **Material Override** with **Override** material as shown below:
 
@@ -41,7 +41,7 @@ Enable `Z` and `Combined` under **Passes** => **Data**.
 
 ![](/img/2023_05_27/enable_z_combined.png)
 
-### Step 3. Create and Configure **Scene Line Art** object for Contour Lines.
+### **Step 3**. Create and Configure **Scene Line Art** object for Contour Lines.
 
 Create a `Scene Line Art` and configure its **Modifier Properties** accordingly.
 
@@ -64,7 +64,7 @@ Set Stroke Thickness to Screen Space under Strokes <= Object Data.
 
 ![](/img/2023_05_27/screen_space.png)
 
-### Step 3. Create and Configure **Scene Line Art** object for Inner Lines.
+### **Step 4**. Create and Configure **Scene Line Art** object for Inner Lines.
 
 Create a `Scene Line Art` and configure its **Modifier Properties** accordingly.
 
@@ -84,7 +84,7 @@ Configure its **Object Data Properties** similar to **Step 2**.
 Set Stroke Thickness to Screen Space under Strokes <= Object Data.
 ```
 
-### Step 4. Render & Save
+### **Step 5**. Render & Save
 
 Press `F12` to render out the scene. 
 
