@@ -33,7 +33,7 @@ Remove the cube once the above material properties has been set.
 
 ### **Step 2**. Configure View Layer properties.
 
-Set **Material Override** with **Override** material as shown below:
+Set **Material Override** with **Override** material under **View Layer** as shown below:
 
 ![](/img/2023_05_27/override_under_view_layer.png)
 
