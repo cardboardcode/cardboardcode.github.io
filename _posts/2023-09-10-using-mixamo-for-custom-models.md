@@ -13,34 +13,38 @@ The aim of this article is to capture my specific unique workflow when using Mix
 ## **Instructions**
 
 ### **Step 1**. Create A Free Account in Adobe's Mixamo
-1. Create a free account on **Mixamo**. This process should take 5 minutes.
+- Create a free account on **Mixamo**. This process should take 5 minutes.
 
 ### **Step 2**. Prepare Riggable Model
-2. Open Blender and use the SketchFab Blender Plugin/Add-On to import a model.
+- Open Blender and use the SketchFab Blender Plugin/Add-On to import a model.
 
 ### **Step 3**. Create Backup and Remove Materials
-3. 
+-
+```
+Author's Note: By removing materials, it allows the uploaded model to face less critical errors when uploading to Mixamo for automatic rigging.
+```
+
 
 ### **Step 4**. Export as `.fbx` file format
-4. 
+-
 
 ### **Step 5**. Upload to Mixamo
-5. 
+-
 
 ### **Step 6**. Select Animation
-6. 
+-
 
 ### **Step 7**. Download as .fbx file format
-7.
+-
 
 ### **Step 8**. Import into Blender scene.
-8.
+-
 
 ### **Step 9**. Append original material to rigged model.
-9.
+-
 
 ### **Step 10**. Apply Desirable Pose of rigged model.
-10.
+-
 
 ## **Credits**
 1. [Female knight by Gustav Pethrus](https://sketchfab.com/3d-models/female-knight-a5238d4effd3464fa0d5a1eddd52e1a4)
