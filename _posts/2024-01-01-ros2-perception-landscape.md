@@ -26,6 +26,10 @@ Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2
 |:----------|:----------|
 | ![darknet_ros](https://img.shields.io/github/stars/leggedrobotics/darknet_ros.svg) | [![GitHub last commit](https://img.shields.io/github/last-commit/leggedrobotics/darknet_ros.svg?style=flat)]() |
 
+| [openrobotics_darknet_ros](https://github.com/ros2/openrobotics_darknet_ros/tree/ros2) | ROS2 wrapper for deploying Darknet's YOLO Computer Vision model. |
+|:----------|:----------|
+| ![openrobotics_darknet_ros](https://img.shields.io/github/stars/ros2/openrobotics_darknet_ros.svg) | [![GitHub last commit](https://img.shields.io/github/last-commit/ros2/openrobotics_darknet_ros.svg?style=flat)]() |
+
 | [ros2_openvino_toolkit](https://github.com/intel/ros2_openvino_toolkit) | ROS2 wrapper for CV API of OpenVINO™ (human vision emulation). |
 |:----------|:----------|
 | ![ros2_openvino_toolkit](https://img.shields.io/github/stars/intel/ros2_openvino_toolkit.svg) | [![GitHub last commit](https://img.shields.io/github/last-commit/intel/ros2_openvino_toolkit.svg?style=flat)]() |
