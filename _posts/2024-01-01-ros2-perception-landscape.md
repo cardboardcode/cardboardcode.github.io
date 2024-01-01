@@ -10,6 +10,8 @@ This article focuses on the **ongoing ROS2 ecosystem of perception-related packa
 
 Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2/), this article aims to provide an experimental platform that provides relevant information about a repository upfront so that ROS2 developers can **make better decisions of software adoption quicker**.  
 
+## **Applications**
+
 | [vision_opencv](https://github.com/ros-perception/vision_opencv/tree/ros2) | Packages for interfacing ROS2 with OpenCV. |
 |:----------|:----------|
 | ![vision_opencv](https://img.shields.io/github/stars/ros-perception/vision_opencv.svg) | [![GitHub last commit](https://img.shields.io/github/last-commit/ros-perception/vision_opencv.svg?style=flat)]() |
@@ -26,7 +28,7 @@ Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2
 |:----------|:----------|
 | ![darknet_ros](https://img.shields.io/github/stars/leggedrobotics/darknet_ros.svg) | [![GitHub last commit](https://img.shields.io/github/last-commit/leggedrobotics/darknet_ros.svg?style=flat)]() |
 
-| [openrobotics_darknet_ros](https://github.com/ros2/openrobotics_darknet_ros/tree/ros2) | ROS2 wrapper for deploying Darknet's YOLO Computer Vision model. |
+| [openrobotics_darknet_ros](https://github.com/ros2/openrobotics_darknet_ros/tree/ros2) | ROS 2 interface to darknet, an open source neural network library.  |
 |:----------|:----------|
 | ![openrobotics_darknet_ros](https://img.shields.io/github/stars/ros2/openrobotics_darknet_ros.svg) | [![GitHub last commit](https://img.shields.io/github/last-commit/ros2/openrobotics_darknet_ros.svg?style=flat)]() |
 
@@ -61,6 +63,16 @@ Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2
 | [image_transport_plugins](https://github.com/ros-perception/image_transport_plugins) | A set of plugins for publishing and subscribing to sensor_msgs/Image topics in representations other than raw pixel data.   |
 |:----------|:----------|
 | ![image_transport_plugins](https://img.shields.io/github/stars/ros-perception/image_transport_plugins.svg) | [![GitHub last commit](https://img.shields.io/github/last-commit/ros-perception/image_transport_plugins.svg?style=flat)]() |
+
+## **Camera Drivers**
+
+| [realsense-ros](https://github.com/IntelRealSense/realsense-ros) | Intel(R) RealSense(TM) ROS Wrapper for Depth Camera |
+|:----------|:----------|
+| ![realsense-ros](https://img.shields.io/github/stars/IntelRealSense/realsense-ros.svg) | [![GitHub last commit](https://img.shields.io/github/last-commit/IntelRealSense/realsense-ros.svg?style=flat)]() |
+
+| [ensenso/ros_driver](https://github.com/ensenso/ros_driver) | Official ROS driver for Ensenso stereo cameras. |
+|:----------|:----------|
+| ![ensenso/ros_driver](https://img.shields.io/github/stars/ensenso/ros_driver.svg) | [![GitHub last commit](https://img.shields.io/github/last-commit/ensenso/ros_driver.svg?style=flat)]() |
 
 ## **References**
 1. awesome-ros2 - https://github.com/fkromer/awesome-ros2/
