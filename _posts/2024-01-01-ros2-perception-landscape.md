@@ -10,8 +10,21 @@ This article focuses on the **ongoing ROS2 ecosystem of perception-related packa
 
 Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2/), this article aims to provide an experimental platform that provides relevant information about a repository upfront so that ROS2 developers can **make better decisions of software adoption quicker**.  
 
-|  |  |
-|----------|----------|
-| [vision_opencv](https://github.com/ros-perception/vision_opencv/tree/ros2) |  Packages for interfacing ROS2 with OpenCV. |
-| **Popularity** | ![vision_opencv](https://img.shields.io/github/stars/ros-perception/vision_opencv.svg)|
-| **Freshness** | [![GitHub last commit](https://img.shields.io/github/last-commit/ros-perception/vision_opencv.svg?style=flat)]()|
+| [vision_opencv](https://github.com/ros-perception/vision_opencv/tree/ros2) | Packages for interfacing ROS2 with OpenCV. |
+|:----------|:----------|
+| **Popularity** : ![vision_opencv](https://img.shields.io/github/stars/ros-perception/vision_opencv.svg) | **Freshness** : [![GitHub last commit](https://img.shields.io/github/last-commit/ros-perception/vision_opencv.svg?style=flat)]() |
+
+| [lidarslam_ros2](https://github.com/rsasaki0109/lidarslam_ros2) | ROS2 package of 3D lidar slam using ndt/gicp registration and pose-optimization. |
+|:----------|:----------|
+| **Popularity** : ![lidarslam_ros2](https://img.shields.io/github/stars/rsasaki0109/lidarslam_ros2.svg) | **Freshness** : [![GitHub last commit](https://img.shields.io/github/last-commit/rsasaki0109/lidarslam_ros2.svg?style=flat)]() |
+
+| [easy_perception_deployment](https://github.com/ros-industrial/easy_perception_deployment) | Package that accelerates training and deployment of Computer Vision models for industries. |
+|:----------|:----------|
+| **Popularity** : ![easy_perception_deployment](https://img.shields.io/github/stars/ros-industrial/easy_perception_deployment.svg) | **Freshness** : [![GitHub last commit](https://img.shields.io/github/last-commit/ros-industrial/easy_perception_deployment.svg?style=flat)]() |
+
+| [darknet_ros](https://github.com/leggedrobotics/darknet_ros/tree/ros2) | ROS2 wrapper for deploying Darknet's YOLO Computer Vision model. |
+|:----------|:----------|
+| **Popularity** : ![darknet_ros](https://img.shields.io/github/stars/leggedrobotics/darknet_ros.svg) | **Freshness** : [![GitHub last commit](https://img.shields.io/github/last-commit/leggedrobotics/darknet_ros.svg?style=flat)]() |
+
+## **References**
+1. awesome-ros2 - https://github.com/fkromer/awesome-ros2/
