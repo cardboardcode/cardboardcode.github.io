@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using Mixamo For Custom Models"
+title:  "Using Mixamo For Custom Models [WIP]"
 date:   2023-09-10 18:34:31 +0800
 categories: blender, mixamo
 ---
