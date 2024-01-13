@@ -24,7 +24,6 @@ The aim of this article is to capture my specific unique workflow when using Mix
 Author's Note: By removing materials, it allows the uploaded model to face less critical errors when uploading to Mixamo for automatic rigging.
 ```
 
-
 ### **Step 4**. Export as `.fbx` file format
 -
 
@@ -50,5 +49,5 @@ Author's Note: By removing materials, it allows the uploaded model to face less 
 1. [Female knight by Gustav Pethrus](https://sketchfab.com/3d-models/female-knight-a5238d4effd3464fa0d5a1eddd52e1a4)
 
 ## **References**
-1. Mixamo Website - https://www.mixamo.com
-2. Upload and rig 3D characters with Mixamo - https://helpx.adobe.com/sg/creative-cloud/help/mixamo-rigging-animation.html
+1. [Mixamo Website](https://www.mixamo.com)
+2. [Upload and rig 3D characters with Mixamo](https://helpx.adobe.com/sg/creative-cloud/help/mixamo-rigging-animation.html)

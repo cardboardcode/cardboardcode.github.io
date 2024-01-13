@@ -124,7 +124,7 @@ In case you need to remove all that is downloaded using this guide, please follo
 Remember to restart PC after all is done.
 
 ## **References**
-1. **NVIDIA GPU Accelerated Computing on WSL 2** - [link](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
-2. **CUDA Toolkit 12.3 Update 2 Downloads** - [link](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=runfile_local)
-3. **Error code: Wsl/Service/CreateInstance/MountVhd/ERROR_FILE_NOT_FOUND** - [link](https://superuser.com/questions/1758361/error-code-wsl-service-createinstance-mountvhd-error-file-not-found)
-4. **How to uninstall WSL2 on Windows 10** - [link](https://pureinfotech.com/uninstall-wsl2-windows-10/)
+1. [NVIDIA GPU Accelerated Computing on WSL 2](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
+2. [CUDA Toolkit 12.3 Update 2 Downloads](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=runfile_local)
+3. [Error code: Wsl/Service/CreateInstance/MountVhd/ERROR_FILE_NOT_FOUND](https://superuser.com/questions/1758361/error-code-wsl-service-createinstance-mountvhd-error-file-not-found)
+4. [How to uninstall WSL2 on Windows 10](https://pureinfotech.com/uninstall-wsl2-windows-10/)

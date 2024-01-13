@@ -59,7 +59,7 @@ git commit -S -m "This is my commit message"
 ```
 
 ## **References**
-1. **How To Sign Off** - [link](https://docs.pi-hole.net/guides/github/how-to-signoff/)
-2. **Signing commits** - [link](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)
-3. **Generating a new GPG key** - [link](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
-4. **Adding a GPG key to your GitHub account** - [link](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account) 
+1. [How To Sign Off](https://docs.pi-hole.net/guides/github/how-to-signoff/)
+2. [Signing commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)
+3. [Generating a new GPG key](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
+4. [Adding a GPG key to your GitHub account](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account) 

@@ -79,4 +79,4 @@ Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2
 | ![zed-ros2-wrapper](https://img.shields.io/github/stars/stereolabs/zed-ros2-wrapper.svg) | [![GitHub last commit](https://img.shields.io/github/last-commit/stereolabs/zed-ros2-wrapper.svg?style=flat)]() |
 
 ## **References**
-1. awesome-ros2 - https://github.com/fkromer/awesome-ros2/
+1. [awesome-ros2](https://github.com/fkromer/awesome-ros2/)
