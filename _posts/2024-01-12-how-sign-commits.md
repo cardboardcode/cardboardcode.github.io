@@ -20,6 +20,17 @@ Therefore, it is necessary to sign/signoff on your git commits in order to conti
 
 **Signing** attaches the **Verified** tag to your commit by checking that the commit was made on the workstation with the specific GPG key generated for that hardware. This form of check is comparatively more robust than the former since the slightest change to your profile in your journey as a developer will register you as a different individual entirely.
 
+## Set up and configure Git Client:
+
+Run the following commands in your terminal:
+
+```bash
+#Set your GitHub Username
+git config user.name "SURNAME NAME"
+#Set your GitHub Email
+git config user.email "youremail@yourorganizationdomain"
+```
+
 ## How To Sign Off Git Commit
 
 Use the following `git` command to sign off:
@@ -31,22 +42,13 @@ git commit --signoff --message 'This is my commit message'
 
 ## How To Sign Git Commit
 
-1. Set up and configure your Git Client:
+Please **skip Step 1 and 2** if you have already generated and added your GPG key.
 
-```bash
-#Set git client to sign all commits by default
-git config --global commit.gpgsign true
-#Set your GitHub Username
-git config user.name "SURNAME NAME"
-#Set your GitHub Email
-git config user.email "youremail@yourorganizationdomain"
-```
-
-2. Generate your GPG key by following the official documentation:
+1. Generate your GPG key by following the official documentation:
 
 https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key\
 
-3. Add your GPG key to your GitHub account by following following official documentation:
+2. Add your GPG key to your GitHub account by following following official documentation:
 
 https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account 
 
