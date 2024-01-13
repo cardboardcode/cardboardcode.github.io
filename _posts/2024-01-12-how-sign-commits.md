@@ -37,7 +37,7 @@ git commit --signoff --message 'This is my commit message'
 #Set git client to sign all commits by default
 git config --global commit.gpgsign true
 #Set your GitHub Username
-git config user.name "FIRST_NAME LAST_NAME"
+git config user.name "SURNAME NAME"
 #Set your GitHub Email
 git config user.email "youremail@yourorganizationdomain"
 ```
@@ -53,7 +53,7 @@ https://docs.github.com/en/authentication/managing-commit-signature-verification
 3. Use the following `git` command to sign:
 
 ```bash
-git commit -S -m "YOUR_COMMIT_MESSAGE"
+git commit -S -m "This is my commit message"
 ```
 
 ## **References**
