@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "ROS2 Perception Landscape At A Glance"
-date:   2024-01-13 15:45:49 +0800
+title:  "ROS2 Perception Landscape At A Glance [Ongoing]"
+date:   2024-01-01 15:45:49 +0800
 categories: ros2
 ---
 
