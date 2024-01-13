@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "ROS2 Perception Landscape At A Glance"
-date:   2024-01-01 15:45:49 +0800
+title:  "ROS2 Perception Landscape At A Glance [Ongoing]"
+date:   2024-01-13 15:45:49 +0800
 categories: ros2
 ---
 
@@ -77,7 +77,6 @@ Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2
 | [zed-ros2-wrapper](https://github.com/stereolabs/zed-ros2-wrapper) | ROS 2 wrapper for the ZED SDK  |
 |:----------|:----------|
 | ![zed-ros2-wrapper](https://img.shields.io/github/stars/stereolabs/zed-ros2-wrapper.svg) | [![GitHub last commit](https://img.shields.io/github/last-commit/stereolabs/zed-ros2-wrapper.svg?style=flat)]() |
-
 
 ## **References**
 1. awesome-ros2 - https://github.com/fkromer/awesome-ros2/
