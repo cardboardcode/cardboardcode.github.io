@@ -20,7 +20,7 @@ Therefore, it is necessary to sign/signoff on your git commits in order to conti
 
 **Signing** attaches the **Verified** tag to your commit by checking that the commit was made on the workstation with the specific GPG key generated for that hardware. This form of check is comparatively more robust than the former since the slightest change to your profile in your journey as a developer will register you as a different individual entirely.
 
-## Set up and configure Git Client:
+## **Set up and configure Git Client**
 
 Run the following commands in your terminal:
 
@@ -31,7 +31,7 @@ git config user.name "SURNAME NAME"
 git config user.email "youremail@yourorganizationdomain"
 ```
 
-## How To Sign Off Git Commit
+## **How To Sign Off Git Commit**
 
 Use the following `git` command to sign off:
 
@@ -40,7 +40,7 @@ git commit --signoff --message 'This is my commit message'
 #git commit -s -m "This is my commit message"
 ```
 
-## How To Sign Git Commit
+## **How To Sign Git Commit**
 
 Please **skip Step 1 and 2** if you have already generated and added your GPG key.
 
@@ -59,7 +59,7 @@ git commit -S -m "This is my commit message"
 ```
 
 ## **References**
-1. How To Sign Off - https://docs.pi-hole.net/guides/github/how-to-signoff/
-2. Signing commits - https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits
-3. Generating a new GPG key - https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
-4. Adding a GPG key to your GitHub account - https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account 
+1. **How To Sign Off** - [link](https://docs.pi-hole.net/guides/github/how-to-signoff/)
+2. **Signing commits** - [link](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)
+3. **Generating a new GPG key** - [link](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
+4. **Adding a GPG key to your GitHub account** - [link](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account) 
