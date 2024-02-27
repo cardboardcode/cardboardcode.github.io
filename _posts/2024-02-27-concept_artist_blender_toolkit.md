@@ -48,7 +48,7 @@ Download Link: [https://polygoniq.gumroad.com/l/botaniq-trees](https://polygoniq
 
 ## **3rd Party Applications**
 
-1. **Quixel Bridge**
+- **Quixel Bridge**
 
 Download Link: https://quixel.com/bridge
 
