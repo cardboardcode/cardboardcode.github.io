@@ -10,37 +10,38 @@ As a concept artist, I use Blender. Here is a concise list of Blender plugins th
 
 ## **Plugins**
 
-1. **Hard-Ops**
+
+- **Hard-Ops**
 
 Download Link: [https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV](https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV)
 
 
-2. **Extreme PBR Evo**
+- **Extreme PBR Evo**
 
 Download Link: [https://andrew-d.gumroad.com/l/BvpHx](https://andrew-d.gumroad.com/l/BvpHx)
 
 
-3. **SketchFab**
+- **SketchFab**
 
 Download Link: [https://github.com/sketchfab/blender-plugin](https://github.com/sketchfab/blender-plugin)
 
 
-4. **Easy HDRI**
+- **Easy HDRI**
 
 Download Link: [https://codeofart.gumroad.com/l/EasyHDRI](https://codeofart.gumroad.com/l/EasyHDRI)
 
 
-5. **Alt Tab Ocean**
+- **Alt Tab Ocean**
 
 Download Link: [https://blendermarket.com/products/alt-tab-water](https://blendermarket.com/products/alt-tab-water)
 
 
-6. **Ivy Generator**
+- **Ivy Generator**
 
 Download Link: [https://abaga.gumroad.com/l/ivygen](https://abaga.gumroad.com/l/ivygen)
 
 
-7. **botaniq_full**
+- **botaniq_full**
 
 Download Link: [https://polygoniq.gumroad.com/l/botaniq-trees](https://polygoniq.gumroad.com/l/botaniq-trees)
 
