@@ -10,39 +10,47 @@ As a concept artist, I use Blender. Here is a concise list of Blender plugins th
 
 ## **Plugins**
 
-1. Hard-Ops
+1. **Hard-Ops**
 
-Download Link: https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV
+Download Link: [https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV](https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV)
 
-2. Extreme PBR Evo
 
-Download Link: https://andrew-d.gumroad.com/l/BvpHx
+2. **Extreme PBR Evo**
 
-3. SketchFab
+Download Link: [https://andrew-d.gumroad.com/l/BvpHx](https://andrew-d.gumroad.com/l/BvpHx)
 
-Download Link: https://github.com/sketchfab/blender-plugin
 
-4. Easy HDRI
+3. **SketchFab**
 
-Download Link: https://codeofart.gumroad.com/l/EasyHDRI
+Download Link: [https://github.com/sketchfab/blender-plugin](https://github.com/sketchfab/blender-plugin)
 
-5. Alt Tab Ocean
 
-Download Link: https://blendermarket.com/products/alt-tab-water
+4. **Easy HDRI**
 
-6. Ivy Generator
+Download Link: [https://codeofart.gumroad.com/l/EasyHDRI](https://codeofart.gumroad.com/l/EasyHDRI)
 
-Download Link: https://abaga.gumroad.com/l/ivygen
 
-7. botaniq_full
+5. **Alt Tab Ocean**
 
-Download Link: https://polygoniq.gumroad.com/l/botaniq-trees
+Download Link: [https://blendermarket.com/products/alt-tab-water](https://blendermarket.com/products/alt-tab-water)
+
+
+6. **Ivy Generator**
+
+Download Link: [https://abaga.gumroad.com/l/ivygen](https://abaga.gumroad.com/l/ivygen)
+
+
+7. **botaniq_full**
+
+Download Link: [https://polygoniq.gumroad.com/l/botaniq-trees](https://polygoniq.gumroad.com/l/botaniq-trees)
+
 
 ## **3rd Party Applications**
 
-1. Bridge
+1. **Quixel Bridge**
 
-Download Link: 
+Download Link: https://quixel.com/bridge
+
 
 ## **Settings**
 
