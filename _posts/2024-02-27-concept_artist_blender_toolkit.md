@@ -11,44 +11,44 @@ As a concept artist, I use Blender. Here is a concise list of Blender plugins th
 ## **Plugins**
 
 
-- **Hard-Ops**
+- **Hard-Ops** [FREE]
 
 **Download Link**: [https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV](https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV)
 
 
-- **Extreme PBR Evo**
+- **Extreme PBR Evo** [PROPRIETARY]
 
 **Download Link**: [https://andrew-d.gumroad.com/l/BvpHx](https://andrew-d.gumroad.com/l/BvpHx)
 
 
-- **SketchFab**
+- **SketchFab** [FREE]
 
 **Download Link**: [https://github.com/sketchfab/blender-plugin](https://github.com/sketchfab/blender-plugin)
 
 
-- **Easy HDRI**
+- **Easy HDRI** [FREE]
 
 **Download Link**: [https://codeofart.gumroad.com/l/EasyHDRI](https://codeofart.gumroad.com/l/EasyHDRI)
 
 
-- **Alt Tab Ocean**
+- **Alt Tab Ocean** [FREE]
 
 **Download Link**: [https://blendermarket.com/products/alt-tab-water](https://blendermarket.com/products/alt-tab-water)
 
 
-- **Ivy Generator**
+- **Ivy Generator** [FREE]
 
 **Download Link**: [https://abaga.gumroad.com/l/ivygen](https://abaga.gumroad.com/l/ivygen)
 
 
-- **botaniq_full**
+- **botaniq_full** [FREE]
 
 **Download Link**: [https://polygoniq.gumroad.com/l/botaniq-trees](https://polygoniq.gumroad.com/l/botaniq-trees)
 
 
 ## **3rd Party Applications**
 
-- **Quixel Bridge**
+- **Quixel Bridge** [FREE]
 
 **Download Link**: https://quixel.com/bridge
 
