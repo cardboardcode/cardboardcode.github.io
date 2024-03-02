@@ -29,6 +29,14 @@ pyautogui.click(x=100, y=200, button='left')
 pyautogui.doubleClick(x=100, y=200, button='left')
 ```
 
+- Screenshot Functions
+
+```python
+im2 = pyautogui.screenshot('output.png') # Capture whole screen.
+im = pyautogui.screenshot(region=(0,0, 200, 200)) # Capture region on whole screen.
+goto_location = pyautogui.locateOnScreen('input.png', confidence=0.9)
+```
+
 - Keyboard Strokes
 
 ```python
