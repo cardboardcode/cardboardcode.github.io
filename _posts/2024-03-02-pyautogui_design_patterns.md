@@ -12,7 +12,7 @@ This article contains `.py` python snippets that calls `PyAutoGUI` functions tha
 
 - Web-scraping
 - File Organizing
-- 
+- GUI Testing
 
 ## **Snippets**
 
