@@ -11,6 +11,7 @@ This article contains `.py` python snippets that calls `PyAutoGUI` functions tha
 ## Use Cases
 
 - Web-scraping
+- File Organizing
 - 
 
 ## **Snippets**
