@@ -101,7 +101,8 @@ Replace the `image_to_find.png` with the path to your own image.
 - **Keyboard Strokes**
 
 ```python
-pyautogui.press('left')
+pyautogui.press('left') # Press specific keyboard key.
+pyautogui.write('asdf') # Type a string using keyboard.
 ```
 
 ## **KEYBOARD KEYS** :keyboard:
