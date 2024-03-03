@@ -6,7 +6,9 @@ categories: pyautogui, python
 ---
 
 
-This article contains `.py` python snippets that calls `PyAutoGUI` functions that automates mouse and keyboard movements.
+This article contains plug-and-play `.py` python snippets that calls `PyAutoGUI` functions that automates mouse and keyboard movements.
+
+This also aims to highlight design patterns you could use to observe during your own tedious computer-related workflow and thus automate easily.
 
 ## Use Cases
 
