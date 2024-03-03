@@ -6,22 +6,22 @@ categories: pyautogui, python
 ---
 
 
-This article contains plug-and-play `.py` python snippets that calls `PyAutoGUI` functions that automates mouse and keyboard movements.
+This article contains **plug-and-play** `.py` **python snippets** that calls `PyAutoGUI` functions that automates mouse and keyboard movements.
 
-This also aims to highlight design patterns you could use to observe during your own tedious computer-related workflow and thus automate easily.
+This also aims to highlight design patterns you could use to **observe** during your own **tedious computer-related workflow** and thus **automate** easily.
 
 ## **Design Pattern**
 
-A typical computer task is observed to have the following repeating pattern:
+**A typical computer task** is observed to have the following repeating pattern:
 
-### LOCATE - INTERACT
+### **LOCATE - INTERACT**
 ```bash
 LOCATE refers to what you are looking at to interact.
 
 Input Data Type: .png/.jpeg image
 Output Data Type: int x-position, int y-position
 ```
-> **Author's Note**: For a tentative tangible implementation of **LOCATE**, please see LOCATE section below.
+> **Author's Note**: For a tentative tangible implementation of **LOCATE**, please see **LOCATE** section below.
 
 ```bash
 INTERACT refers to what you are looking at to interact.
