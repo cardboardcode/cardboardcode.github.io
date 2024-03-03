@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PyAutoGUI Design Patterns"
+title:  "PyAutoGUI Design Pattern"
 date:   2024-03-02 15:27:49 +0800
 categories: pyautogui, python
 ---
@@ -10,7 +10,26 @@ This article contains plug-and-play `.py` python snippets that calls `PyAutoGUI`
 
 This also aims to highlight design patterns you could use to observe during your own tedious computer-related workflow and thus automate easily.
 
-## Use Cases
+## **Design Pattern**
+
+A typical computer task is observed to have the following repeating pattern:
+
+### LOCATE - INTERACT
+```bash
+LOCATE refers to what you are looking at to interact.
+
+Input Data Type: .png/.jpeg image
+Output Data Type: int x-position, int y-position
+```
+```bash
+INTERACT refers to what you are looking at to interact.
+
+Input Data Type: Keyboard Strokes and Mouse Movements
+Output Data Type: Change of GUI state.
+```
+
+
+## **Use Cases**
 
 - Web-scraping
 - File Organizing
