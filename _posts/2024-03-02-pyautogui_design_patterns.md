@@ -21,13 +21,14 @@ LOCATE refers to what you are looking at to interact.
 Input Data Type: .png/.jpeg image
 Output Data Type: int x-position, int y-position
 ```
+> **Author's Note**: For a tentative tangible implementation of **LOCATE**, please see LOCATE section below.
+
 ```bash
 INTERACT refers to what you are looking at to interact.
 
 Input Data Type: Keyboard Strokes and Mouse Movements
 Output Data Type: Change of GUI state.
 ```
-
 
 ## **Use Cases**
 
@@ -89,8 +90,11 @@ def locateOnScreen(template_path):
         return pt[0] + int(w/2), pt[1] + int(h/2)
 ```
 
+### LOCATE
 ```python
-goto_pos = locateOnScreen('image_to_find.png')
+goto_pos = None
+while (goto_pos is None):
+    goto_pos = locateOnScreen('image_to_find.png')
 ```
 Replace the `image_to_find.png` with the path to your own image.
 
