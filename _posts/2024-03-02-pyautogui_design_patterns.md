@@ -132,6 +132,21 @@ pyautogui.write('asdf') # Type a string using keyboard.
 'command', 'option', 'optionleft', 'optionright']
 ```
 
+## **Limitations**
+This type of automation is not perfect and there are shortcomings which need to be accounted for:
+
+### **Fringe Cases**
+Here are a few cases where this type of GUI automation would fall short:
+
+1. A GUI change of state takes a long while and there are duplicates of the **LOCATE** object present
+during transition that would give false positives.
+
+2. The rate of interaction required is too high. Examples would be playing an FPS game and reacting
+promptly to enemies.
+
+3. ...
+
+
 ## **References**
 
 1. [PyAutoGUI's Documentation](https://pyautogui.readthedocs.io/en/latest/)
