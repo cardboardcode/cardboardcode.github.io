@@ -105,7 +105,7 @@ pyautogui.press('left') # Press specific keyboard key.
 pyautogui.write('asdf') # Type a string using keyboard.
 ```
 
-## **KEYBOARD KEYS** :keyboard:
+## **KEYBOARD KEYS**
 
 ```
 ['\t', '\n', '\r', ' ', '!', '"', '#', '$', '%', '&', "'", '(',
