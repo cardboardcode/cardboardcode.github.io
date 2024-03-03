@@ -18,34 +18,68 @@ This article contains `.py` python snippets that calls `PyAutoGUI` functions tha
 
 ## **Snippets**
 
-- Mouse Movement
+- **Mouse Movement**
 
 ```python
-pyautogui.moveTo(x=200, y=200)
+pyautogui.moveTo(x=200, y=200, duration=1.0)
 ```
 
-- Mouse Clicks
+- **Mouse Clicks**
 
 ```python
 pyautogui.click(x=100, y=200, button='left')
 pyautogui.doubleClick(x=100, y=200, button='left')
 ```
 
-- Screenshot Functions
+- **Screenshot Function(s)**
+
+> **Author's Note**: While `PyAutoGUI` offers its own screenshot function `locateOnScreen`, please use the following `.py` implementation for higher and repeatable accuracy: 
 
 ```python
-im2 = pyautogui.screenshot('output.png') # Capture whole screen.
-im = pyautogui.screenshot(region=(0,0, 200, 200)) # Capture region on whole screen.
-goto_location = pyautogui.locateOnScreen('input.png', confidence=0.9)
+import cv2
+from PIL import ImageGrab 
+
+def locateOnScreen(template_path):
+
+    # Grab the whole screen using Pillow and convert to OpenCV.
+    whole_screen = ImageGrab.grab()
+    # whole_screen.save("whole_screen.png")
+    open_cv_image = np.array(whole_screen)
+    image = open_cv_image[:, :, ::-1].copy()
+
+    # Convert to grayscale for template matching.
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Load in template image to find in the whole screen
+    template = cv2.imread(template_path, cv2.IMREAD_GRAYSCALE)
+
+    # Run template-matching using OpenCV.
+    result = cv2.matchTemplate(image, template, cv2.TM_CCOEFF_NORMED)
+
+    # Set threshold
+    threshold = 0.99
+    # Get the width and height of the location template image
+    w, h = template.shape[::-1]
+    # Get locations (x,y).
+    locations = np.where(result >= threshold)
+
+    # Loop through the locations and draw rectangles around the matches
+    for pt in zip(*locations[::-1]):
+        return pt[0] + int(w/2), pt[1] + int(h/2)
 ```
 
-- Keyboard Strokes
+```python
+goto_pos = locateOnScreen('image_to_find.png')
+```
+Replace the `image_to_find.png` with the path to your own image.
+
+- **Keyboard Strokes**
 
 ```python
 pyautogui.press('left')
 ```
 
-KEYBOARD KEYS 
+## **KEYBOARD KEYS** :keyboard:
 
 ```
 ['\t', '\n', '\r', ' ', '!', '"', '#', '$', '%', '&', "'", '(',
@@ -75,4 +109,3 @@ KEYBOARD KEYS
 ## **References**
 
 1. [PyAutoGUI's Documentation](https://pyautogui.readthedocs.io/en/latest/)
-
