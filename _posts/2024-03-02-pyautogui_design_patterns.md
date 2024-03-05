@@ -134,7 +134,7 @@ pyautogui.write('asdf') # Type a string using keyboard.
 ```
 
 ## **Limitations**
-This type of automation is not perfect and there are shortcomings which need to be accounted for:
+This type of automation is not perfect and there are **shortcomings** which need **to be accounted for**:
 
 ### **Fringe Cases**
 Here are a few cases where this type of GUI automation would fall short:
