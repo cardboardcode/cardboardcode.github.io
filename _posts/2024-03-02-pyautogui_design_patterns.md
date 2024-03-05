@@ -62,7 +62,7 @@ import cv2
 import numpy as np
 from PIL import ImageGrab 
 
-def locateOnScreen(template_path):
+def locateOnScreen(template_path, threshold=0.99):
 
     # Grab the whole screen using Pillow and convert to OpenCV.
     whole_screen = ImageGrab.grab()
@@ -79,8 +79,6 @@ def locateOnScreen(template_path):
     # Run template-matching using OpenCV.
     result = cv2.matchTemplate(image, template, cv2.TM_CCOEFF_NORMED)
 
-    # Set threshold
-    threshold = 0.99
     # Get the width and height of the location template image
     w, h = template.shape[::-1]
     # Get locations (x,y).
@@ -94,8 +92,10 @@ def locateOnScreen(template_path):
 ### LOCATE
 ```python
 goto_pos = None
+curr_threshold = 0.99
 while (goto_pos is None):
-    goto_pos = locateOnScreen('path_to_image_to_find.png')
+    goto_pos = locateOnScreen('path_to_image_to_find.png', curr_threshold)
+    curr_threshold = curr_threshold - 0.01
 ```
 Replace the `path_to_image_to_find.png` with **the path to your own image**.
 
