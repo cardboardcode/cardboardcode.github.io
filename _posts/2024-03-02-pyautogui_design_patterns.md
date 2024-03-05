@@ -59,6 +59,7 @@ pyautogui.doubleClick(x=100, y=200, button='left')
 
 ```python
 import cv2
+import numpy as np
 from PIL import ImageGrab 
 
 def locateOnScreen(template_path):
