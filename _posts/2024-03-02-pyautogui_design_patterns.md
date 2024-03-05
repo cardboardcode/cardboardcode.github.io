@@ -30,14 +30,6 @@ Input Data Type: Keyboard Strokes and Mouse Movements
 Output Data Type: Change of GUI state.
 ```
 
-## **Use Cases**
-
-- Web-scraping
-- File Organizing
-- GUI Testing
-- Game Aimbot
-- Data Entry
-
 ## **Snippets**
 
 - **Mouse Movement**
@@ -139,14 +131,11 @@ This type of automation is not perfect and there are **shortcomings** which need
 ### **Fringe Cases**
 Here are a few cases where this type of GUI automation would fall short:
 
-1. A GUI change of state takes a long while and there are duplicates of the **LOCATE** object present
+1. **A GUI change of state** takes a long while and there are duplicates of the **LOCATE** object present
 during transition that would give false positives.
 
-2. The rate of interaction required is too high. Examples would be playing an FPS game and reacting
-promptly to enemies.
-
-3. ...
-
+2. The rate of interaction required is too high. Examples would be **playing an FPS game** and **reacting
+promptly to enemies**.
 
 ## **References**
 
