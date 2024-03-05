@@ -139,6 +139,8 @@ during transition that would give false positives.
 2. The rate of interaction required is too high. Examples would be **playing an FPS game** and **reacting
 promptly to enemies**.
 
+3. The template to be recognized only appears when the mouse is hovered over a region of the screen or clicked.
+
 ## **References**
 
 1. [PyAutoGUI's Documentation](https://pyautogui.readthedocs.io/en/latest/)
