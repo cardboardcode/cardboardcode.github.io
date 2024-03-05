@@ -95,9 +95,9 @@ def locateOnScreen(template_path):
 ```python
 goto_pos = None
 while (goto_pos is None):
-    goto_pos = locateOnScreen('image_to_find.png')
+    goto_pos = locateOnScreen('path_to_image_to_find.png')
 ```
-Replace the `image_to_find.png` with the path to your own image.
+Replace the `path_to_image_to_find.png` with **the path to your own image**.
 
 - **Keyboard Strokes**
 
