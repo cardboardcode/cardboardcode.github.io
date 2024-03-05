@@ -87,7 +87,9 @@ goto_pos = None
 curr_threshold = 0.99
 while (goto_pos is None):
     goto_pos = locateOnScreen('path_to_image_to_find.png', curr_threshold)
-    curr_threshold = curr_threshold - 0.01
+    if goto_pose is None:
+        curr_threshold = curr_threshold - 0.01
+        print("No match found. Reducing curr_threshold to:", curr_threshold)
 ```
 Replace the `path_to_image_to_find.png` with **the path to your own image**.
 
