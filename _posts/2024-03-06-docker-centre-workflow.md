@@ -146,3 +146,5 @@ fi
 
 1. [Docker Official Documentation](https://docs.docker.com/)
 2. [Run the Docker daemon as a non-root user (Rootless mode)](https://docs.docker.com/engine/security/rootless/)
+3. ["Escape the Docker" Vulnerability (2019) ](https://csbygb.gitbook.io/pentips/web-pentesting/docker-exploitation)
+4. [Coinhive Cryptojacking via Malicious Docker Images (2018)](https://unit42.paloaltonetworks.com/cryptojacking-docker-images-for-mining-monero/) 
