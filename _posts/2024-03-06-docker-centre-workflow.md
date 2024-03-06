@@ -49,6 +49,9 @@ docker run -m 8GB -it --rm -e DISPLAY=$DISPLAY -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH
 xhost -local:docker
 ```
 
+TODO:
+[ ] Explore alternative approach to X11-forwarding like `Xpra`, `VNC` or other web-based user interfaces.
+
 ## **Clean-Up**
 
 This section covers how to remove Docker containers/images. Create the following `.bash` file and run them.
