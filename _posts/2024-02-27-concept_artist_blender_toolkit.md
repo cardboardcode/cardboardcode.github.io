@@ -10,45 +10,40 @@ As a concept artist, I use Blender. Here is a concise list of Blender plugins th
 
 ## **Plugins**
 
-| **[Hard-Ops](https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV)** | [FREE] |
+| **[Hard-Ops](https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV)** | [<img src="https://img.shields.io/badge/FREE-00A300">](<LINK>) | 
 ---
+Streamlines hard surface modeling workflow in Blender.
 
-- **Extreme PBR Evo** [PROPRIETARY] 
+| **[Extreme PBR Evo](https://andrew-d.gumroad.com/l/BvpHx)** | [<img src="https://img.shields.io/badge/PROPRIETARY-EF7215">](<LINK>) |
+---
+Provides 1-click realistic material library for Blender.
 
-**Download Link**: [https://andrew-d.gumroad.com/l/BvpHx](https://andrew-d.gumroad.com/l/BvpHx)
+| **[SketchFab](https://github.com/sketchfab/blender-plugin)** | [<img src="https://img.shields.io/badge/FREE-00A300">](<LINK>) |
+---
+Provides quick import function from the SketchFab online platform for free 3D models.
 
+| **[Easy HDRI](https://codeofart.gumroad.com/l/EasyHDRI)** | [<img src="https://img.shields.io/badge/FREE-00A300">](<LINK>) |
+---
+Provides 1-click simplified HDR environment map creation.
 
-- **SketchFab** [FREE]
+| **[Alt Tab Ocean](https://blendermarket.com/products/alt-tab-water)** | [<img src="https://img.shields.io/badge/FREE-00A300">](<LINK>) |
+---
+Provides 1-click realistic ocean creation tool for Blender.
 
-**Download Link**: [https://github.com/sketchfab/blender-plugin](https://github.com/sketchfab/blender-plugin)
+| **[Ivy Generator](https://abaga.gumroad.com/l/ivygen)** | [<img src="https://img.shields.io/badge/FREE-00A300">](<LINK>) |
+---
+Provides procedural ivy generation for scenes.
 
-
-- **Easy HDRI** [FREE]
-
-**Download Link**: [https://codeofart.gumroad.com/l/EasyHDRI](https://codeofart.gumroad.com/l/EasyHDRI)
-
-
-- **Alt Tab Ocean** [FREE]
-
-**Download Link**: [https://blendermarket.com/products/alt-tab-water](https://blendermarket.com/products/alt-tab-water)
-
-
-- **Ivy Generator** [FREE]
-
-**Download Link**: [https://abaga.gumroad.com/l/ivygen](https://abaga.gumroad.com/l/ivygen)
-
-
-- **botaniq_full** [FREE]
-
-**Download Link**: [https://polygoniq.gumroad.com/l/botaniq-trees](https://polygoniq.gumroad.com/l/botaniq-trees)
+| **[botaniq_full](https://polygoniq.gumroad.com/l/botaniq-trees)** | [<img src="https://img.shields.io/badge/FREE-00A300">](<LINK>) |
+---
+Provides comprehensive 3D plant model library.
 
 
 ## **3rd Party Applications**
 
-- **Quixel Bridge** [FREE]
-
-**Download Link**: https://quixel.com/bridge
-
+| **[Quixel Bridge](https://quixel.com/bridge)** | [<img src="https://img.shields.io/badge/FREE-00A300">](<LINK>) |
+---
+Provides 1-click realistic material and architecture/nature models library for Blender.
 
 ## **Settings**
 
