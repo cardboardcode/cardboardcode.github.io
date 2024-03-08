@@ -10,13 +10,10 @@ As a concept artist, I use Blender. Here is a concise list of Blender plugins th
 
 ## **Plugins**
 
+| **[Hard-Ops](https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV)** | [FREE] |
+---
 
-- **Hard-Ops** [FREE]
-
-**Download Link**: [https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV](https://drive.google.com/drive/folders/1H_5i83hw2hpqhASwYrleHGxeFRK3JInV)
-
-
-- **Extreme PBR Evo** [PROPRIETARY] :dollar:
+- **Extreme PBR Evo** [PROPRIETARY] 
 
 **Download Link**: [https://andrew-d.gumroad.com/l/BvpHx](https://andrew-d.gumroad.com/l/BvpHx)
 
