@@ -30,6 +30,15 @@ Input Data Type: Keyboard Strokes and Mouse Movements
 Output Data Type: Change of GUI state.
 ```
 
+## **Dependencies**
+Below is a `requirements.txt` file which allows for ease-of-setup to get started using the snippet below:
+
+```txt
+easyocr==1.7.1
+PyAutoGUI==0.9.54
+opencv-python==4.9.0.80
+```
+
 ## **Snippets**
 
 - **Mouse Movement**
