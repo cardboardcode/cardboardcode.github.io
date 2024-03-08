@@ -103,11 +103,12 @@ Replace the `path_to_image_to_find.png` with **the path to your own image**.
 import easyocr
 
 def get_text_from_image(path_to_input_image):
-    reader = easyocr.Reader(['en'])  # Replace 'en' with desired language code
+    # Replace 'en' with desired language code
+    reader = easyocr.Reader(['en'])  
     # text = reader.readtext('img/test_text_image.png')
     text_results = reader.readtext(path_to_input_image)  # Assuming it returns a list of dictionaries
-    print(text_results)
-    
+
+    # Get bounding boxes within input image, deduced text as well as probability 
     for (bbox, text, prob) in text_results:
       return text, prob
 ```
