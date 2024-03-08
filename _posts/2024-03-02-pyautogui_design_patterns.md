@@ -87,10 +87,16 @@ def locateOnScreen(template_path, threshold=0.99):
 
 ### LOCATE
 ```python
+# Initialize the go-to (x,y) position with a NoneType.
+# Initialize the current template matching threshold with 0.99.
 goto_pos = None
 curr_threshold = 0.99
+# Run locateOnScreen function until the template image is detected
+# and go-to (x,y) position is no longer a NoneType.
 while (goto_pos is None):
     goto_pos = locateOnScreen('path_to_image_to_find.png', curr_threshold)
+    # If the template image is not detected, decrement threshold by 0.01
+    # and report to user.
     if goto_pose is None:
         curr_threshold = curr_threshold - 0.01
         print("No match found. Reducing curr_threshold to:", curr_threshold)
@@ -102,7 +108,7 @@ Replace the `path_to_image_to_find.png` with **the path to your own image**.
 ```python
 import easyocr
 
-def get_text_from_image(path_to_input_image):
+def getTextFromImage(path_to_input_image):
     # Replace 'en' with desired language code
     reader = easyocr.Reader(['en'])  
     # text = reader.readtext('img/test_text_image.png')
