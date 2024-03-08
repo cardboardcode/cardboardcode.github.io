@@ -47,7 +47,11 @@ pyautogui.doubleClick(x=100, y=200, button='left')
 
 - **Screenshot Function(s)**
 
+This section covers function features that could be useful in determining the next course of action for automation:
+
 > **Author's Note**: While `PyAutoGUI` offers its own screenshot function `locateOnScreen`, please use the following `.py` implementation for higher and repeatable accuracy: 
+
+`locateOnScreen` - This function determines where an image template is on the screen.
 
 ```python
 import cv2
@@ -92,6 +96,21 @@ while (goto_pos is None):
         print("No match found. Reducing curr_threshold to:", curr_threshold)
 ```
 Replace the `path_to_image_to_find.png` with **the path to your own image**.
+
+`getTextFromImage` - This function identifies the text in an input image.
+
+```python
+import easyocr
+
+def get_text_from_image(path_to_input_image):
+    reader = easyocr.Reader(['en'])  # Replace 'en' with desired language code
+    # text = reader.readtext('img/test_text_image.png')
+    text_results = reader.readtext(path_to_input_image)  # Assuming it returns a list of dictionaries
+    print(text_results)
+    
+    for (bbox, text, prob) in text_results:
+      return text, prob
+```
 
 - **Keyboard Strokes**
 
