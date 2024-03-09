@@ -50,3 +50,20 @@ Provides 1-click realistic material and architecture/nature models library for B
 - **Render Engine**: `Cycles`
 - **Denoise**: `Optix` + `Albedo`
 
+Configure `Sampling` under `Render` tab as such to optimize for a better development workflow:
+
+### **Viewport**
+
+```bash
+Noise Threshold: 0.1000
+Max Samples: 128
+Min Samples: 0
+```
+
+### **Render**
+
+```bash
+Noise Threshold: 0.1000
+Max Samples: 250
+Min Samples: 0
+```
