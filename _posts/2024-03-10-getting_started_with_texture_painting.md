@@ -65,3 +65,5 @@ Select your designated base color to fill with.
 2. [BLENDER - ROCK MATERIAL STUDY - hand painted](https://www.youtube.com/watch?v=1lMfRhO09JA) - 14 minutes video tutorial showing how
 to do a basic texture painting to produce a stylized 3D rock asset, typically used for games.
 3. [Texture Painting - Quick Start Guide - Blender](https://www.youtube.com/watch?v=WjS_zNQNVlw) - A 4 minutes video tutorial on getting started with texture painting. Painting a simple hammer by Grant Abbitt.
+4. [Painterly brushworks in blender ; Recreate your favorite paintings in 3d!](https://www.youtube.com/watch?v=10kJdVW8qOs) - Art Goal 1.
+5. [Getting that 2D look in 3D! 🍑](https://www.youtube.com/watch?v=5Idffj0gjIs) - Art Goal 2.
