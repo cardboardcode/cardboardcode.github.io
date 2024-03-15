@@ -23,6 +23,8 @@ This article aims to collate a list of tool you can download and use for free to
 
 [WIP] Please follow [this video tutorial by Blandman Studios](https://youtu.be/eTWf5D092VY?si=bCn4oXp1aCHsJzXl&t=600) to install the **virtio drivers**.
 
+Read in greater detail why **virtio drivers** help improve performance [here](https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers). **TLDR** - It does so by allowing direct access to underlying Linux drives, rather than slower emulated Windows in KVM.
+
 Download **virtio drivers** [here](ttps://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md#downloads). Be sure to select `Stable virtio-win ISO`.
 
 > :warning: Do note that, for unknown reasons, downloading this `.iso` file will take a long time. Would recommend using [this unofficial mirror link](https://1drv.ms/u/s!AgPqSRmLOBnd-Fh3JBDRBISogIV3?e=eYKAkK) instead.
@@ -41,3 +43,4 @@ Download **virtio-win-guest-tools.exe** [here](https://fedorapeople.org/groups/v
 2. [Why should we install Virtio drivers when using Windows 10 inside KVM by Blandman Studios](https://youtu.be/eTWf5D092VY?si=bCn4oXp1aCHsJzXl&t=600)
 3. [virtio_win-pkg-scripts Downloads](https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md#downloads)
 4. [Share Folder Between Windows Guest and Linux Host in KVM using virtiofs](https://www.debugpoint.com/kvm-share-folder-windows-guest/)
+5. [Windows VirtIO Drivers](https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers)
