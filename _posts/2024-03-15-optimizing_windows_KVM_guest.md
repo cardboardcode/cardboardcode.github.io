@@ -5,6 +5,8 @@ date:   2024-03-15 13:40:49 +0800
 categories: KVM, virtual machine
 ---
 
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
 When setting up a **Windows 10** image using the KVM `virt-manager` (following popular online articles), using it just as is **yields poor user experience** with the following problems:
 
 - Low frame refresh rate 
@@ -26,6 +28,10 @@ This article aims to collate a list of tool you can download and use for free to
 Read in greater detail why **virtio drivers** help improve performance [here](https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers). **TLDR** - It does so by allowing direct access to underlying Linux drives, rather than slower emulated Windows in KVM.
 
 Download **virtio drivers** [here](ttps://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md#downloads). Be sure to select `Stable virtio-win ISO`.
+
+<div class="alert alert-danger" role="alert">
+  This is an example of a danger alert! You can change the alert type by using different classes like "alert-success", "alert-warning", or "alert-info".
+</div>
 
 > [!WARNING]
 > For unknown reasons, downloading this `.iso` file will take a long time. Would recommend using [this unofficial mirror link](https://1drv.ms/u/s!AgPqSRmLOBnd-Fh3JBDRBISogIV3?e=eYKAkK) instead.
