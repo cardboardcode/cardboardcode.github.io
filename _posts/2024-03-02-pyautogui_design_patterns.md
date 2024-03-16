@@ -22,8 +22,7 @@ Input Data Type: .png/.jpeg image
 Output Data Type: int x-position, int y-position
 ```
 
-> [!NOTE]
-> For a tentative tangible implementation of **LOCATE**, please see **LOCATE** section below.
+> ℹ️ For a tentative tangible implementation of **LOCATE**, please see **LOCATE** section below.
 
 ```bash
 INTERACT refers to what you are looking at to interact.
@@ -60,8 +59,7 @@ pyautogui.doubleClick(x=100, y=200, button='left')
 
 This section covers function features that could be useful in determining the next course of action for automation:
 
-> [!NOTE]
-> While `PyAutoGUI` offers its own screenshot function `locateOnScreen`, please use the following `.py` implementation for higher and repeatable accuracy: 
+> ℹ️ While `PyAutoGUI` offers its own screenshot function `locateOnScreen`, please use the following `.py` implementation for higher and repeatable accuracy: 
 
 `locateOnScreen` - This function determines where an image template is on the screen.
 

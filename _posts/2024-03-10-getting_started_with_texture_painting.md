@@ -20,8 +20,7 @@ Please arrange the workspace similar to what is show below:
 
 This is for ease of development. Providing an intuitive overview of what your texture paint looks like as you work on it.
 
-> [!NOTE]
-> This is basically just adding an UV editor on the left side on top of the default workspace layout.
+> ℹ️ This is basically just adding an UV editor on the left side on top of the default workspace layout.
 
 ## **Initial Steps**
 
@@ -58,8 +57,7 @@ Select your designated base color to fill with.
 | `Shift` + `Mouse Middle Button` | Pan camera. |
 | `Ctrl` + `Mouse Middle Button` | Zoom camera. |
 
-> [!NOTE]
-> Map the `Mouse Middle Button` to the bottom button of your **Stylus Pen** if you are using a Monitor Tablet for your workflow.
+> ℹ️ Map the `Mouse Middle Button` to the bottom button of your **Stylus Pen** if you are using a Monitor Tablet for your workflow.
 
 ### **References**
 

@@ -16,8 +16,7 @@ This article provides an ultra-simplified guide to settign up nvidia-smi in `WSL
 
 1. Run the following command in terminal, **running with administrative privileges**:
 
-> [!NOTE]
-> Note that the installation requires a minimum of 20.2 GB.
+> ℹ️ Note that the installation requires a minimum of 20.2 GB.
 
 ```bash
 # Install WSL 2 and Ubuntu
@@ -68,8 +67,7 @@ Set your username and password, following instructions in terminal.
 
 2. Run the following commands in the Ubuntu terminal:
 
-> [!NOTE]
-> The commands below uses the example of downloading *CUDA Toolkit 12.3*, as of this writing. The runfile is 4.07 GB.
+> ℹ️ The commands below uses the example of downloading *CUDA Toolkit 12.3*, as of this writing. The runfile is 4.07 GB.
 
 ```bash
 # Remove old GPG key. For the reason, please refer to [1]

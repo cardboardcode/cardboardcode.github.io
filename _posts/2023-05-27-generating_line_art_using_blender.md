@@ -45,8 +45,7 @@ Enable `Z` and `Combined` under **Passes** => **Data**.
 
 Create a `Scene Line Art` and configure its **Modifier Properties** accordingly.
 
-> [!NOTE]
-> Once created, name it LineArt HBO. Additionally, add to its own collection. Call it lines.
+> ℹ️ Once created, name it LineArt HBO. Additionally, add to its own collection. Call it lines.
 
 ```
 Disable Realtime to make viewport efficient.
@@ -69,8 +68,7 @@ Set Stroke Thickness to Screen Space under Strokes <= Object Data.
 
 Create a `Scene Line Art` and configure its **Modifier Properties** accordingly.
 
-> [!NOTE]
-> Once created, name it LineArt Thin. Additionally, add to lines collection.
+> ℹ️ Once created, name it LineArt Thin. Additionally, add to lines collection.
 
 ```
 Set Line Thickness to 4. 
@@ -78,8 +76,7 @@ Set Line Thickness to 4.
 
 ![](/img/2023_05_27/thin.png)
 
-> [!NOTE]
-> Generally, thin inner lines should have half the size of the contour lines.
+> ℹ️ Generally, thin inner lines should have half the size of the contour lines.
 
 Configure its **Object Data Properties** similar to **Step 2**.
 
@@ -91,8 +88,7 @@ Set Stroke Thickness to Screen Space under Strokes <= Object Data.
 
 Press `F12` to render out the scene. 
 
-> [!NOTE]
-> Don't panic when you see a blank white screen in your render screen. The linework 
+> ℹ️ Don't panic when you see a blank white screen in your render screen. The linework 
 should appear only once the rendering is done overall. 
 
 ![](/img/2023_05_27/save_render.png)

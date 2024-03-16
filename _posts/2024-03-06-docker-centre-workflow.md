@@ -18,8 +18,7 @@ Therefore, this article hopes to **address this issue** of environment standardi
 
 2. Configure `docker` such that you need not always have to run it with `sudo`. Do note this carries security risk but at least offers ease of use within the context of largely-offline development.
 
-> [!NOTE]
-> To avoid such security risk, please consider setting up Docker [rootless](https://docs.docker.com/engine/security/rootless/).
+> ℹ️ To avoid such security risk, please consider setting up Docker [rootless](https://docs.docker.com/engine/security/rootless/).
 
 
 ## **Run**
@@ -49,9 +48,6 @@ xauth nlist $DISPLAY | sed -e 's/^..../ffff/' | xauth -f $XAUTH nmerge -
 docker run -m 8GB -it --rm -e DISPLAY=$DISPLAY -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH -e XAUTHORITY=$XAUTH -v ${PWD}:/src  -it <image_name:tag_name>
 xhost -local:docker
 ```
-
-TODO:
-[ ] Explore alternative approach to X11-forwarding like `Xpra`, `VNC` or other web-based user interfaces.
 
 ## **Save & Share**
 This section covers an offline methodology of sharing varying docker images in order to achieve the quick environmental standardization among different developers:
@@ -153,13 +149,12 @@ fi
 
 1. [Coinhive Cryptojacking via Malicious Docker Images (2018)](https://unit42.paloaltonetworks.com/cryptojacking-docker-images-for-mining-monero/) 
 
-> [!NOTE]
-> Coinhive has shut down as of 2019. [[Ref]](https://www.theverge.com/2019/2/28/18244636/coinhive-cryptojacking-cryptocurrency-mining-shut-down-monero-date)
+
+> ℹ️ Coinhive has shut down as of 2019. [[Ref]](https://www.theverge.com/2019/2/28/18244636/coinhive-cryptojacking-cryptocurrency-mining-shut-down-monero-date)
 
 2. ["Escape the Docker" Vulnerability (2019) ](https://csbygb.gitbook.io/pentips/web-pentesting/docker-exploitation)
 
-> [!NOTE]
-> Docker versions 18.09.2, 17.03.1-ce, and 17.06.2-ce and later addressed the issue.
+> ℹ️ Docker versions 18.09.2, 17.03.1-ce, and 17.06.2-ce and later addressed the issue.
 
 - **HARDWARE** - Hardware-specific programs that rely on devices such as GPU cannot be instantiated or virtualized effectively through Docker. 
 
