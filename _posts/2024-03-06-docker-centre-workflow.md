@@ -52,6 +52,24 @@ xhost -local:docker
 TODO:
 [ ] Explore alternative approach to X11-forwarding like `Xpra`, `VNC` or other web-based user interfaces.
 
+## **Save & Share**
+This section covers an offline methodology of sharing varying docker images in order to achieve the quick environmental standardization among different developers:
+
+1. Save a docker image as `.tar` file:
+
+```bash
+docker save -o <file_name>.tar <docker_image_name>
+#Eg. docker save -o mynginx1.tar nginx
+```
+
+2. Load a `.tar` file as docker image on different workstations:
+
+```bash
+docker load < <file_name>.tar
+#Eg. docker load < mynginx1.tar
+```
+
+
 ## **Clean-Up**
 
 This section covers how to remove Docker containers/images. Create the following `.bash` file and run them.
@@ -148,3 +166,4 @@ fi
 2. [Run the Docker daemon as a non-root user (Rootless mode)](https://docs.docker.com/engine/security/rootless/)
 3. ["Escape the Docker" Vulnerability (2019) ](https://csbygb.gitbook.io/pentips/web-pentesting/docker-exploitation)
 4. [Coinhive Cryptojacking via Malicious Docker Images (2018)](https://unit42.paloaltonetworks.com/cryptojacking-docker-images-for-mining-monero/) 
+5. [Saving Images and Containers as Tar Files for Sharing](https://dockerlabs.collabnix.com/beginners/saving-images-as-tar/)
