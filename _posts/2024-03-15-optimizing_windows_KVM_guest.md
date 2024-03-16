@@ -19,7 +19,7 @@ This article aims to collate a list of tool you can download and use for free to
 
 ## **What To Do** 
 
-### **For Performance Improvement**: :red_circle:
+### **For Performance Improvement**:  🔴
 
 [WIP] Please follow [this video tutorial by Blandman Studios](https://youtu.be/eTWf5D092VY?si=bCn4oXp1aCHsJzXl&t=600) to install the **virtio drivers**.
 
@@ -30,7 +30,7 @@ Download **virtio drivers** [here](ttps://github.com/virtio-win/virtio-win-pkg-s
 > [!WARNING]
 > For unknown reasons, downloading this `.iso` file will take a long time. Would recommend using [this unofficial mirror link](https://1drv.ms/u/s!AgPqSRmLOBnd-Fh3JBDRBISogIV3?e=eYKAkK) instead.
 
-### **For Easy File Sharing**: :blue_circle:
+### **For Easy File Sharing**: 🔵
 
 [WIP] Please follow [this article by debugpoint](https://www.debugpoint.com/kvm-share-folder-windows-guest/) to install **WinFSP** and **virtio-win-guest-tools.exe**
 
