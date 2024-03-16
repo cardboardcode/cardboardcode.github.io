@@ -5,6 +5,7 @@ date:   2024-03-15 13:40:49 +0800
 categories: KVM, virtual machine
 ---
 
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWV6N3hqejNpbWM4MmQxMzZpY3BrNmg4emplOG4xdzJtamZncHpncSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3Q2hJ4FLN1UvS/giphy.gif)
 
 When setting up a **Windows 10** image using the KVM `virt-manager` (following popular online articles), using it just as is **yields poor user experience** with the following problems:
 
