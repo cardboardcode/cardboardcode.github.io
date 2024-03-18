@@ -96,20 +96,43 @@ def locateOnScreen(template_path, threshold=0.99):
 ```
 
 ### LOCATE
+
+**Template 1**: Determine cursor position of template,  assuming it has yet to appear. 
 ```python
 # Initialize the go-to (x,y) position with a NoneType.
 # Initialize the current template matching threshold with 0.99.
 goto_pos = None
 curr_threshold = 0.99
+scene_to_detect = ''
 # Run locateOnScreen function until the template image is detected
 # and go-to (x,y) position is no longer a NoneType.
 while (goto_pos is None):
-    goto_pos = locateOnScreen('path_to_image_to_find.png', curr_threshold)
+    scene_to_detect = 'path_to_image_to_find.png'
+    goto_pos = locateOnScreen(scene_to_detect, curr_threshold)
+```
+Replace the `path_to_image_to_find.png` with **the path to your own image**.
+
+**Template 2**: Determine cursor position of template, assuming it has appeared. 
+```python
+# Initialize the go-to (x,y) position with a NoneType.
+# Initialize the current template matching threshold with 0.99.
+goto_pos = None
+curr_threshold = 0.99
+scene_to_detect = ''
+# Run locateOnScreen function until the template image is detected
+# and go-to (x,y) position is no longer a NoneType.
+while (goto_pos is None):
+    scene_to_detect = 'path_to_image_to_find.png'
+    goto_pos = locateOnScreen(scene_to_detect, curr_threshold)
     # If the template image is not detected, decrement threshold by 0.01
     # and report to user.
     if goto_pos is None:
         curr_threshold = curr_threshold - 0.01
         print("No match found. Reducing curr_threshold to:", curr_threshold)
+    # If the current threshold is negative, report to user and exit program.
+    if curr_threshold <= 0:
+        print("No match found - Template-Matching for [" + scene_to_detect + "] lower limit reached. Exiting...")
+        sys.exit(1)
 ```
 Replace the `path_to_image_to_find.png` with **the path to your own image**.
 
