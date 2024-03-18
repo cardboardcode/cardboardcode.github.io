@@ -107,7 +107,7 @@ while (goto_pos is None):
     goto_pos = locateOnScreen('path_to_image_to_find.png', curr_threshold)
     # If the template image is not detected, decrement threshold by 0.01
     # and report to user.
-    if goto_pose is None:
+    if goto_pos is None:
         curr_threshold = curr_threshold - 0.01
         print("No match found. Reducing curr_threshold to:", curr_threshold)
 ```
