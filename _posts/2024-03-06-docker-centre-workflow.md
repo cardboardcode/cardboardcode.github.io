@@ -5,6 +5,7 @@ date:   2024-03-02 15:27:49 +0800
 categories: pyautogui, python
 ---
 
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnh6dDJpaTltaGQ4dG9nc3FoZzF5YXBtMnJzeDB5ZmxsbHcxY2R4ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xVurSXSjNiifP8qLXy/giphy.gif)
 
 In my experience developing software within a team, **standardization of environment dependencies has always been a constant pain**. There had been **countless instances** where trying to get more hands onboard resulted in **more intense bouts of stress**, rather than actually resolving the issue at hand. 
 
