@@ -16,6 +16,8 @@ That's it. It should not take long. Just copy & paste. No thinking needed. Just 
 
 1. Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 
+<Include screenshots of command prompt with admin rights and powershell with admin rights.>
+
 2. **[ PowerShell ]** - Install Chocolatey:
 
 ```batch
@@ -105,6 +107,14 @@ wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/tinyxml
 
 ```batch
 wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/tinyxml2.6.0.0.nupkg
+```
+
+```batch
+cd ..
+```
+
+```batch
+choco install -y -s repositories asio cunit eigen tinyxml-usestl tinyxml2 bullet
 ```
 
 ## **References**
