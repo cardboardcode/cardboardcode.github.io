@@ -14,13 +14,15 @@ That's it. It should not take long. Just copy & paste. No thinking needed. Just 
 
 ## **Setup**
 
-1. Open up a **Command Prompt Terminal** & **Powershell** with `administrative privileges`.
+1. Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 
-2. **Terminal** - Install Chocolatey:
+2. **[ PowerShell ]** - Install Chocolatey:
 
 ```batch
-
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
+
+3. **[  ]**
 
 3. ...
 
