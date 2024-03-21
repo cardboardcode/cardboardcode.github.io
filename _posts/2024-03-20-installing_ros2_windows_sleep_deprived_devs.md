@@ -16,15 +16,19 @@ Just copy & paste. No thinking needed. Just basic cognitive functions here.
 
 ## **Setup**
 
-1. Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
+Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 
-    > Include screenshots of command prompt with admin rights and powershell with admin rights.
+![](/img/2024_03_20/admin_cp_powershell.png)
 
-2. **[ PowerShell ]** - Install Chocolatey:
+1. **[ Command Prompt ]** - Install **wget**
 
-    > Insert step to install wget
-
+    ```batch
+    choco install -y wget
     ```
+
+2. **[ PowerShell ]** - Install **Chocolatey**:
+
+    ```batch
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
     ```
 
@@ -51,6 +55,10 @@ Just copy & paste. No thinking needed. Just basic cognitive functions here.
     setx /m OPENSSL_CONF "C:\Program Files\OpenSSL-Win64\bin\openssl.cfg"
     ```
 
+    ```batch
+    setx /m PATH "%PATH%;C:\Program Files\OpenSSL-Win64\bin\"
+    ```
+
 5. **[ Command Prompt ]** - Install **Visual Studio 2019**:
 
     >Include screenshot to select the Desktop development with C++
@@ -59,29 +67,48 @@ Just copy & paste. No thinking needed. Just basic cognitive functions here.
     choco install -y visualstudio2019community
     ```
 
+    ⚠️ Please restart your workstation at this point before proceeding...
 
 6. **[ Command Prompt ]** - Install **OpenCV**:
 
-    >Insert intermediate warning to restart at this point...
+    ```batch
+    cd %USERPROFILE%/Downloads
+    ```
 
     ```batch
     wget https://github.com/ros2/ros2/releases/download/opencv-archives/opencv-3.4.6-vc16.VS2019.zip
     ```
 
     ```batch
+    cd C:\
+    ```
+
+    ```batch
+    mkdir opencv
+    ```
+
+    ```batch
+    cd %USERPROFILE%/Downloads
+    ```
+
+    ```batch
+    expand -f opencv-3.4.6-vc16.VS2019.zip /D C:\opencv
+    ```
+
+    ```batch
     setx /m OpenCV_DIR C:\opencv
     ```
 
+    ```batch
+    setx /m PATH "%PATH%;C:\opencv\x64\vc16\bin"
+    ```
 
 7. **[ Command Prompt ]** - Install **other dependencies**:
 
-    >Insert intermediate warning to restart at this point...
 
     ```batch
     choco install -y cmake
     ```
-
-
 
     ```batch
     mkdir repositories
@@ -159,6 +186,9 @@ Just copy & paste. No thinking needed. Just basic cognitive functions here.
 
     ```batch
     cd %USERPROFILE%/Downloads
+    ```
+
+    ```batch
     wget https://github.com/ros2/ros2/releases/download/release-humble-20240222/ros2-humble-20240222-windows-release-amd64.zip
     ```
 
@@ -172,6 +202,9 @@ Just copy & paste. No thinking needed. Just basic cognitive functions here.
 
     ```batch
     cd %USERPROFILE%/Downloads
+    ```
+
+    ```batch
     expand -f ros2-humble-20240222-windows-release-amd64.zip /D C:\dev\ros2_humble
     ```
 
