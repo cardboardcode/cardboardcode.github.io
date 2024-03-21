@@ -14,6 +14,15 @@ That's it. It should not take long. Just copy & paste. No thinking needed. Just 
 
 ## **Setup**
 
+1. Open up a **Command Prompt Terminal** & **Powershell** with `administrative privileges`.
+
+2. **Terminal** - Install Chocolatey:
+
+```batch
+
+```
+
+3. ...
 
 
 ## **References**
