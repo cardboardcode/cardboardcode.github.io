@@ -231,4 +231,4 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 
 ## **References**
 
-1. [Windows (binary)](https://docs.ros.org/en/humble/Installation/Windows-Install-Binary.html)
+1. [Installing ROS 2 on Windows](https://docs.ros.org/en/humble/Installation/Windows-Install-Binary.html)
