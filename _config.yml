@@ -24,6 +24,7 @@ github_username:  cardboardcode
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
