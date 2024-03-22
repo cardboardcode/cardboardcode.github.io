@@ -67,7 +67,7 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 
     ![](/img/2024_03_20/visual_studio_code.png)
 
-7. Restart your PC to refresh environment variables before continuing.
+7. ⚠️ **Restart** your PC to refresh environment variables before continuing.
 
 8. **[ Command Prompt ]** - Install **OpenCV**:
 
