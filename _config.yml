@@ -34,7 +34,7 @@ plugins:
   - jekyll-feed
 
 google_analytics: UA-NNNNNNNN-N
-show_excerpts: true
+show_excerpts: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
