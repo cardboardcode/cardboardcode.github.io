@@ -11,7 +11,7 @@ Hey. Yo. Didn't sleep much? Rushing yet another project? Same here. So let's kee
 
 So you want to install **ROS 2 Humble** on Windows? Great. 
 
-**Copy & Paste**. That's all. 
+##  **Copy & Paste**. That's all. 
 
 Just copy & paste. No thinking needed. Just basic cognitive functions here.
 
