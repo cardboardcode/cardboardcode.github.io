@@ -5,6 +5,7 @@ date:   2024-03-20 20:27:49 +0800
 categories: ROS 2, windows
 ---
 
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjdqcnM5OGdvbW5pM3E2OGJ5MjN0YnRrYnN0dzdkaDYyemM3YWgwdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/z2Sectp9SiC88/giphy.gif)
 
 Hey. Yo. Didn't sleep much? Rushing yet another project? Same here. So let's keep things simple for both of us. 
 
