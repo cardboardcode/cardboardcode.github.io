@@ -61,15 +61,15 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 
 5. **[ Command Prompt ]** - Install **Visual Studio 2019**:
 
-    >Include screenshot to select the Desktop development with C++
-
     ```batch
     choco install -y visualstudio2019community
     ```
 
-    ⚠️ Please restart your workstation at this point before proceeding...
+    ![](/img/2024_03_20/visual_studio_code.png)
 
-6. **[ Command Prompt ]** - Install **OpenCV**:
+6. Restart your PC to refresh environment variables before continuing.
+
+7. **[ Command Prompt ]** - Install **OpenCV**:
 
     ```batch
     cd %USERPROFILE%/Downloads
@@ -103,7 +103,7 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
     setx /m PATH "%PATH%;C:\opencv\x64\vc16\bin"
     ```
 
-7. **[ Command Prompt ]** - Install **other dependencies**:
+8. **[ Command Prompt ]** - Install **other dependencies**:
 
 
     ```batch
@@ -158,7 +158,7 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
     python -m pip install -U catkin_pkg cryptography empy importlib-metadata lark==1.1.1 lxml matplotlib netifaces numpy opencv-python PyQt5 pillow psutil pycairo pydot pyparsing==2.4.7 pyyaml rosdistro
     ```
 
-8. **[ Command Prompt ]** - Install **Qt5**:
+9. **[ Command Prompt ]** - Install **Qt5**:
 
     ```batch
     wget https://download.qt.io/archive/qt/5.12/5.12.12/qt-opensource-windows-x86-5.12.12.exe
@@ -176,13 +176,13 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
     setx /m QT_QPA_PLATFORM_PLUGIN_PATH C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\plugins\platforms
     ```
 
-9. **[ Command Prompt ]** - Install **GraphViz**:
+10. **[ Command Prompt ]** - Install **GraphViz**:
 
     ```batch
     choco install -y graphviz
     ```
 
-10. **[ Command Prompt ]** - Install **ROS 2**:
+11. **[ Command Prompt ]** - Install **ROS 2**:
 
     ```batch
     cd %USERPROFILE%/Downloads
