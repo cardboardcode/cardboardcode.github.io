@@ -49,6 +49,10 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 5. **[ Command Prompt ]** - Install **OpenSSL**:
 
     ```batch
+    cd %USERPROFILE%/Downloads
+    ```
+
+    ```batch
     wget https://slproweb.com/download/Win64OpenSSL-1_1_1w.msi
     ```
 
@@ -106,9 +110,12 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 
 9. **[ Command Prompt ]** - Install **other dependencies**:
 
-
     ```batch
     choco install -y cmake
+    ```
+
+    ```batch
+    cd %USERPROFILE%/Downloads
     ```
 
     ```batch
@@ -162,8 +169,20 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 10. **[ Command Prompt ]** - Install **Qt5**:
 
     ```batch
+    cd %USERPROFILE%/Downloads
+    ```
+
+    ```batch
     wget https://download.qt.io/archive/qt/5.12/5.12.12/qt-opensource-windows-x86-5.12.12.exe
     ```
+
+    ```batch
+    call qt-opensource-windows-x86-5.12.12.exe
+    ```
+
+    > ⚠️
+    > You will need to sign up for a login account here when installing. This is due to
+    > a controversial policy change in 2020. Check out [here](https://www.qt.io/blog/qt-offering-changes-2020) for more details.
 
     ```batch
     setx /m Qt5_DIR C:\Qt\Qt5.12.12\5.12.12\msvc2017_64
@@ -194,10 +213,6 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
     ```
 
     ```batch
-    cd C:\
-    ```
-
-    ```batch
     mkdir dev\ros2_humble
     ```
 
@@ -206,16 +221,20 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
     ```
 
     ```batch
-    expand -f ros2-humble-20240222-windows-release-amd64.zip /D C:\dev\ros2_humble
+    cd C:\
+    ```
+
+    ```batch
+    tar xvfz ros2-humble-20240222-windows-release-amd64.zip -C C:\dev\ros2_humble
     ```
 
 
-## **Verify**
+## **Verify** 
 
 1. **[ Command Prompt ]** - Source the ROS 2 setup file.
 
     ```batch
-    call C:\dev\ros2_humble\local_setup.bat
+    call C:\dev\ros2_humble\ros2-windows\local_setup.bat
     ```
 
 2. **[ Command Prompt ]** - Run `talker` ROS 2 node:
@@ -224,13 +243,36 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
     ros2 run demo_nodes_cpp talker
     ```
 
-3. **[ Command Prompt ]** - Run `listener` ROS 2 node:
+3. **[ Command Prompt ]** - Run `listener` ROS 2 node in another terminal:
 
     ```batch
     ros2 run demo_nodes_py listener
     ```
 
-## **Uninstall**
+4. It should look similar to what is shown below:
+
+    ```batch
+    [INFO] [1711201903.525939200] [talker]: Publishing: 'Hello World: 1'
+    [INFO] [1711201904.531960900] [talker]: Publishing: 'Hello World: 2'
+    [INFO] [1711201905.538109400] [talker]: Publishing: 'Hello World: 3'
+    [INFO] [1711201906.528078800] [talker]: Publishing: 'Hello World: 4'
+    [INFO] [1711201907.534121300] [talker]: Publishing: 'Hello World: 5'
+    [INFO] [1711201908.524656700] [talker]: Publishing: 'Hello World: 6'
+    [INFO] [1711201909.531361100] [talker]: Publishing: 'Hello World: 7'
+    [INFO] [1711201910.537687100] [talker]: Publishing: 'Hello World: 8'
+    ```
+
+
+    ```batch
+    [INFO] [1711201905.595844300] [listener]: I heard: [Hello World: 3]
+    [INFO] [1711201906.530543000] [listener]: I heard: [Hello World: 4]
+    [INFO] [1711201907.536591800] [listener]: I heard: [Hello World: 5]
+    [INFO] [1711201908.527087400] [listener]: I heard: [Hello World: 6]
+    [INFO] [1711201909.533571700] [listener]: I heard: [Hello World: 7]
+    [INFO] [1711201910.540949700] [listener]: I heard: [Hello World: 8]
+    ```
+
+## **Uninstall** 🔴
 
     ```batch
     rmdir /s /q C:\dev\ros2_humble
