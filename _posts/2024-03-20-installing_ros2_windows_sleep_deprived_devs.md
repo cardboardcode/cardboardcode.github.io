@@ -213,6 +213,7 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 ## **Verify**
 
 1. **[ Command Prompt ]** - Source the ROS 2 setup file.
+
     ```batch
     call C:\dev\ros2_humble\local_setup.bat
     ```
@@ -232,3 +233,7 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 ## **References**
 
 1. [Installing ROS 2 on Windows](https://docs.ros.org/en/humble/Installation/Windows-Install-Binary.html)
+2. [GraphViz 10.0.1 - Chocolatey](https://community.chocolatey.org/packages/Graphviz)
+3. [Qt 5.12.12](https://download.qt.io/archive/qt/5.12/5.12.12/)
+4. [OpenSSL](https://www.openssl.org/source/)
+5. [ROS 2 Choco Packages](https://github.com/ros2/choco-packages/releases/)
