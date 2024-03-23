@@ -230,6 +230,12 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
     ros2 run demo_nodes_py listener
     ```
 
+## **Uninstall**
+
+    ```batch
+    rmdir /s /q C:\dev\ros2_humble
+    ```
+
 ## **References**
 
 1. [Installing ROS 2 on Windows](https://docs.ros.org/en/humble/Installation/Windows-Install-Binary.html)
