@@ -81,10 +81,6 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
     ```
 
     ```batch
-    wget https://github.com/ros2/ros2/releases/download/opencv-archives/opencv-3.4.6-vc16.VS2019.zip
-    ```
-
-    ```batch
     cd C:\
     ```
 
@@ -97,7 +93,11 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
     ```
 
     ```batch
-    expand -f opencv-3.4.6-vc16.VS2019.zip /D C:\opencv
+    wget https://github.com/ros2/ros2/releases/download/opencv-archives/opencv-3.4.6-vc16.VS2019.zip
+    ```
+
+    ```batch
+    tar xvfz opencv-3.4.6-vc16.VS2019.zip -C C:\opencv
     ```
 
     ```batch
