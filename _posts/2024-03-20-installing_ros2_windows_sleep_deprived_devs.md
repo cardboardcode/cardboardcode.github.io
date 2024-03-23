@@ -274,9 +274,10 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 
 ## **Uninstall** 🔴
 
-    ```batch
+Run the command below to remove the ROS 2 binaries installed earlier:
+
+
     rmdir /s /q C:\dev\ros2_humble
-    ```
 
 ## **References**
 
