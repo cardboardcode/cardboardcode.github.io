@@ -274,6 +274,7 @@ Run the command below to undo everything that is installed following this articl
 
 
     rmdir /s /q C:\dev\ros2_humble
+    rmdir /s /q C:\opencv
     
     choco uninstall -y wget
     choco uninstall -y python -x
@@ -281,6 +282,7 @@ Run the command below to undo everything that is installed following this articl
     choco uninstall -y visualstudio2019community -x
     choco uninstall -y cmake -x
     choco uninstall -y graphviz -x
+    choco uninstall -y asio cunit eigen tinyxml-usestl tinyxml2 bullet -x
 
 
 Remove the system environment variables that were set before:
