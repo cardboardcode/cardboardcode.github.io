@@ -297,9 +297,17 @@ Remove the following paths from `PATH`:
 
 Run the command below to remove the installed python packages:
 
-    ```batch
     python -m pip uninstall -U catkin_pkg cryptography empy importlib-metadata lark==1.1.1 lxml matplotlib netifaces numpy opencv-python PyQt5 pillow psutil pycairo pydot pyparsing==2.4.7 pyyaml rosdistro
-    ```
+
+Delete all files downloaded from `wget`:
+
+    cd %USERPROFILE%/Downloads
+
+    del Win64OpenSSL-1_1_1w.msi
+    del opencv-3.4.6-vc16.VS2019.zip
+    rmdir /s /q repositories
+    del qt-opensource-windows-x86-5.12.12.exe
+
 
 ## **References**
 
