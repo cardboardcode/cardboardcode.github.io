@@ -279,7 +279,6 @@ Run the command below to undo everything that is installed following this articl
 
     rmdir /s /q C:\dev\ros2_humble
     
-    ```batch
     choco uninstall -y wget
     choco uninstall -y python -x
     choco uninstall -y vcredist2013 vcredist140 -x
@@ -288,6 +287,20 @@ Run the command below to undo everything that is installed following this articl
     choco uninstall -y graphviz -x
 
 
+Remove the system environment variables that were set before:
+
+    Qt5_DIR
+    QT_QPA_PLATFORM_PLUGIN_PATH
+
+Remove the following paths from `PATH`:
+
+    C:\opencv\x64\vc16\bin
+    C:\Program Files\OpenSSL-Win64\bin\
+
+Run the command below to remove the installed python packages:
+
+    ```batch
+    python -m pip uninstall -U catkin_pkg cryptography empy importlib-metadata lark==1.1.1 lxml matplotlib netifaces numpy opencv-python PyQt5 pillow psutil pycairo pydot pyparsing==2.4.7 pyyaml rosdistro
     ```
 
 ## **References**
