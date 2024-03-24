@@ -189,10 +189,6 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
     ```
 
     ```batch
-    setx /m Qt5_DIR C:\Qt\Qt5.12.12\5.12.12\msvc2017_64
-    ```
-
-    ```batch
     setx /m QT_QPA_PLATFORM_PLUGIN_PATH C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\plugins\platforms
     ```
 
