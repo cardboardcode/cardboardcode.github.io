@@ -274,10 +274,21 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 
 ## **Uninstall** 🔴
 
-Run the command below to remove the ROS 2 binaries installed earlier:
+Run the command below to undo everything that is installed following this article:
 
 
     rmdir /s /q C:\dev\ros2_humble
+    
+    ```batch
+    choco uninstall -y wget
+    choco uninstall -y python -x
+    choco uninstall -y vcredist2013 vcredist140 -x
+    choco uninstall -y visualstudio2019community -x
+    choco uninstall -y cmake -x
+    choco uninstall -y graphviz -x
+
+
+    ```
 
 ## **References**
 
