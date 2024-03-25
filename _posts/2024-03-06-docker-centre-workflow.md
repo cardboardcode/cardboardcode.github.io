@@ -72,7 +72,7 @@ docker load < <file_name>.tar
 
 This section covers how to remove Docker containers/images. Create the following `.bash` file and run them.
 
-1. `remove_all_docker_containers.bash`
+### 1a. [ Linux ] - `remove_all_docker_containers.bash`
 
 ```bash
 #!/bin/bash
@@ -106,7 +106,13 @@ else
 fi
 ```
 
-2. `remove_all_docker_images.bash`
+### 1b. [ Windows - Powershell ]
+
+```batch
+docker ps -aq | Where-Object { $_ -ne "" } | ForEach-Object { docker rm $_ }
+```
+
+### 2a. [ Linux ] - `remove_all_docker_images.bash`
 
 ```bash
 #!/bin/bash
@@ -138,6 +144,12 @@ else
     echo "Images not removed."
   fi
 fi
+```
+
+### 2b. [ Windows - Powershell ]
+
+```batch
+docker rmi -f $(docker images -aq)
 ```
 
 ## **Limitations**
