@@ -21,233 +21,188 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
 
 ![](/img/2024_03_20/admin_cp_powershell.png)
 
-1. **[ Command Prompt ]** - Install **wget**
 
-    ```batch
-    choco install -y wget
-    ```
+1\. **[ Command Prompt ]** - Install **wget**
 
-2. **[ PowerShell ]** - Install **Chocolatey**:
+{% capture code %}{% raw %}choco install -y wget{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-    ```
+2\. **[ PowerShell ]** - Install **Chocolatey**:
 
-3. **[ Command Prompt ]** - Install **Python**
+{% capture code %}{% raw %}Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1')){% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    choco install -y python --version 3.8.3
-    ```
+3\. **[ Command Prompt ]** - Install **Python**
+
+{% capture code %}{% raw %}choco install -y python --version 3.8.3{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
 
-4. **[ Command Prompt ]** - Install **Visual C++ Redistributables**:
+4\. **[ Command Prompt ]** - Install **Visual C++ Redistributables**:
 
-    ```batch
-    choco install -y vcredist2013 vcredist140
-    ```
+{% capture code %}{% raw %}choco install -y vcredist2013 vcredist140{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-5. **[ Command Prompt ]** - Install **OpenSSL**:
+5\. **[ Command Prompt ]** - Install **OpenSSL**:
 
-    ```batch
-    cd %USERPROFILE%/Downloads
-    ```
+{% capture code %}{% raw %}cd %USERPROFILE%/Downloads{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    wget https://slproweb.com/download/Win64OpenSSL-1_1_1w.msi
-    ```
+{% capture code %}{% raw %}wget https://slproweb.com/download/Win64OpenSSL-1_1_1w.msi{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    setx /m OPENSSL_CONF "C:\Program Files\OpenSSL-Win64\bin\openssl.cfg"
-    ```
+{% capture code %}{% raw %}setx /m OPENSSL_CONF "C:\Program Files\OpenSSL-Win64\bin\openssl.cfg"{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    setx /m PATH "%PATH%;C:\Program Files\OpenSSL-Win64\bin\"
-    ```
+{% capture code %}{% raw %}setx /m PATH "%PATH%;C:\Program Files\OpenSSL-Win64\bin\"{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-6. **[ Command Prompt ]** - Install **Visual Studio 2019**:
+6\. **[ Command Prompt ]** - Install **Visual Studio 2019**:
 
-    ```batch
-    choco install -y visualstudio2019community
-    ```
+{% capture code %}{% raw %}choco install -y visualstudio2019community{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ![](/img/2024_03_20/visual_studio_code.png)
+![](/img/2024_03_20/visual_studio_code.png)
 
-7. ⚠️ **Restart** your PC to refresh environment variables before continuing.
+7\. ⚠️ **Restart** your PC to refresh environment variables before continuing.
 
-8. **[ Command Prompt ]** - Install **OpenCV**:
+8\. **[ Command Prompt ]** - Install **OpenCV**:
 
-    ```batch
-    cd %USERPROFILE%/Downloads
-    ```
+{% capture code %}{% raw %}cd %USERPROFILE%/Downloads{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    cd C:\
-    ```
+{% capture code %}{% raw %}cd C:\{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    mkdir opencv
-    ```
+{% capture code %}{% raw %}mkdir opencv{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    cd %USERPROFILE%/Downloads
-    ```
+{% capture code %}{% raw %}cd %USERPROFILE%/Downloads{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    wget https://github.com/ros2/ros2/releases/download/opencv-archives/opencv-3.4.6-vc16.VS2019.zip
-    ```
+{% capture code %}{% raw %}wget https://github.com/ros2/ros2/releases/download/opencv-archives/opencv-3.4.6-vc16.VS2019.zip{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    tar xvfz opencv-3.4.6-vc16.VS2019.zip -C C:\opencv
-    ```
+{% capture code %}{% raw %}tar xvfz opencv-3.4.6-vc16.VS2019.zip -C C:\opencv{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    setx /m OpenCV_DIR C:\opencv
-    ```
+{% capture code %}{% raw %}setx /m OpenCV_DIR C:\opencv{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    setx /m PATH "%PATH%;C:\opencv\x64\vc16\bin"
-    ```
+{% capture code %}{% raw %}setx /m PATH "%PATH%;C:\opencv\x64\vc16\bin"{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-9. **[ Command Prompt ]** - Install **other dependencies**:
+9\. **[ Command Prompt ]** - Install **other dependencies**:
 
-    ```batch
-    choco install -y cmake
-    ```
+{% capture code %}{% raw %}choco install -y cmake{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    cd %USERPROFILE%/Downloads
-    ```
+{% capture code %}{% raw %}cd %USERPROFILE%/Downloads{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    mkdir repositories
-    ```
+{% capture code %}{% raw %}mkdir repositories{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    cd repositories
-    ```
+{% capture code %}{% raw %}cd repositories{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/asio.1.12.1.nupkg
-    ```
+{% capture code %}{% raw %}wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/asio.1.12.1.nupkg{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/bullet.3.17.nupkg
-    ```
+{% capture code %}{% raw %}wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/bullet.3.17.nupkg{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/cunit.2.1.3.nupkg
-    ```
+{% capture code %}{% raw %}wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/cunit.2.1.3.nupkg{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/eigen.3.3.4.nupkg
-    ```
+{% capture code %}{% raw %}wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/eigen.3.3.4.nupkg{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/tinyxml-usestl.2.6.2.nupkg
-    ```
+{% capture code %}{% raw %}wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/tinyxml-usestl.2.6.2.nupkg{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/tinyxml2.6.0.0.nupkg
-    ```
+{% capture code %}{% raw %}wget https://github.com/ros2/choco-packages/releases/download/2022-03-15/tinyxml2.6.0.0.nupkg{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    cd ..
-    ```
+{% capture code %}{% raw %}cd ..{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    choco install -y -s repositories asio cunit eigen tinyxml-usestl tinyxml2 bullet
-    ```
+{% capture code %}{% raw %}choco install -y -s repositories asio cunit eigen tinyxml-usestl tinyxml2 bullet{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    python -m pip install -U pip setuptools==59.6.0
-    ```
+{% capture code %}{% raw %}python -m pip install -U pip setuptools==59.6.0{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    python -m pip install -U catkin_pkg cryptography empy importlib-metadata lark==1.1.1 lxml matplotlib netifaces numpy opencv-python PyQt5 pillow psutil pycairo pydot pyparsing==2.4.7 pyyaml rosdistro
-    ```
+{% capture code %}{% raw %}python -m pip install -U catkin_pkg cryptography empy importlib-metadata lark==1.1.1 lxml matplotlib netifaces numpy opencv-python PyQt5 pillow psutil pycairo pydot pyparsing==2.4.7 pyyaml rosdistro{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-10. **[ Command Prompt ]** - Install **Qt5**:
+10\. **[ Command Prompt ]** - Install **Qt5**:
 
-    ```batch
-    cd %USERPROFILE%/Downloads
-    ```
+{% capture code %}{% raw %}cd %USERPROFILE%/Downloads{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    wget https://download.qt.io/archive/qt/5.12/5.12.12/qt-opensource-windows-x86-5.12.12.exe
-    ```
+{% capture code %}{% raw %}wget https://download.qt.io/archive/qt/5.12/5.12.12/qt-opensource-windows-x86-5.12.12.exe{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    call qt-opensource-windows-x86-5.12.12.exe
-    ```
+{% capture code %}{% raw %}call qt-opensource-windows-x86-5.12.12.exe{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
     > ⚠️
     > You will need to sign up for a login account here when installing. This is due to
     > a controversial policy change in 2020. Check out [here](https://www.qt.io/blog/qt-offering-changes-2020) for more details.
 
-    ```batch
-    setx /m Qt5_DIR C:\Qt\Qt5.12.12\5.12.12\msvc2017_64
-    ```
+{% capture code %}{% raw %}setx /m Qt5_DIR C:\Qt\Qt5.12.12\5.12.12\msvc2017_64{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    setx /m QT_QPA_PLATFORM_PLUGIN_PATH C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\plugins\platforms
-    ```
+{% capture code %}{% raw %}setx /m QT_QPA_PLATFORM_PLUGIN_PATH C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\plugins\platforms{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-11. **[ Command Prompt ]** - Install **GraphViz**:
+11\. **[ Command Prompt ]** - Install **GraphViz**:
 
-    ```batch
-    choco install -y graphviz
-    ```
+{% capture code %}{% raw %}choco install -y graphviz{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-12. **[ Command Prompt ]** - Install **ROS 2**:
+12\. **[ Command Prompt ]** - Install **ROS 2**:
 
-    ```batch
-    cd %USERPROFILE%/Downloads
-    ```
+{% capture code %}{% raw %}cd %USERPROFILE%/Downloads{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    wget https://github.com/ros2/ros2/releases/download/release-humble-20240222/ros2-humble-20240222-windows-release-amd64.zip
-    ```
+{% capture code %}{% raw %}wget https://github.com/ros2/ros2/releases/download/release-humble-20240222/ros2-humble-20240222-windows-release-amd64.zip{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    mkdir dev\ros2_humble
-    ```
+{% capture code %}{% raw %}mkdir dev\ros2_humble{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    cd %USERPROFILE%/Downloads
-    ```
+{% capture code %}{% raw %}cd %USERPROFILE%/Downloads{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    cd C:\
-    ```
+{% capture code %}{% raw %}cd C:\{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-    ```batch
-    tar xvfz ros2-humble-20240222-windows-release-amd64.zip -C C:\dev\ros2_humble
-    ```
+{% capture code %}{% raw %}tar xvfz ros2-humble-20240222-windows-release-amd64.zip -C C:\dev\ros2_humble{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
 
 ## **Verify** 
 
-1. **[ Command Prompt ]** - Source the ROS 2 setup file.
+1\. **[ Command Prompt ]** - Source the ROS 2 setup file.
 
-    ```batch
-    call C:\dev\ros2_humble\ros2-windows\local_setup.bat
-    ```
+{% capture code %}{% raw %}call C:\dev\ros2_humble\ros2-windows\local_setup.bat{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-2. **[ Command Prompt ]** - Run `talker` ROS 2 node:
+2\. **[ Command Prompt ]** - Run `talker` ROS 2 node:
 
-    ```batch
-    ros2 run demo_nodes_cpp talker
-    ```
+{% capture code %}{% raw %}ros2 run demo_nodes_cpp talker{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-3. **[ Command Prompt ]** - Run `listener` ROS 2 node in another terminal:
+3\. **[ Command Prompt ]** - Run `listener` ROS 2 node in another terminal:
 
-    ```batch
-    ros2 run demo_nodes_py listener
-    ```
+{% capture code %}{% raw %}ros2 run demo_nodes_py listener{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
-4. It should look similar to what is shown below:
+4\. It should look similar to what is shown below:
 
-    ```batch
+
     [INFO] [1711201903.525939200] [talker]: Publishing: 'Hello World: 1'
     [INFO] [1711201904.531960900] [talker]: Publishing: 'Hello World: 2'
     [INFO] [1711201905.538109400] [talker]: Publishing: 'Hello World: 3'
@@ -256,33 +211,27 @@ Open up a **[ Command Prompt ]** & **[ PowerShell ]** with `admin rights`.
     [INFO] [1711201908.524656700] [talker]: Publishing: 'Hello World: 6'
     [INFO] [1711201909.531361100] [talker]: Publishing: 'Hello World: 7'
     [INFO] [1711201910.537687100] [talker]: Publishing: 'Hello World: 8'
-    ```
 
 
-    ```batch
     [INFO] [1711201905.595844300] [listener]: I heard: [Hello World: 3]
     [INFO] [1711201906.530543000] [listener]: I heard: [Hello World: 4]
     [INFO] [1711201907.536591800] [listener]: I heard: [Hello World: 5]
     [INFO] [1711201908.527087400] [listener]: I heard: [Hello World: 6]
     [INFO] [1711201909.533571700] [listener]: I heard: [Hello World: 7]
     [INFO] [1711201910.540949700] [listener]: I heard: [Hello World: 8]
-    ```
+
 
 ## **Uninstall** 🔴
 
 Run the command below to undo everything that is installed following this article:
 
 
-    rmdir /s /q C:\dev\ros2_humble
-    rmdir /s /q C:\opencv
-    
-    choco uninstall -y wget
-    choco uninstall -y python -x
-    choco uninstall -y vcredist2013 vcredist140 -x
-    choco uninstall -y visualstudio2019community -x
-    choco uninstall -y cmake -x
-    choco uninstall -y graphviz -x
-    choco uninstall -y asio cunit eigen tinyxml-usestl tinyxml2 bullet -x
+{% capture code %}{% raw %}rmdir /s /q C:\dev\ros2_humble{% endraw %}{% endcapture %}
+{% include code.html code=code %}
+{% capture code %}{% raw %}rmdir /s /q C:\opencv{% endraw %}{% endcapture %}
+{% include code.html code=code %}
+{% capture code %}{% raw %}choco uninstall -y wget python vcredist2013 vcredist140 cmake graphviz asio cunit eigen tinyxml-usestl tinyxml2 bullet -x{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
 
 Remove the system environment variables that were set before:
@@ -297,16 +246,20 @@ Remove the following paths from `PATH`:
 
 Run the command below to remove the installed python packages:
 
-    python -m pip uninstall -U catkin_pkg cryptography empy importlib-metadata lark==1.1.1 lxml matplotlib netifaces numpy opencv-python PyQt5 pillow psutil pycairo pydot pyparsing==2.4.7 pyyaml rosdistro
+{% capture code %}{% raw %}python -m pip uninstall -U catkin_pkg cryptography empy importlib-metadata lark==1.1.1 lxml matplotlib netifaces numpy opencv-python PyQt5 pillow psutil pycairo pydot pyparsing==2.4.7 pyyaml rosdistro{% endraw %}{% endcapture %} {% include code.html code=code %}
 
 Delete all files downloaded from `wget`:
 
-    cd %USERPROFILE%/Downloads
-
-    del Win64OpenSSL-1_1_1w.msi
-    del opencv-3.4.6-vc16.VS2019.zip
-    rmdir /s /q repositories
-    del qt-opensource-windows-x86-5.12.12.exe
+{% capture code %}{% raw %}cd %USERPROFILE%/Downloads{% endraw %}{% endcapture %}
+{% include code.html code=code %}
+{% capture code %}{% raw %}del Win64OpenSSL-1_1_1w.msi{% endraw %}{% endcapture %}
+{% include code.html code=code %}
+{% capture code %}{% raw %}del opencv-3.4.6-vc16.VS2019.zip{% endraw %}{% endcapture %}
+{% include code.html code=code %}
+{% capture code %}{% raw %}rmdir /s /q repositories{% endraw %}{% endcapture %}
+{% include code.html code=code %}
+{% capture code %}{% raw %}del qt-opensource-windows-x86-5.12.12.exe{% endraw %}{% endcapture %}
+{% include code.html code=code %}
 
 
 ## **References**

@@ -1,7 +1,48 @@
 img {
-    transition: transform 0.5s;
+    transition: transform 0.25s;
   }
   
-  img:hover {
-    transform: scale(1.1);
+img:hover {
+    transform: scale(1.025);
+  }
+
+.copy-code-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.25em;
+  background: #3b3b3b;
+  }
+
+.copy-code-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: #616161;
+    color: #e7e7e7;
+    padding: 0.4em 0.5em;
+    border-radius: 5px;
+
+    &::before {
+        content: "Copy";
+    }
+
+    &::after {
+        margin-left: 4px;
+        content: "📋";
+        width: 1em;
+    }
+
+    /* This class will be toggled via JavaScript */
+    &.copied {
+        &::before {
+            content: "Copied!";
+        }
+
+        &::after {
+            content: "✔️";
+        }
+    }
   }
