@@ -21,23 +21,18 @@ Here is an example that defines and runs a dockerized TODO management applicatio
 
 This application uses only 1 docker container.
 
-### 1. Download codebase for app:
+### 1\. Download codebase for app:
 
-```bash
-# Open new terminal
-git clone https://github.com/docker/getting-started.git --depth 1
-```
+{% capture code %}{% raw %}# Open new terminal
+git clone https://github.com/docker/getting-started.git --depth 1{% endraw %}{% endcapture %} {% include code.html code=code %}
 
 This creates a folder called `getting-started`.
 
-### 2. Navigate into the application source code and create a `Dockerfile`:
+### 2\. Navigate into the application source code and create a `Dockerfile`:
 
-```bash
-cd getting-started/app
-touch Dockerfile
-```
+{% capture code %}{% raw %}cd getting-started/app && touch Dockerfile{% endraw %}{% endcapture %} {% include code.html code=code %}
 
-### 3. Copy and paste the following content into `Dockerfile`:
+### 3\. Copy and paste the following content into `Dockerfile`:
 
 ```text
 FROM node:18-alpine
@@ -50,23 +45,17 @@ EXPOSE 3000
 
 Note that in `CMD`, it copies the application source code into Docker volume.
 
-### 4. Build the docker image with the app automatically integrated into the Docker image:
+### 4\. Build the docker image with the app automatically integrated into the Docker image:
 
-```bash
-docker build -t getting-started .
-```
+{% capture code %}{% raw %}docker build -t getting-started .{% endraw %}{% endcapture %} {% include code.html code=code %}
 
-### 5. Run the docker image as a container:
+### 5\. Run the docker image as a container:
 
-```bash
-docker run -p 3000:3000 getting-started
-```
+{% capture code %}{% raw %}docker run -p 3000:3000 getting-started{% endraw %}{% endcapture %} {% include code.html code=code %}
 
-### 6. Access your TODO application via your browser:
+### 6\. Access your TODO application via your browser at:
 
-```bash
-http://localhost:3000/
-```
+[http://localhost:3000/](http://localhost:3000/)
 
 
 ### **Verify**
@@ -88,30 +77,26 @@ This application uses 3 docker containers.
 
 
 
-### 1. Download the example application's `compose.yaml` file:
+### 1\. Download the example application's `compose.yaml` file:
 
 
-```bash
-wget https://github.com/docker/awesome-compose/raw/master/nextcloud-redis-mariadb/compose.yaml
-```
+{% capture code %}{% raw %}wget https://github.com/docker/awesome-compose/raw/master/nextcloud-redis-mariadb/compose.yaml{% endraw %}{% endcapture %} {% include code.html code=code %}
 
 It creates a `nc` Docker container that is based on `nextcloud:apache` Docker image, a `redis` Docker container that is based on `redis:alpine` Docker image and a `db` that is based on `mariadb:10.5` Docker image. These 3 containers interact with one another to allow our home NextCloud server to work.
 
 
-### 2. Run the application in the same folder as `compose.yaml`:
+### 2\. Run the application in the same folder as `compose.yaml`:
 
 
-```bash
-# Open new terminal
-docker compose up 
-```
+{% capture code %}{% raw %}# Open new terminal
+docker compose up{% endraw %}{% endcapture %} {% include code.html code=code %}
 
 
-### 3. Access your NextCloud server via your browser:
+### 3\. Access your NextCloud server via your browser:
 
-```bash
-http://localhost:80
-```
+
+[http://localhost:80](http://localhost:80)
+
 
 
 ### **Verify**
