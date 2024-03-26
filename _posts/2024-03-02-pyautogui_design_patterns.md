@@ -44,16 +44,12 @@ opencv-python==4.9.0.80
 
 - **Mouse Movement**
 
-```python
-pyautogui.moveTo(x=200, y=200, duration=1.0)
-```
+{% capture code %}{% raw %}pyautogui.moveTo(x=200, y=200, duration=1.0){% endraw %}{% endcapture %} {% include code.html code=code %}
 
 - **Mouse Clicks**
 
-```python
-pyautogui.click(x=100, y=200, button='left')
-pyautogui.doubleClick(x=100, y=200, button='left')
-```
+{% capture code %}{% raw %}pyautogui.click(x=100, y=200, button='left'){% endraw %}{% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}pyautogui.doubleClick(x=100, y=200, button='left'){% endraw %}{% endcapture %} {% include code.html code=code %}
 
 - **Screenshot Function(s)**
 
@@ -63,8 +59,7 @@ This section covers function features that could be useful in determining the ne
 
 `locateOnScreen` - This function determines where an image template is on the screen.
 
-```python
-import cv2
+{% capture code %}{% raw %}import cv2
 import numpy as np
 from PIL import ImageGrab 
 
@@ -93,13 +88,13 @@ def locateOnScreen(template_path, threshold=0.99):
     # Loop through the locations and draw rectangles around the matches
     for pt in zip(*locations[::-1]):
         return pt[0] + int(w/2), pt[1] + int(h/2)
-```
+{% endraw %}{% endcapture %} {% include code.html code=code %}
 
 ### LOCATE
 
 **Template 1**: Determine cursor position of template,  assuming it has yet to appear. 
-```python
-# Initialize the go-to (x,y) position with a NoneType.
+
+{% capture code %}{% raw %}# Initialize the go-to (x,y) position with a NoneType.
 # Initialize the current template matching threshold with 0.99.
 goto_pos = None
 curr_threshold = 0.99
@@ -109,12 +104,13 @@ scene_to_detect = ''
 while (goto_pos is None):
     scene_to_detect = 'path_to_image_to_find.png'
     goto_pos = locateOnScreen(scene_to_detect, curr_threshold)
-```
+{% endraw %}{% endcapture %} {% include code.html code=code %}
+
 Replace the `path_to_image_to_find.png` with **the path to your own image**.
 
-**Template 2**: Determine cursor position of template, assuming it has appeared. 
-```python
-# Initialize the go-to (x,y) position with a NoneType.
+**Template 2**: Determine cursor position of template, assuming it has appeared.
+
+{% capture code %}{% raw %}# Initialize the go-to (x,y) position with a NoneType.
 # Initialize the current template matching threshold with 0.99.
 goto_pos = None
 curr_threshold = 0.99
@@ -133,12 +129,13 @@ while (goto_pos is None):
     if curr_threshold <= 0:
         print("No match found - Template-Matching for [" + scene_to_detect + "] lower limit reached. Exiting...")
         sys.exit(1)
-```
+{% endraw %}{% endcapture %} {% include code.html code=code %}
+
 Replace the `path_to_image_to_find.png` with **the path to your own image**.
 
 `getTextFromImage` - This function identifies the text in an input image.
 
-```python
+{% capture code %}{% raw %}
 import easyocr
 
 def getTextFromImage(path_to_input_image):
@@ -150,14 +147,17 @@ def getTextFromImage(path_to_input_image):
     # Get bounding boxes within input image, deduced text as well as probability 
     for (bbox, text, prob) in text_results:
       return text, prob
-```
+{% endraw %}{% endcapture %} {% include code.html code=code %}
 
 - **Keyboard Strokes**
 
-```python
+{% capture code %}{% raw %}
 pyautogui.press('left') # Press specific keyboard key.
+{% endraw %}{% endcapture %} {% include code.html code=code %}
+
+{% capture code %}{% raw %}
 pyautogui.write('asdf') # Type a string using keyboard.
-```
+{% endraw %}{% endcapture %} {% include code.html code=code %}
 
 ## **KEYBOARD KEYS**
 
