@@ -50,7 +50,7 @@ docker run -m 8GB -it --rm -e DISPLAY=$DISPLAY -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH
 xhost -local:docker
 ```
 
-## **Save & Share**
+## **Save & Share** 
 This section covers an offline methodology of sharing varying docker images in order to achieve the quick environmental standardization among different developers:
 
 1. Save a docker image as `.tar` file:
@@ -68,11 +68,11 @@ docker load < <file_name>.tar
 ```
 
 
-## **Clean-Up**
+## **Clean-Up** 🧹
 
 This section covers how to remove Docker containers/images. Create the following `.bash` file and run them.
 
-### 1a. [ Linux ] - `remove_all_docker_containers.bash`
+### 1a. 🐧 [ **Linux** ] - `remove_all_docker_containers.bash`
 
 ```bash
 #!/bin/bash
@@ -106,13 +106,15 @@ else
 fi
 ```
 
-### 1b. [ Windows - Powershell ]
+### 1b. 🪟 [ **Windows - Powershell** ]
 
-```batch
-docker ps -aq | Where-Object { $_ -ne "" } | ForEach-Object { docker rm $_ }
-```
+{% capture code %}{% raw %}docker ps -aq | Where-Object { $_ -ne "" } | ForEach-Object { docker rm $_ }{% endraw %}{% endcapture %} {% include code.html code=code %}
 
-### 2a. [ Linux ] - `remove_all_docker_images.bash`
+### 1c. 🐧 [ **Linux** ]
+
+{% capture code %}{% raw %}{% endraw %}docker rm $(docker ps -aq){% endcapture %} {% include code.html code=code %}
+
+### 2a. 🐧  [ **Linux** ] - `remove_all_docker_images.bash`
 
 ```bash
 #!/bin/bash
@@ -146,13 +148,15 @@ else
 fi
 ```
 
-### 2b. [ Windows - Powershell ]
+### 2b. 🪟 [ **Windows - Powershell** ]
 
-```batch
-docker rmi -f $(docker images -aq)
-```
+{% capture code %}{% raw %}docker rmi -f $(docker images -aq){% endraw %}{% endcapture %} {% include code.html code=code %}
 
-## **Limitations**
+### 2c. 🐧 [ **Linux** ]
+
+{% capture code %}{% raw %}{% endraw %}docker rmi $(docker images -q){% endcapture %} {% include code.html code=code %}
+
+## **Limitations** 👎
 
 - **MEMORY** - Docker images could easily exceed `10GB` in memory space use.
 
