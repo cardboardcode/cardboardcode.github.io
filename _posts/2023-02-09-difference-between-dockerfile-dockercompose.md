@@ -24,13 +24,13 @@ This application uses only 1 docker container.
 ### 1\. Download codebase for app:
 
 {% capture code %}{% raw %}# Open new terminal
-git clone https://github.com/docker/getting-started.git --depth 1{% endraw %}{% endcapture %} {% include code.html code=code %}
+git clone https://github.com/docker/getting-started.git --depth 1{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
 
 This creates a folder called `getting-started`.
 
 ### 2\. Navigate into the application source code and create a `Dockerfile`:
 
-{% capture code %}{% raw %}cd getting-started/app && touch Dockerfile{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}cd getting-started/app && touch Dockerfile{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
 
 ### 3\. Copy and paste the following content into `Dockerfile`:
 
@@ -47,11 +47,11 @@ Note that in `CMD`, it copies the application source code into Docker volume.
 
 ### 4\. Build the docker image with the app automatically integrated into the Docker image:
 
-{% capture code %}{% raw %}docker build -t getting-started .{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}docker build -t getting-started .{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
 
 ### 5\. Run the docker image as a container:
 
-{% capture code %}{% raw %}docker run -p 3000:3000 getting-started{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}docker run -p 3000:3000 getting-started{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
 
 ### 6\. Access your TODO application via your browser at:
 
@@ -80,7 +80,7 @@ This application uses 3 docker containers.
 ### 1\. Download the example application's `compose.yaml` file:
 
 
-{% capture code %}{% raw %}wget https://github.com/docker/awesome-compose/raw/master/nextcloud-redis-mariadb/compose.yaml{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}wget https://github.com/docker/awesome-compose/raw/master/nextcloud-redis-mariadb/compose.yaml{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
 
 It creates a `nc` Docker container that is based on `nextcloud:apache` Docker image, a `redis` Docker container that is based on `redis:alpine` Docker image and a `db` that is based on `mariadb:10.5` Docker image. These 3 containers interact with one another to allow our home NextCloud server to work.
 
@@ -89,7 +89,7 @@ It creates a `nc` Docker container that is based on `nextcloud:apache` Docker im
 
 
 {% capture code %}{% raw %}# Open new terminal
-docker compose up{% endraw %}{% endcapture %} {% include code.html code=code %}
+docker compose up{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
 
 
 ### 3\. Access your NextCloud server via your browser:
