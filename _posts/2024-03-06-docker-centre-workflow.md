@@ -108,11 +108,11 @@ fi
 
 ### 1b. 🪟 [ **Windows - Powershell** ]
 
-{% capture code %}{% raw %}docker ps -aq | Where-Object { $_ -ne "" } | ForEach-Object { docker rm $_ }{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}docker ps -aq | Where-Object { $_ -ne "" } | ForEach-Object { docker rm $_ }{% endraw %}{% endcapture %} {% include code.html code=code lang="batch" %}
 
 ### 1c. 🐧 [ **Linux** ]
 
-{% capture code %}{% raw %}{% endraw %}docker rm $(docker ps -aq){% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}{% endraw %}docker rm $(docker ps -aq){% endcapture %} {% include code.html code=code lang="bash" %}
 
 ### 2a. 🐧  [ **Linux** ] - `remove_all_docker_images.bash`
 
@@ -150,11 +150,11 @@ fi
 
 ### 2b. 🪟 [ **Windows - Powershell** ]
 
-{% capture code %}{% raw %}docker rmi -f $(docker images -aq){% endraw %}{% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}docker rmi -f $(docker images -aq){% endraw %}{% endcapture %} {% include code.html code=code lang="batch" %}
 
 ### 2c. 🐧 [ **Linux** ]
 
-{% capture code %}{% raw %}{% endraw %}docker rmi $(docker images -q){% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}{% endraw %}docker rmi $(docker images -q){% endcapture %} {% include code.html code=code lang="bash" %}
 
 ## **Limitations** 👎
 
