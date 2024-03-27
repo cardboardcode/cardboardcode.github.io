@@ -44,12 +44,12 @@ opencv-python==4.9.0.80
 
 - **Mouse Movement**
 
-{% capture code %}{% raw %}pyautogui.moveTo(x=200, y=200, duration=1.0){% endraw %}{% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}pyautogui.moveTo(x=200, y=200, duration=1.0){% endraw %}{% endcapture %} {% include code.html code=code lang="python" %}
 
 - **Mouse Clicks**
 
-{% capture code %}{% raw %}pyautogui.click(x=100, y=200, button='left'){% endraw %}{% endcapture %} {% include code.html code=code %}
-{% capture code %}{% raw %}pyautogui.doubleClick(x=100, y=200, button='left'){% endraw %}{% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}pyautogui.click(x=100, y=200, button='left'){% endraw %}{% endcapture %} {% include code.html code=code lang="python" %}
+{% capture code %}{% raw %}pyautogui.doubleClick(x=100, y=200, button='left'){% endraw %}{% endcapture %} {% include code.html code=code lang="python" %}
 
 - **Screenshot Function(s)**
 
@@ -88,7 +88,7 @@ def locateOnScreen(template_path, threshold=0.99):
     # Loop through the locations and draw rectangles around the matches
     for pt in zip(*locations[::-1]):
         return pt[0] + int(w/2), pt[1] + int(h/2)
-{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% endraw %}{% endcapture %} {% include code.html code=code lang="python" %}
 
 ### LOCATE
 
@@ -104,7 +104,7 @@ scene_to_detect = ''
 while (goto_pos is None):
     scene_to_detect = 'path_to_image_to_find.png'
     goto_pos = locateOnScreen(scene_to_detect, curr_threshold)
-{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% endraw %}{% endcapture %} {% include code.html code=code lang="python" %}
 
 Replace the `path_to_image_to_find.png` with **the path to your own image**.
 
@@ -129,7 +129,7 @@ while (goto_pos is None):
     if curr_threshold <= 0:
         print("No match found - Template-Matching for [" + scene_to_detect + "] lower limit reached. Exiting...")
         sys.exit(1)
-{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% endraw %}{% endcapture %} {% include code.html code=code lang="python" %}
 
 Replace the `path_to_image_to_find.png` with **the path to your own image**.
 
@@ -147,17 +147,17 @@ def getTextFromImage(path_to_input_image):
     # Get bounding boxes within input image, deduced text as well as probability 
     for (bbox, text, prob) in text_results:
       return text, prob
-{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% endraw %}{% endcapture %} {% include code.html code=code lang="python" %}
 
 - **Keyboard Strokes**
 
 {% capture code %}{% raw %}
 pyautogui.press('left') # Press specific keyboard key.
-{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% endraw %}{% endcapture %} {% include code.html code=code lang="python" %}
 
 {% capture code %}{% raw %}
 pyautogui.write('asdf') # Type a string using keyboard.
-{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% endraw %}{% endcapture %} {% include code.html code=code lang="python" %}
 
 ## **KEYBOARD KEYS**
 
