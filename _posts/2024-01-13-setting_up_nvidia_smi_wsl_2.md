@@ -19,9 +19,9 @@ This article provides an ultra-simplified guide to settign up nvidia-smi in `WSL
 > ℹ️ Note that the installation requires a minimum of 20.2 GB.
 
 {% capture code %}{% raw %}# Install WSL 2 and Ubuntu
-wsl.exe --install{% endraw %}{% endcapture %} {% include code.html code=code %}
+wsl.exe --install{% endraw %}{% endcapture %} {% include code.html code=code lang="batch" %}
 {% capture code %}{% raw %}# Update WSL 2 to latest version
-wsl.exe --update{% endraw %}{% endcapture %} {% include code.html code=code %}
+wsl.exe --update{% endraw %}{% endcapture %} {% include code.html code=code lang="batch" %}
 
 ### **Verify**
 You should see the following successful terminal output:
@@ -43,9 +43,9 @@ The requested operation is successful. Changes will not be effective until the s
 3. Run the following command in terminal, **running with administrative privileges**:
 
 {% capture code %}{% raw %}# Update WSL 2 to latest version
-wsl.exe --update{% endraw %}{% endcapture %} {% include code.html code=code %}
+wsl.exe --update{% endraw %}{% endcapture %} {% include code.html code=code lang="batch" %}
 {% capture code %}{% raw %}# Unregister the distribution to avoid the following error [3].
-wsl --unregister Ubuntu{% endraw %}{% endcapture %} {% include code.html code=code %}
+wsl --unregister Ubuntu{% endraw %}{% endcapture %} {% include code.html code=code lang="batch" %}
 
 ### **Verify**
 You should see the following successful terminal output:
@@ -66,20 +66,20 @@ Set your username and password, following instructions in terminal.
 > ℹ️ The commands below uses the example of downloading *CUDA Toolkit 12.3*, as of this writing. The runfile is 4.07 GB.
 
 {% capture code %}{% raw %}# Remove old GPG key. For the reason, please refer to [1]
-sudo apt-get update{% endraw %}{% endcapture %} {% include code.html code=code %}
-{% capture code %}{% raw %}sudo apt-key del 7fa2af80{% endraw %}{% endcapture %} {% include code.html code=code %}
+sudo apt-get update{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
+{% capture code %}{% raw %}sudo apt-key del 7fa2af80{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
 {% capture code %}{% raw %}# Get the runfile from official Nvidia download site
-wget https://developer.download.nvidia.com/compute/cuda/12.3.2/local_installers/cuda_12.3.2_545.23.08_linux.run{% endraw %}{% endcapture %} {% include code.html code=code %}
+wget https://developer.download.nvidia.com/compute/cuda/12.3.2/local_installers/cuda_12.3.2_545.23.08_linux.run{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
 
 {% capture code %}{% raw %}# Install gcc required for Nvidia CUDA Toolkit
-sudo apt-get update && apt-get install build-essential{% endraw %}{% endcapture %} {% include code.html code=code %}
+sudo apt-get update && apt-get install build-essential{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
 
 {% capture code %}{% raw %} Run the runfile and follow instructions in terminal to fully download
-sudo sh cuda_12.3.2_545.23.08_linux.run{% endraw %}{% endcapture %} {% include code.html code=code %}
+sudo sh cuda_12.3.2_545.23.08_linux.run{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
 
 # Export PATH and LD_LIBRARY_PATH
-{% capture code %}{% raw %}export PATH=$PATH:/usr/local/cuda-12.3/bin:{% endraw %}{% endcapture %} {% include code.html code=code %}
-{% capture code %}{% raw %}export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.3/lib64:{% endraw %}{% endcapture %} {% include code.html code=code %}
+{% capture code %}{% raw %}export PATH=$PATH:/usr/local/cuda-12.3/bin:{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
+{% capture code %}{% raw %}export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.3/lib64:{% endraw %}{% endcapture %} {% include code.html code=code lang="bash" %}
 
 ### **Verification**
 You should see a similar output as shown below:
