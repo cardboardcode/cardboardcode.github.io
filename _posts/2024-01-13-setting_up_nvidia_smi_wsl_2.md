@@ -2,6 +2,7 @@
 layout: post
 title:  "Setting up nvidia-smi on WSL 2"
 date:   2024-01-12 12:04:01 +0800
+permalink: /SettingUpNvidiaSMIonWSL2/
 categories: nvidia
 ---
 

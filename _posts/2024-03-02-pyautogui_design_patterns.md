@@ -2,6 +2,7 @@
 layout: post
 title:  "PyAutoGUI Design Pattern"
 date:   2024-03-02 15:27:49 +0800
+permalink: /PyAutoGUIDesignPattern/
 categories: pyautogui, python
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title:  "How To Sign or Sign Off on Git Commits"
 date:   2024-01-13 12:04:01 +0800
+permalink: /HowToSignorSignOffOnGitCommits/
 categories: git
 ---
 

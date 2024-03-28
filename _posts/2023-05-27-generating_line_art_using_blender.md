@@ -2,6 +2,7 @@
 layout: post
 title:  "Generating Line Art in Blender"
 date:   2023-05-27 13:05:31 +0800
+permalink: /GeneratingLineArtInBlender/
 categories: blender
 ---
 

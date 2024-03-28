@@ -2,6 +2,7 @@
 layout: post
 title:  "Concept Artist Blender Tool Kit"
 date:   2024-02-27 19:05:49 +0800
+permalink: /ConceptArtistBlenderToolKit/
 categories: blender
 ---
 

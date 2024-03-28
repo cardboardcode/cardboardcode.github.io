@@ -2,6 +2,7 @@
 layout: post
 title:  "ROS2 Perception Landscape At A Glance [Ongoing]"
 date:   2024-01-01 15:45:49 +0800
+permalink: /ROS2 Perception LandscapeAtAGlance/
 categories: ros2
 ---
 

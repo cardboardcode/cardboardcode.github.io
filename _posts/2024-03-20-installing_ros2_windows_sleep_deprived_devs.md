@@ -2,6 +2,7 @@
 layout: post
 title:  "How To Install ROS 2 on Windows for Sleep-Deprived Developers"
 date:   2024-03-20 20:27:49 +0800
+permalink: /InstallingROS2OnWindowsSleepyGuide/
 categories: ROS 2, windows
 ---
 
