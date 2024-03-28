@@ -15,15 +15,28 @@ layout: default
       {%- endif -%}</p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+  <div class="float-container">
+    <div class="float-child-toc">
+      <div class="toc">
+        <b>Jump to:</b>
+        {% include toc.html html=content %}
+      </div>
+    </div>
+    <div class="float-child">
+      <div class="post-content e-content" itemprop="articleBody">
+      {{ content }}
+      </div>
+    </div>
+
+    <div class="float-child">
+      {%- if site.disqus.shortname -%}
+        {%- include disqus_comments.html -%}
+      {%- endif -%}
+
+      <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+
+      {% include comments.html %}
+    </div>
   </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-
-  {% include comments.html %}
 </article>
