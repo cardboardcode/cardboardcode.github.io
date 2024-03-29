@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Optimizing Windows 10 when using inside KVM"
-date:   2024-03-15 13:40:49 +0800
 permalink: /OptimizingWindows10WhenInKVM/
 categories: KVM, virtual machine
 ---

@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Difference between Dockerfile and docker compose"
-date:   2023-02-09 21:56:49 +0800
 permalink: /DifferenceBetweenDockerfileAndDockerCompose/
 categories: docker
 ---

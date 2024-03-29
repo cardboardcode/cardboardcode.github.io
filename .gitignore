@@ -1,3 +1,4 @@
 # Directories to be ignored
 vendor/
 _site/
+Gemfile.lock

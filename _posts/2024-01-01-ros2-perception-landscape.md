@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "ROS2 Perception Landscape At A Glance [ Ongoing ]"
-date:   2024-01-01 15:45:49 +0800
 permalink: /ROS2PerceptionLandscapeAtAGlance/
 categories: ros2, perception, computer vision
 ---
-
-
 
 This article focuses on the **ongoing ROS2 ecosystem of perception-related packages**. 
 

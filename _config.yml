@@ -28,6 +28,7 @@ highlighter: rouge
 remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
+  - jekyll-last-modified-at
 minima:
   skin: dark
 plugins:
@@ -35,6 +36,9 @@ plugins:
 
 google_analytics: UA-NNNNNNNN-N
 show_excerpts: false
+
+last-modified-at:
+    date-format: '📝 Updated on %d %b, %Y     '
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
