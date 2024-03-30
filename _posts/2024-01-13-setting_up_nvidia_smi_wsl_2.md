@@ -14,7 +14,7 @@ This article provides an ultra-simplified guide to settign up nvidia-smi in `WSL
 
 ## **Installing `WSL 2`**
 
-1. Run the following command in terminal, **running with administrative privileges**:
+1\. Run the following command in terminal, **running with administrative privileges**:
 
 > ℹ️ Note that the installation requires a minimum of 20.2 GB.
 
@@ -38,9 +38,9 @@ The requested operation is successful. Changes will not be effective until the s
 ...
 ```
 
-2. Restart PC to allow WSL 2 to take effect.
+2\. Restart PC to allow WSL 2 to take effect.
 
-3. Run the following command in terminal, **running with administrative privileges**:
+3\. Run the following command in terminal, **running with administrative privileges**:
 
 {% capture code %}{% raw %}# Update WSL 2 to latest version
 wsl.exe --update{% endraw %}{% endcapture %} {% include code.html code=code lang="batch" %}
@@ -57,11 +57,11 @@ Updating Windows Subsystem for Linux to version: X.X.XX.
 
 ## **Installing `nvidia-smi`**
 
-1. Once you are done installing `WSL 2`, open the `Ubuntu` Desktop app. A Ubuntu bash terminal should appear.
+1\. Once you are done installing `WSL 2`, open the `Ubuntu` Desktop app. A Ubuntu bash terminal should appear.
 
 Set your username and password, following instructions in terminal.
 
-2. Run the following commands in the Ubuntu terminal:
+2\. Run the following commands in the Ubuntu terminal:
 
 > ℹ️ The commands below uses the example of downloading *CUDA Toolkit 12.3*, as of this writing. The runfile is 4.07 GB.
 
