@@ -265,6 +265,7 @@ DEPENDENCIES
   github-pages (~> 227)
   jekyll-feed (~> 0.6)
   jekyll-last-modified-at
+  jekyll-seo-tag
   kramdown-parser-gfm
   minima (~> 2.0)
   tzinfo (~> 1.2)
