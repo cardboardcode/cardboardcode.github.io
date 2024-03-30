@@ -24,19 +24,19 @@ This is for ease of development. Providing an intuitive overview of what your te
 
 ## **Initial Steps**
 
-1. Select your mesh object you wish to apply Texture Painting to.
+1\. Select your mesh object you wish to apply Texture Painting to.
 
-2. Press `Tab` to go to edit mode. 
+2\. Press `Tab` to go to edit mode. 
 
-3. Press `Ctrl` + `a` to select all mesh faces of selected object.
+3\. Press `Ctrl` + `a` to select all mesh faces of selected object.
 
-4. Press `u` to open `UV Mapping` and select **Unwrap**
+4\. Press `u` to open `UV Mapping` and select **Unwrap**
 
-5. Add a new **Base Color** texture under the `Tool` tab as shown below:
+5\. Add a new **Base Color** texture under the `Tool` tab as shown below:
 
 ![](/img/2024_03_10/adding_texture_button.png)
 
-6. Configure the **Base Color** texture with the recommended settings as shown below:
+6\. Configure the **Base Color** texture with the recommended settings as shown below:
 
 ![](/img/2024_03_10/base_color_settings.png)
 
