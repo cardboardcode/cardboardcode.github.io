@@ -44,11 +44,11 @@ git commit --signoff --message 'This is my commit message'
 
 Please **skip Step 1 and 2** if you have already generated and added your GPG key.
 
-1. Generate your GPG key by following [the official documentation](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
+1\. Generate your GPG key by following [the official documentation](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
 
-2. Add your GPG key to your GitHub account by following [the official documentation](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account) 
+2\. Add your GPG key to your GitHub account by following [the official documentation](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account) 
 
-3. Use the following `git` command to sign:
+3\. Use the following `git` command to sign:
 
 ```bash
 git commit -S -m "This is my commit message"
