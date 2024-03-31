@@ -32,7 +32,7 @@ These resources not only allowed me to achieve what is required at work, it also
 
 ## **Tool**
 
-1\. **Colcon Build Tool** - Essential for building ROS 2 packages
+1\. **Colcon Build Tool** - Essential cli tool for building ROS 2 packages
 
 `Link`: https://colcon.readthedocs.io/en/released/index.html
 
@@ -40,16 +40,38 @@ These resources not only allowed me to achieve what is required at work, it also
     > ROS 2 does not automatically build colcon tools which is required for building basic ROS 2 packages. 
     > Use the link above for instructions to install. 
 
+2\. **Visual Studio Code** - Useful GUI application for writing code.
+
+`Link` : https://code.visualstudio.com/docs/setup/linux
+
+    > Install Plugin: https://marketplace.visualstudio.com/items?itemName=ms-iot.vscode-ros
+
+3\. **VNC Docker for ROS 2** - Useful automatic environment setup tool to get started using ROS 2:
+
+`Link` : https://github.com/Tiryoh/docker-ros2-desktop-vnc
+
+4\. **act** - Useful for running GitHub Action locally before commiting to cloud.
+
+`Link`: https://github.com/nektos/act
+
+5\. **ROS 2 Dockers** - Useful for Continuous Integration concerning ROS and environment standardization among team developers.
+
+`Link`: https://hub.docker.com/_/ros/
+
 ## **Code**
 
 1\. **Code Examples for Exploration** - Useful for exploring different types of implement you may need for your projects.
 
 `Link`: https://github.com/ros2/demos
 `Link` : https://github.com/ros2/examples 
+`Link` : https://github.com/IntelligentSystemsLabUTV/ros2-examples
+`Link` : https://github.com/mikeferguson/ros2_cookbook
 
 2\. **Industrial Standard GitHub Action Workflow** - Useful for integrating industrial-standard static and dynamic analysis via Continuous Integration via GitHub Action.
 
 `Link` : https://github.com/ros-industrial/industrial_ci
 
-3\. 
+3\. **RMF Demos** - Useful for getting started quickly with `OpenRMF`.
+
+`Link`: https://github.com/open-rmf/rmf_demos
 
