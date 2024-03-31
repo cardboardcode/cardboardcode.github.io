@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "How To Install ROS 2 on Windows for Sleep-Deprived Developers"
+title:  "Sleepy Guide: How To Install ROS 2 on Windows 10"
 permalink: /InstallingROS2OnWindowsSleepyGuide/
-categories: ROS 2, windows
+categories: ROS 2, windows, Windows 10
 ---
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjdqcnM5OGdvbW5pM3E2OGJ5MjN0YnRrYnN0dzdkaDYyemM3YWgwdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/z2Sectp9SiC88/giphy.gif)
