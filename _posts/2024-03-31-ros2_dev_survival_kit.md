@@ -26,9 +26,13 @@ These resources not only allowed me to achieve what is required at work, it also
 
 `Link` : https://docs.ros.org/en/humble/How-To-Guides.html
 
+5\. **Open Source Licenses** - Useful for understanding the licenses applied to different ROS 2 packages in the ecosystem
+
+`Link` : https://opensource.org/licenses
+
 ## **Tool**
 
-1\. **Colcon Build Tool**
+1\. **Colcon Build Tool** - Essential for building ROS 2 packages
 
 `Link`: https://colcon.readthedocs.io/en/released/index.html
 
@@ -38,10 +42,16 @@ These resources not only allowed me to achieve what is required at work, it also
 
 ## **Code**
 
-1\. **Code Examples for Exploration**
+1\. **Code Examples for Exploration** - Useful for exploring different types of implement you may need for your projects.
 
 `Link`: https://github.com/ros2/demos
 `Link` : https://github.com/ros2/examples 
+
+2\. **Industrial Standard GitHub Action Workflow** - Useful for integrating industrial-standard static and dynamic analysis via Continuous Integration via GitHub Action.
+
+`Link` : https://github.com/ros-industrial/industrial_ci
+
+3\. 
 
 ## **References**
 
