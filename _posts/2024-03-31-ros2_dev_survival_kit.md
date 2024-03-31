@@ -18,6 +18,16 @@ These resources not only allowed me to achieve what is required at work, it also
 
 `Link`: https://github.com/fkromer/awesome-ros2
 
+## **Tool**
+
+1\. **Colcon Build Tool**
+
+`Link`: https://colcon.readthedocs.io/en/released/index.html
+
+    > ⚠️
+    > ROS 2 does not automatically build colcon tools which is required for building basic ROS 2 packages. 
+    > Use the link above for instructions to install. 
+
 ## **Code**
 
 1\. **Code Examples for Exploration**
