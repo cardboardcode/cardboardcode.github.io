@@ -53,6 +53,3 @@ These resources not only allowed me to achieve what is required at work, it also
 
 3\. 
 
-## **References**
-
-1. []()
