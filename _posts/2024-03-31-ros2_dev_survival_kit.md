@@ -10,13 +10,21 @@ These resources not only allowed me to achieve what is required at work, it also
 
 ##  **Documentations**
 
-1\. **General Documentation**
+1\. **General Documentation** - Essential for understanding ROS 2.
 
 `Link`: https://docs.ros.org/en/humble/index.html
 
-2\. **3rd-Party ROS 2 Resource Curation List**
+2\. **3rd-Party ROS 2 Resource Curation List** - Useful for knowing what open-source ROS 2 packages are out there.
 
 `Link`: https://github.com/fkromer/awesome-ros2
+
+3\. **ROS 2  Distributions** - Useful to understand the general roadmap of ROS 2.
+
+`Link` : https://docs.ros.org/en/humble/Releases.html
+
+4\. **How To Guides** - Useful for exploring different types of implement you may need for your projects.
+
+`Link` : https://docs.ros.org/en/humble/How-To-Guides.html
 
 ## **Tool**
 
