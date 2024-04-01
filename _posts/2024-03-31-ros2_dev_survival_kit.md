@@ -61,6 +61,8 @@ These resources not only allowed me to achieve what is required at work, it also
 6\. **gdb** - Useful for debugging runtime errors.
 
 `Link`: https://sourceware.org/gdb/
+`Link`: https://devguide.python.org/development-tools/gdb/ - For python debugging
+`Link`: https://github.com/reveng007/GDB-Cheat-Sheet - A cheat sheet for using gdb.
 
 ## **Code**
 
