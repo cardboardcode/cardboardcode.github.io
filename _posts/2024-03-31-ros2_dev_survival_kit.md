@@ -58,6 +58,10 @@ These resources not only allowed me to achieve what is required at work, it also
 
 `Link`: https://hub.docker.com/_/ros/
 
+6\. **gdb** - Useful for debugging runtime errors.
+
+`Link`: https://sourceware.org/gdb/
+
 ## **Code**
 
 1\. **Code Examples for Exploration** - Useful for exploring different types of implement you may need for your projects.
