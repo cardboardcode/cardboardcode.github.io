@@ -64,6 +64,14 @@ These resources not only allowed me to achieve what is required at work, it also
 `Link`: https://devguide.python.org/development-tools/gdb/ - For python debugging
 `Link`: https://github.com/reveng007/GDB-Cheat-Sheet - A cheat sheet for using gdb.
 
+7\. **vim** - Useful for editing code on the fly and with lighweight software.
+
+`Link`: https://github.com/cardboardcode/quick_vim
+
+7\. **nano** - Useful for editing code in Docker containers with built-in lighweight software.
+
+`Link`: https://github.com/cardboardcode/quick_nano
+
 ## **Code**
 
 1\. **Code Examples for Exploration** - Useful for exploring different types of implement you may need for your projects.
