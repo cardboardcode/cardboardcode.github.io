@@ -75,3 +75,10 @@ These resources not only allowed me to achieve what is required at work, it also
 
 `Link`: https://github.com/open-rmf/rmf_demos
 
+## **Programming Languages**
+
+- [Bash](https://www.gnu.org/software/bash/)
+- [C++](https://cplusplus.com/)
+- [Python](https://www.python.org/)
+- [Markdown](https://www.markdownguide.org/)
+
