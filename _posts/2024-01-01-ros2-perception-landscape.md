@@ -9,7 +9,7 @@ This article focuses on the **ongoing ROS2 ecosystem of perception-related packa
 
 Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2/), this article aims to provide an experimental platform that provides relevant information about a repository upfront so that ROS2 developers can **make better decisions of software adoption quicker**.  
 
-## **Applications**
+## **Applications** ⚙️
 
 | [vision_opencv](https://github.com/ros-perception/vision_opencv/tree/ros2) | Packages for interfacing **ROS2** with **OpenCV**. |
 |:----------|:----------|
