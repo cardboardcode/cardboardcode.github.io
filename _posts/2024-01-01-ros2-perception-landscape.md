@@ -63,7 +63,7 @@ Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2
 |:----------|:----------|
 | <img src="https://m3-markdown-badges.vercel.app/stars/3/2/ros-perception/image_transport_plugins"> | [![GitHub last commit](https://img.shields.io/github/last-commit/ros-perception/image_transport_plugins.svg?style=flat)]() |
 
-## **Camera Drivers**
+## **Camera Drivers** 📷
 
 | [realsense-ros](https://github.com/IntelRealSense/realsense-ros) | **Intel**(R) **RealSense**(TM) ROS Wrapper for Depth Camera |
 |:----------|:----------|
