@@ -86,5 +86,14 @@ Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2
 
 [![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=stereolabs/zed-ros2-wrapper)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=stereolabs/zed-ros2-wrapper)
 
+## **Lidar Drivers** 📷
+
+| [pf_lidar_ros2_driver](https://github.com/PepperlFuchs/pf_lidar_ros2_driver) | ROS2 driver for **Pepperl+Fuchs R2000** and **R2300 laser scanners**  |
+|:----------|:----------|
+| <img src="https://m3-markdown-badges.vercel.app/stars/3/2/PepperlFuchs/pf_lidar_ros2_driver"> | [![GitHub last commit](https://img.shields.io/github/last-commit/PepperlFuchs/pf_lidar_ros2_driver.svg?style=flat)]() |
+
+[![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=PepperlFuchs/pf_lidar_ros2_driver)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=PepperlFuchs/pf_lidar_ros2_driver)
+
 ## **References**
 1. [awesome-ros2](https://github.com/fkromer/awesome-ros2/)
+2. [A List of ROS 2 Supported Sensors for Robots](https://www.theconstruct.ai/list-ros2-supported-sensors-for-robots/)
