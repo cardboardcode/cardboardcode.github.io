@@ -94,6 +94,13 @@ Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2
 
 [![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=PepperlFuchs/pf_lidar_ros2_driver)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=PepperlFuchs/pf_lidar_ros2_driver)
 
+| [sick_scan_xd](https://github.com/SICKAG/sick_scan_xd) | ROS2 driver for **SICK lidars laser scanners**  |
+|:----------|:----------|
+| <img src="https://m3-markdown-badges.vercel.app/stars/3/2/SICKAG/sick_scan_xd"> | [![GitHub last commit](https://img.shields.io/github/last-commit/SICKAG/sick_scan_xd.svg?style=flat)]() |
+
+[![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=SICKAG/sick_scan_xd)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=SICKAG/sick_scan_xd)
+
 ## **References**
 1. [awesome-ros2](https://github.com/fkromer/awesome-ros2/)
 2. [A List of ROS 2 Supported Sensors for Robots](https://www.theconstruct.ai/list-ros2-supported-sensors-for-robots/)
+3. [ros-drivers](https://github.com/ros-drivers)
