@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Optimizing Windows 10 when using inside KVM"
+title:  "Optimizing Windows 10 when using inside KVM 🪟"
 permalink: /OptimizingWindows10WhenInKVM/
 categories: KVM, virtual machine
 ---
