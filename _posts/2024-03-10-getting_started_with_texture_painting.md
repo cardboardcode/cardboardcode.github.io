@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting Started With Texture Painting in Blender"
+title:  "Getting Started With Texture Painting in Blender 🖌️"
 permalink: /GettingStartedWithTexturingPaintingInBlender/
 categories: blender, texture painting
 ---
