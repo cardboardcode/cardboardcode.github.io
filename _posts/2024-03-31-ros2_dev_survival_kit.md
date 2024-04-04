@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A ROS 2 Developer's Survival Kit"
+title:  "A ROS 2 Developer's Survival Kit 🧰"
 permalink: /ROS2DevSurvivalKit/
 categories: ROS 2
 ---
