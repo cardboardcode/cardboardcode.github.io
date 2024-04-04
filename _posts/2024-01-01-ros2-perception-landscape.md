@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ROS2 Perception Landscape At A Glance [ Ongoing ]"
+title:  "ROS2 Perception Landscape At A Glance [ Ongoing ] 🧿"
 permalink: /ROS2PerceptionLandscapeAtAGlance/
 categories: ros2, perception, computer vision
 ---
