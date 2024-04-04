@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Docker-Centric Approach to Software Development"
+title:  "A Docker-Centric Approach to Software Development 🐳"
 permalink: /ADockerCentricApproachToSoftwareDevelopment/
 categories: pyautogui, python
 ---
