@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How To Sign or Sign Off on Git Commits"
+title:  "How To Sign or Sign Off on Git Commits 🔏"
 permalink: /HowToSignorSignOffOnGitCommits/
 categories: git
 ---
