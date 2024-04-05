@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to Create A Concept Brief"
+title:  "How to Create A Concept Brief 🗺️"
 permalink: /HowToCreateAConceptBrief/
 categories: concept artist
 ---
@@ -13,29 +13,29 @@ A concept brief is a document typically used in entertainment design (Eg. Video 
 
 Here's what an example of it looks like:
 
-### Environment Concept Brief
+### Environment Concept Brief 🖼️
 ![](img/2024_04_05/env_concept_brief.png)
 
-### Character Concept Brief
+### Character Concept Brief 👤
 ![](img/2024_04_05/char_concept_brief.png)
 
 ## **TEMPLATES**
 
 Based on the examples provided above, here are the condensed templates you can download:
 
-### Environment Concept Brief
+### Environment Concept Brief 🖼️
 ![](img/2024_04_05/ed_concept_brief_template.png)
 
 [Click here](https://github.com/cardboardcode/cardboardcode.github.io/raw/main/img/2024_04_05/ed_concept_brief_template.pur) to download.
 
-### Character Concept Brief
+### Character Concept Brief 👤
 ![](img/2024_04_05/char_concept_brief_template.png)
 
 [Click here](https://github.com/cardboardcode/cardboardcode.github.io/raw/main/img/2024_04_05/char_concept_brief_template.pur) to download.
 
 ## **Definitions**
 
-### Environment Concept Brief
+### Environment Concept Brief 🖼️
 
 1\. > WHAT | WHY | WHERE | WHEN
 
@@ -51,7 +51,7 @@ Based on the examples provided above, here are the condensed templates you can d
 
 7\. > STATE OF THE WORLD
 
-### Character Concept Brief
+### Character Concept Brief 👤
 
 1\. > NAME
 
