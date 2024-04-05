@@ -26,8 +26,12 @@ Based on the examples provided above, here are the condensed templates you can d
 ### Environment Concept Brief
 ![](img/2024_04_05/ed_concept_brief_template.png)
 
+[Click here](https://github.com/cardboardcode/cardboardcode.github.io/raw/main/img/2024_04_05/ed_concept_brief_template.pur) to download.
+
 ### Character Concept Brief
 ![](img/2024_04_05/char_concept_brief_template.png)
+
+[Click here](https://github.com/cardboardcode/cardboardcode.github.io/raw/main/img/2024_04_05/char_concept_brief_template.pur) to download.
 
 ## **Definitions**
 
