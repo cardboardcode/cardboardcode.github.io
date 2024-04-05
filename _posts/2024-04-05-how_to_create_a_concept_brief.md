@@ -71,5 +71,8 @@ Here's what an example of it looks like:
 
 ## **Places To Source For References**
 
-- []()
+- [Pinterest](https://www.pinterest.com/) - For General Resources
+- [Concept Art World](https://conceptartworld.com/) - For Art Direction references from western artists.
+- [Creative Uncut](https://www.creativeuncut.com/) - For Art Direction references from japanese artists.
+- [Artstation](https://www.artstation.com/) - For Art Direction references.
 
