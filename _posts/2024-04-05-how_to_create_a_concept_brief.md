@@ -21,6 +21,14 @@ Here's what an example of it looks like:
 
 ## **TEMPLATES**
 
+Based on the examples provided above, here are the condensed templates you can download:
+
+### Environment Concept Brief
+![](img/2024_04_05/ed_concept_brief_template.png)
+
+### Character Concept Brief
+![](img/2024_04_05/char_concept_brief_template.png)
+
 ## **Definitions**
 
 ### Environment Concept Brief
