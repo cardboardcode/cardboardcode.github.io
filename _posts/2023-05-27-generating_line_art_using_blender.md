@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Generating Line Art in Blender"
+title:  "Generating Line Art in Blender ✒️"
 permalink: /GeneratingLineArtInBlender/
 categories: blender
 ---

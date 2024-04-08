@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Difference between Dockerfile and docker compose"
+title:  "Difference between Dockerfile and docker compose 🐳"
 permalink: /DifferenceBetweenDockerfileAndDockerCompose/
 categories: docker
 ---
