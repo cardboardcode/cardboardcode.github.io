@@ -75,7 +75,9 @@ Always reference!
 
 ### Character Concept Brief 👤
 
-1\. `NAME`
+1\. `NAME(AGE)`
+
+This refers to a name of the character you have in mind as well as the age.
 
 2\. `WHAT, WHY, WHERE. WHEN`
 
@@ -109,4 +111,5 @@ Always reference!
 - [Concept Art World](https://conceptartworld.com/) - For Art Direction references from western artists.
 - [Creative Uncut](https://www.creativeuncut.com/) - For Art Direction references from japanese artists.
 - [Artstation](https://www.artstation.com/) - For Art Direction references.
+- [character.ai](https://character.ai/) - For generating possible character names and backstories automatically.
 
