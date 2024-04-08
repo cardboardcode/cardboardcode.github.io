@@ -81,6 +81,14 @@ This refers to a name of the character you have in mind as well as the age.
 
 2\. `WHAT, WHY, WHERE. WHEN`
 
+`WHAT` refers to the type of main occupation/archetype of the character you have in mind.
+
+`WHY` refers to a potentially contrasting trait in the character you have in mind.
+
+`WHERE` refers to a possible location your character may be living or operating in.
+
+`WHEN` refers to the time period in which the character is in. Eg. FUTURE, PRESENT, MEDIEVAL TIMES, POST-WW1
+
 3\. `DESCRIPTION`
 
 4\. `PHYSICAL TRAITS`
