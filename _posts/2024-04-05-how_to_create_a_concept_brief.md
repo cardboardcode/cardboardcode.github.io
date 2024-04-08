@@ -39,6 +39,14 @@ Based on the examples provided above, here are the condensed templates you can d
 
 1\. `WHAT, WHY, WHERE. WHEN`
 
+`WHAT` refers to the type of main structure in the environment you intend to render.
+
+`WHY` refers to a event that could be happening in the environment you intend to render.
+
+`WHERE` refers to a possible location you intend to render the environment in.
+
+`WHEN` refers to the time period in which the environment is in. Eg. FUTURE, PRESENT, MEDIEVAL TIMES, POST-WW1
+
 2\. `GOAL`
 
 3\. `IDEAS & SUGGESTION`
