@@ -49,15 +49,29 @@ Based on the examples provided above, here are the condensed templates you can d
 
 2\. `GOAL`
 
+This refers to a story that gives more in-depth details about what is happening in the environment.
+
 3\. `IDEAS & SUGGESTION`
+
+This can include at least 5 things/ideas that the environment could contain.
 
 4\. `FOCAL POINT`
 
+This refers to the focal point which you want viewers to see the most in the environment.
+
 5\. `ART DIRECTION`
+
+This refers to the focal point which you want viewers to see the most in the environment.
 
 6\. `LOCATION`
 
+This can include at least 3 possible real-life locations which the environment can be based on.
+
 7\. `STATE OF THE WORLD`
+
+This includes only real-life photo references used for specific concepts/ideas/objects in the environment.
+
+Always reference!
 
 ### Character Concept Brief 👤
 
