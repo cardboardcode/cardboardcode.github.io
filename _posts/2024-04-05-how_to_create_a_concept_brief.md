@@ -91,27 +91,51 @@ This refers to a name of the character you have in mind as well as the age.
 
 3\. `DESCRIPTION`
 
+This refers to a story that gives more in-depth details about the character and how he/she came to be.
+
 4\. `PHYSICAL TRAITS`
+
+This can include at least 5 physical features that describe what the character should roughly look like.
 
 5\. `ART STYLE`
 
+This refers to the visuals your character may be based off.
+
 6\. `THEME`
+
+This refers to the specific game universe your character may reside in.
 
 7\. `OCCUPATION/WHAT`
 
+This can include at least 5 occupational features that make your character unique and interesting.
+
 8\. `IDEAS`
+
+This can include at least 5 general ideas that make your character unique and interesting.
 
 9\. `FOCAL POINT(S)`
 
+This should include only one thing which you would like to direct viewers' attention to on your character.
+
 10\. `TARGET GAME/STUDIO`
+
+This should include at least 2 artpieces from the game/film you feel your character should be based off from.
 
 11\. `LOCATION`
 
+This should include at least 3 possible locations your character may be living or operating in.
+
 12\. `CONTEXT`
+
+This should include at least 1 art piece showing how the character is doing or what is happening around him/her.
 
 13\. `ART DIRECTION`
 
+This should include at least 3 art pieces establishing the visual standards of the character.
+
 14\. `STATE OF THE WORLD`
+
+This includes only real-life photo references used for specific concepts/ideas/objects of the character you have in mind.
 
 ## **Places To Source For References**
 
