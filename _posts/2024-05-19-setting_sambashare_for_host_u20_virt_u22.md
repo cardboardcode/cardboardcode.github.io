@@ -68,7 +68,7 @@ The alternative would be to use a physical thumbdrive, treat it as the shared fo
 
 7. Add the shared network folder to your file directory using the IP address of Virtual **Ubuntu** `22.04`.
 
-> smb://INSERT_IP_ADDRESS_HERE/
+> smb://INSERT IP ADDRESS HERE/
 
 > Eg. smb://192.168.50.25
 
