@@ -20,9 +20,9 @@ The alternative would be to use a physical thumbdrive, treat it as the shared fo
 
 ## **Steps**
 
-1. Start up your Virtual **Ubuntu** `22.04` via `KVM's virt-manager`.
+1\. Start up your Virtual **Ubuntu** `22.04` via `KVM's virt-manager`.
 
-2. Install `sambashare` in Virtual **Ubuntu** `22.04` by running the following command:
+2\. Install `sambashare` in Virtual **Ubuntu** `22.04` by running the following command:
 
 {% capture code %}{% raw %}sudo apt-get update{% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
@@ -30,7 +30,7 @@ The alternative would be to use a physical thumbdrive, treat it as the shared fo
 {% capture code %}{% raw %}sudo apt-get install sambashare{% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-3. Include the following code snippet in the file, `/etc/samba/smb.conf`
+3\. Include the following code snippet in the file, `/etc/samba/smb.conf`
 
 {% capture code %}{% raw %}sudo gedit /etc/samba/smb.conf{% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
@@ -49,24 +49,24 @@ The alternative would be to use a physical thumbdrive, treat it as the shared fo
 
 > Eg. /home/garybey/Downloads
 
-4. Restart Samba using the command below to apply the changes.
+4\. Restart Samba using the command below to apply the changes.
 
 {% capture code %}{% raw %}sudo systemctl restart smbd{% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-5. Create a password to lock the shared folder:
+5\. Create a password to lock the shared folder:
 
 {% capture code %}{% raw %}sudo smbpasswd -a username{% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
 > Replace 'username' with your ubuntu user name.
 
-6. In Host **Ubuntu** `20.04`, identify the **IP ADDRESS** of Virtual **Ubuntu** `22.04` by running the following command in terminal:
+6\. In Host **Ubuntu** `20.04`, identify the **IP ADDRESS** of Virtual **Ubuntu** `22.04` by running the following command in terminal:
 
 {% capture code %}{% raw %}virsh net-dhcp-leases default{% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-7. Add the shared network folder to your file directory using the IP address of Virtual **Ubuntu** `22.04`.
+7\. Add the shared network folder to your file directory using the IP address of Virtual **Ubuntu** `22.04`.
 
 > smb://INSERT IP ADDRESS HERE/
 
