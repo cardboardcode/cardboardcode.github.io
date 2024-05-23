@@ -57,7 +57,7 @@ While the documentation of RMF is comprehensive, readers or developers may still
 
 **Link**: https://open-rmf.github.io/rmf-panel-js/
 
-## **Verify** :white_check_mark:
+## **Verify** ✅
 
 1\. Download `hotel_tasks.json` using the command below:
 
