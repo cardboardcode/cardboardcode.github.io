@@ -17,4 +17,5 @@ While the documentation of RMF is comprehensive, readers or developers may still
 
 ## **References**
 
-- []()
+- [Root repository for the RMF software](https://github.com/open-rmf/rmf)
+- [Demonstrations of the OpenRMF software](https://github.com/open-rmf/rmf_demos?tab=readme-ov-file)
