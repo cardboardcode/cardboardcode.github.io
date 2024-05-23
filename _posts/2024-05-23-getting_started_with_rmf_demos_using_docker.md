@@ -13,7 +13,65 @@ While the documentation of RMF is comprehensive, readers or developers may still
 
 ## **Steps**
 
-1\. 
+1\. **Download** the latest docker image containing the RMF demos:
+
+{% capture code %}{% raw %}docker pull ghcr.io/open-rmf/rmf/rmf_demos:latest
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+> Caution: This instruction will take a while depending on your internet and local workstation. Grab a coffee or do something else while you wait. 
+
+2\. **Rename** the docker image to `rmf:latest`:
+
+{% capture code %}{% raw %}docker tag ghcr.io/open-rmf/rmf/rmf_demos:latest rmf:latest
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+3\. Enable Graphic User Interface access for docker:
+
+> WIP
+
+{% capture code %}{% raw %}
+
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+> Note that this command runs a security risk and should not be used as an official deployment. For the context of research and learning, this command should be okay.
+
+4\. Create a docker container from the docker image downloaded:
+
+> WIP
+
+{% capture code %}{% raw %}
+
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+5\. Launch `rmf_demos_gz_classic` ROS 2 package:
+
+{% capture code %}{% raw %}ros2 launch rmf_demos_gz_classic hotel.launch.xml
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+6\. Open the following link in your browser to access the RMF Panel which you can use to send requests to robots in simulation:
+
+**Link**: https://open-rmf.github.io/rmf-panel-js/
+
+## **Verify** :white_check_mark:
+
+1\. Download `hotel_tasks.json` using the command below:
+
+{% capture code %}{% raw %}wget https://github.com/open-rmf/rmf_demos/blob/main/rmf_demos_panel/task_lists/hotel_tasks.json
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+2\. Upload `hotel_tasks.json` to RMF Panel:
+
+> WIP
+
+3\. Upon uploading, you should then see `tinyrobot_1` robot in Gazebo moving. 
+
+> WIP
 
 ## **References**
 
