@@ -29,10 +29,8 @@ While the documentation of RMF is comprehensive, readers or developers may still
 
 3\. Enable Graphic User Interface access for docker:
 
-> WIP
-
 {% capture code %}{% raw %}
-
+xhost +local:docker
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
@@ -40,9 +38,15 @@ While the documentation of RMF is comprehensive, readers or developers may still
 
 4\. Create a docker container from the docker image downloaded:
 
-> WIP
-
 {% capture code %}{% raw %}
+docker run -it --rm \
+ --name ros2_rmf \
+ --runtime=nvidia \
+ -e DISPLAY=$DISPLAY \
+ -v /tmp/.X11-unix:/tmp/.X11-unix \
+ --net=host \
+ --ipc host \
+ rmf:latest /bin/bash
 
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
@@ -55,7 +59,7 @@ While the documentation of RMF is comprehensive, readers or developers may still
 
 6\. Open the following link in your browser to access the RMF Panel which you can use to send requests to robots in simulation:
 
-**Link**: https://open-rmf.github.io/rmf-panel-js/
+**Link**: [https://open-rmf.github.io/rmf-panel-js/](https://open-rmf.github.io/rmf-panel-js/)
 
 ## **Verify** ✅
 
@@ -67,11 +71,11 @@ While the documentation of RMF is comprehensive, readers or developers may still
 
 2\. Upload `hotel_tasks.json` to RMF Panel:
 
-> WIP
+![](/img/2024_05_23/upload_hotel_tasks.jpg)
 
 3\. Upon uploading, you should then see `tinyrobot_1` robot in Gazebo moving. 
 
-> WIP
+![](/img/2024_05_23/tinybot_1_actions_rmf_hotel_spedup.gif)
 
 ## **References**
 
