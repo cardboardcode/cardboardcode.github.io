@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting Started with Turtlebot3 Navigation Simulation using Docker" 🐢🐳
+title:  "Getting Started with Turtlebot3 Navigation Simulation using Docker 🐢🐳" 
 permalink: /GettingStartedWithTurtlebot3NavigationSimulationUsingDocker/
 categories: docker, rmf, ROS 2, humble, tutorial
 ---
