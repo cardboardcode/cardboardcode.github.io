@@ -122,6 +122,11 @@ git clone https://github.com/osrf/gazebo_models.git models --depth 1 --single-br
 8\. **Launch** the **Gazebo** Simulation:
 
 {% capture code %}{% raw %}
+cd /turtlebot3_ws
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
 export GAZEBO_MODEL_PATH=/turtlebot3_ws/.gazebo/models:
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
