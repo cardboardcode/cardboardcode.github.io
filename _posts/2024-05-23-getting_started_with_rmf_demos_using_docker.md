@@ -27,7 +27,7 @@ While the documentation of RMF is comprehensive, readers or developers may still
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-3\. Enable Graphic User Interface access for docker:
+3\. **Enable** Graphic User Interface access for docker:
 
 {% capture code %}{% raw %}
 xhost +local:docker
@@ -36,7 +36,7 @@ xhost +local:docker
 
 > Note that this command runs a security risk and should not be used as an official deployment. For the context of research and learning, this command should be okay.
 
-4\. Create a docker container from the docker image downloaded:
+4\. **Create** a docker container from the docker image downloaded:
 
 {% capture code %}{% raw %}
 docker run -it --rm \
@@ -47,11 +47,10 @@ docker run -it --rm \
  --net=host \
  --ipc host \
  rmf:latest /bin/bash
-
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-5\. Launch `rmf_demos_gz_classic` ROS 2 package:
+5\. **Launch** `rmf_demos_gz_classic` ROS 2 package:
 
 {% capture code %}{% raw %}ros2 launch rmf_demos_gz_classic hotel.launch.xml
 {% endraw %}{% endcapture %}
@@ -63,13 +62,13 @@ docker run -it --rm \
 
 ## **Verify** ✅
 
-1\. Download `hotel_tasks.json` using the command below:
+1\. **Download** `hotel_tasks.json` using the command below:
 
 {% capture code %}{% raw %}wget https://github.com/open-rmf/rmf_demos/blob/main/rmf_demos_panel/task_lists/hotel_tasks.json
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-2\. Upload `hotel_tasks.json` to RMF Panel:
+2\. **Upload** `hotel_tasks.json` to RMF Panel:
 
 ![](/img/2024_05_23/upload_hotel_tasks.jpg)
 
