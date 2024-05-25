@@ -12,7 +12,8 @@ If you simply want to get started with **Turtlebot3 Navigation Simulation** wher
 
 If this wall of text had you confused, just look at the `.gif` below:
 
-> WIP
+![](/img/2024_05_25/rviz_navigation_spedup.gif)
+![](/img/2024_05_25/gazebo_navigation_spedup.gif)
 
 ## **Steps**
 
