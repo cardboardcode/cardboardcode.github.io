@@ -147,6 +147,11 @@ export TURTLEBOT3_MODEL=burger
 {% include code.html code=code lang="bash" %}
 
 {% capture code %}{% raw %}
+source install/setup.bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
