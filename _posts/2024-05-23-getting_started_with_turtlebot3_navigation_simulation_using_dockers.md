@@ -66,11 +66,6 @@ mkdir -p turtlebot3_ws/src && cd turtlebot3_ws/src
 {% include code.html code=code lang="bash" %}
 
 {% capture code %}{% raw %}
-mkdir -p turtlebot3_ws/src && cd turtlebot3_ws/src
-{% endraw %}{% endcapture %}
-{% include code.html code=code lang="bash" %}
-
-{% capture code %}{% raw %}
 git clone -b humble-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git --single-branch --depth 1
 git clone -b humble-devel https://github.com/ROBOTIS-GIT/turtlebot3.git --single-branch --depth 1
 
