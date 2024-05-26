@@ -7,7 +7,8 @@ categories: docker, rmf, ROS 2, humble, tutorial
 
 This article simply captures the steps I took to run a simulated Turtlebot3 ROS2 navigation stack within an isolated Docker image. 
 
-**Why Read This?**
+## **Why Read This?**
+
 If you simply want to get started with **Turtlebot3 Navigation Simulation** where you have **a virtual turtlebot3 burger**, running in **turtlebot3_world** with its ROS 2 navigational stack running and allowing for autonomous navigation using `Nav2Goal` requests sent through an `RViz` window, then this is the article for you.
 
 If this wall of text had you confused, just look at the `.gif` below:
