@@ -9,7 +9,7 @@ This article simply captures the steps I took to **run a simulated LinoRobot ROS
 
 ## **Why Read This?**
 
-
+![](/img/2024_05_27/linorobot_simulation_spedup.gif)
 
 ## **Steps**
 
@@ -52,29 +52,200 @@ docker run -it --rm \
 
 5\. **Set up** a **ROS 2** workspace:
 
-> WIP
+{% capture code %}{% raw %}
+cd /
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+mkdir -p linorobot2_ws/src && cd linorobot2_ws/src
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+git clone -b humble https://github.com/linorobot/linorobot2 --single-branch --depth 1
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
 6\. **Build** the **ROS 2** workspace:
 
 {% capture code %}{% raw %}
-colcon build --symlink-install
+cd /linorobot2_ws
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-7\. **Launch** the **Gazebo** Simulation:
+{% capture code %}{% raw %}
+rosdep update && rosdep install --from-path src --ignore-src -y --skip-keys microxrcedds_agent --skip-keys micro_ros_agent
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
+{% capture code %}{% raw %}
+colcon build
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
-8\. **Launch** the **SLAM** Simulation to start generate the map in a new terminal:
+7\. **Set up** Gazebo models:
 
-9\. **Run** `turtlebot3_teleop` to start moving the virtual turtlebot3 around on the map to populate the map in a new terminal:
+{% capture code %}{% raw %}
+cd /linorobot2_ws
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
-10\. **Save** the map by running the commands in a new terminal:
+{% capture code %}{% raw %}
+mkdir -p .gazebo/models
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
-11\. **Launch** the **Navigation** Simulation to start allowing the robot to navigate autonomously in a new terminal:
+{% capture code %}{% raw %}
+cd /linorobot2_ws/.gazebo
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+git clone https://github.com/osrf/gazebo_models.git models --depth 1 --single-branch --branch master
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+cd /linorobot2_ws/.gazebo/models && rm -r .git README.md .gitignore CMakeLists.txt LICENSE check_install.bash database.config.in manifest.xml.in
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+8\. **Launch** the **Gazebo** Simulation:
+
+{% capture code %}{% raw %}
+cd /linorobot2_ws
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+export GAZEBO_MODEL_PATH=/linorobot2_ws/.gazebo/models:
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+source /usr/share/gazebo/setup.bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+source /linorobot2_ws/install/setup.bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+export LINOROBOT2_BASE=2wd
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+export GAZEBO_MDOEL_PATH=/root/linorobot_ws/.gazebo/models:
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+source install/setup.bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+ros2 launch linorobot2_gazebo gazebo.launch.py
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+![](/img/2024_05_27/gazebo_simulation_linorobot2.png)
+
+8\. **Launch** the **SLAM** Simulation to start generate the map in **a new terminal**:
+
+{% capture code %}{% raw %}
+docker exec -it ros2_turtlebot3_gazebo bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+source /linorobot2_ws/install/setup.bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+export LINOROBOT2_BASE=2wd
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+ros2 launch linorobot2_navigation slam.launch.py rviz:=true sim:=true
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+9\. **Run** `teleop_twist_keyboard` to start moving the virtual **LinoRobot2** around on the map to populate the map in **a new terminal**:
+
+{% capture code %}{% raw %}
+docker exec -it ros2_linorobot2_gazebo bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+source /linorobot2_ws/install/setup.bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+export LINOROBOT2_BASE=2wd
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+10\. **Save** the map by running the commands in **a new terminal**:
+
+{% capture code %}{% raw %}
+docker exec -it ros2_linorobot2_gazebo bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+source /ros_entrypoint.sh
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+ros2 run nav2_map_server map_saver_cli -f playground_selfmade --ros-args -p save_map_timeout:=10000.
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+11\. **Launch** the **Navigation** Simulation to start allowing the robot to navigate autonomously in **a new terminal**:
+
+{% capture code %}{% raw %}
+docker exec -it ros2_linorobot2_gazebo bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+source /linorobot2_ws/install/setup.bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+export LINOROBOT2_BASE=2wd
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}
+ros2 launch linorobot2_navigation navigation.launch.py rviz:=true sim:=true
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
 ## **Verify** ✅
 
-> WIP
+After completing all aformentioned steps, you should see something similar on your screen like what is shown below:
+
+When sending a **Nav2 Goal** request via `RViz`, you should see the following:
+![](/img/2024_05_27/linorobot_simulation_spedup.gif)
+
+> The virtual linorobot2 should then start navigating to the new destination in **Gazebo**:
 
 ## **References**
 
