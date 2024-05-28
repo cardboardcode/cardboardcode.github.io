@@ -93,7 +93,7 @@ source /ros_entrypoint.sh
 {% include code.html code=code lang="bash" %}
 
 {% capture code %}{% raw %}
-rosdep install --from-paths src --ignore-src --rosdistro=humble -y
+rosdep update && rosdep install --from-paths src --ignore-src --rosdistro=humble -y
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
@@ -145,11 +145,6 @@ source /turtlebot3_ws/install/setup.bash
 
 {% capture code %}{% raw %}
 export TURTLEBOT3_MODEL=burger
-{% endraw %}{% endcapture %}
-{% include code.html code=code lang="bash" %}
-
-{% capture code %}{% raw %}
-source install/setup.bash
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
@@ -226,6 +221,8 @@ ros2 run nav2_map_server map_saver_cli -f /turtlebot3_ws/map
 {% include code.html code=code lang="bash" %}
 
 > This should generate map.pgm and map.yaml in `/turtlebot3_ws` file directory.
+
+> Additionally, at this stage, please close the `turtlebot3_teleop` and **SLAM** simulation terminals.
 
 11\. **Launch** the **Navigation** Simulation to start allowing the robot to navigate autonomously in a new terminal:
 
