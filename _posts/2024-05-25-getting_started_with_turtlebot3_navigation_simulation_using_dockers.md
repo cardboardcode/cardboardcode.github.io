@@ -43,10 +43,23 @@ xhost +local:docker
 
 4\. **Create** a docker container from the docker image downloaded:
 
+**If Nvidia GPU is present:**
 {% capture code %}{% raw %}
 docker run -it --rm \
  --name ros2_turtlebot3_gazebo \
  --runtime=nvidia \
+ -e DISPLAY=$DISPLAY \
+ -v /tmp/.X11-unix:/tmp/.X11-unix \
+ --net=host \
+ --ipc host \
+ rmf:latest /bin/bash
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+**If no GPU:**
+{% capture code %}{% raw %}
+docker run -it --rm \
+ --name ros2_turtlebot3_gazebo \
  -e DISPLAY=$DISPLAY \
  -v /tmp/.X11-unix:/tmp/.X11-unix \
  --net=host \
