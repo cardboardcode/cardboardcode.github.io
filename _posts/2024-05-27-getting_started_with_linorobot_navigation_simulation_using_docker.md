@@ -250,4 +250,3 @@ When sending a **Nav2 Goal** request via `RViz`, you should see the following:
 ## **References**
 
 - [LinoRobot2 GitHub Repository](https://github.com/linorobot/linorobot2)
-- []()
