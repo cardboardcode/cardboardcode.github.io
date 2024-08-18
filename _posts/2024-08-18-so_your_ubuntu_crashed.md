@@ -65,25 +65,25 @@ c\. If the above command did nothing to fix it, try the following alternative:
 
 If, like me, you have reached this stage of debugging and your issue is still persisting, run the commands below:
 
-a\. Open `sudo vim /etc/apt/sources.list`:
-```bash
-sudo vim /etc/apt/sources.list
-# If you don't have vim, use the one below:
-sudo nano /etc/apt/sources.list 
-```
+a\. Open `/etc/apt/sources.list`:
+
+{% capture code %}{% raw %}sudo nano /etc/apt/sources.list{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
 b\. Add the following 2 lines:
-```bash
-deb http://ir.archive.ubuntu.com/ubuntu/ jammy-updates main restricted universe multiverse
-deb http://ir.archive.ubuntu.com/ubuntu/ jammy-backports main restricted universe multiverse
-```
+
+{% capture code %}{% raw %}deb http://ir.archive.ubuntu.com/ubuntu/ jammy-updates main restricted universe multiverse
+deb http://ir.archive.ubuntu.com/ubuntu/ jammy-backports main restricted universe multiverse{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
 c\. Update the package index files:
-```bash
-sudo apt update
-``` 
-d\. Install `ubuntu-desktop`:
-```bash
-sudo apt install ubuntu-desktop
-```
+
+{% capture code %}{% raw %}sudo apt update{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}sudo apt install ubuntu-desktop{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
 
 ## **References**
 
