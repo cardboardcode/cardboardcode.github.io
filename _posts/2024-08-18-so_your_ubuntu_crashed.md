@@ -84,8 +84,37 @@ c\. Update the package index files:
 {% capture code %}{% raw %}sudo apt install ubuntu-desktop{% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
+## 4\. Able to boot to the Login Screen now but my screen resolution is all messed up.
+
+Also, if, like me, your GUI is now at a low resolution and you cannot change it, your nvidia graphics card driver is still broken from the update. Here's what you need to do to set thing right:
+
+a\. Remove nvidia drivers:
+
+{% capture code %}{% raw %}sudo dpkg -P $(dpkg -l | grep nvidia-driver | awk '{print $2}'){% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+b\. Switch back to nouvea driver:
+
+{% capture code %}{% raw %}sudo apt update{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}sudo apt install xserver-xorg-video-nouveau{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+c\. Shut down (not restart) your system and then boot it up.
+
+d\. Once your GUI is now back to the original resolution, install nvidia drivers:
+
+{% capture code %}{% raw %}ubuntu-drivers devices{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}sudo ubuntu-drivers autoinstall
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
 ## **References**
 
 - [Cannot install ubuntu-desktop on Ubuntu 22.04 LTS](https://askubuntu.com/a/1488891)
-- []()
+- [Unmet Dependencies ubuntu-desktop](https://unix.stackexchange.com/questions/673340/unmet-dependencies-ubuntu-desktop)
+- [Restoring the Ubuntu UI After an Unexpected tty1 Boot](https://medium.com/@elysiumceleste/restoring-the-ubuntu-ui-after-an-unexpected-tty1-boot-9f1042e03139)
+- [How to uninstall the NVIDIA drivers on Ubuntu 22.04 Jammy Jellyfish Linux](https://linuxconfig.org/how-to-uninstall-the-nvidia-drivers-on-ubuntu-22-04-jammy-jellyfish-linux)
