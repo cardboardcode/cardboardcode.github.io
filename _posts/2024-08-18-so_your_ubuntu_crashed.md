@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "So Your Ubuntu Crashed After An Update..." 
+title:  "So Your Ubuntu Crashed After An Update...⛓️‍💥" 
 permalink: /SoYourUbuntuCrashedAfterAnUpdate/
 categories: ubuntu, tty, crash, 
 ---
@@ -18,14 +18,15 @@ Follow the commands below:
 a\. Log in within `tty` terminal by typing your username first and then your password.
 
 b\. Update the package index files:
-```bash
-sudo apt-get update
-```
+
+{% capture code %}{% raw %}sudo apt-get update{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
 c\. Install `ubuntu-desktop`:
-```bash
-sudo apt-get install ubuntu-desktop
-```
+
+{% capture code %}{% raw %}sudo apt-get install ubuntu-desktop{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
 
 ## 2\. Unable to install `ubuntu-desktop` due to **unmet dependencies**.
 
@@ -34,29 +35,31 @@ The reason you are seeing this is due to broken packages concerning dependencies
 Follow the commands below:
 
 a\. Clean up your packages:
-```bash
-sudo apt autoclean
-```
-```bash
-sudo apt clean
-```
-```bash
-sudo apt autoremove
-```
+
+{% capture code %}{% raw %}sudo apt autoclean{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}sudo apt clean{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}sudo apt autoremove{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
 b\. Fix the broken packages:
-```bash
-sudo apt --fix broken
-```
-```bash
-sudo apt install -f ubuntu-desktop
-```
+
+{% capture code %}{% raw %}sudo apt --fix broken{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}sudo apt install -f ubuntu-desktop{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
 c\. If the above command did nothing to fix it, try the following alternative:
-```bash
-sudo dpkg --configure -a
-```
-```bash
-sudo apt install -f ubuntu-desktop
-```
+
+{% capture code %}{% raw %}sudo dpkg --configure -a{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+{% capture code %}{% raw %}sudo apt install -f ubuntu-desktop{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
 ## 3\. Tried all solutions above to install `ubuntu-desktop`. None of it works. 
 
