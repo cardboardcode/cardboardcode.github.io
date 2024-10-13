@@ -15,7 +15,7 @@ While the documentation of RMF is comprehensive, readers or developers may still
 
 1\. **Download** the latest docker image containing the RMF demos:
 
-{% capture code %}{% raw %}docker pull ghcr.io/open-rmf/rmf/rmf_demos:latest
+{% capture code %}{% raw %}docker pull cardboardcode/rmf_demos:humble
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
@@ -23,7 +23,7 @@ While the documentation of RMF is comprehensive, readers or developers may still
 
 2\. **Rename** the docker image to `rmf:latest`:
 
-{% capture code %}{% raw %}docker tag ghcr.io/open-rmf/rmf/rmf_demos:latest rmf:latest
+{% capture code %}{% raw %}docker tag cardboardcode/rmf_demos:humble rmf:latest
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
@@ -36,7 +36,7 @@ xhost +local:docker
 
 > Note that this command runs a security risk and should not be used as an official deployment. For the context of research and learning, this command should be okay.
 
-4\. **Create** a docker container from the docker image downloaded:
+4\. **Launch** `rmf_demos_gz_classic` ROS 2 package:
 
 {% capture code %}{% raw %}
 docker run -it --rm \
@@ -45,34 +45,26 @@ docker run -it --rm \
  -e DISPLAY=$DISPLAY \
  -v /tmp/.X11-unix:/tmp/.X11-unix \
  --net=host \
- --ipc host \
- rmf:latest /bin/bash
+ rmf:latest /bin/bash -c "ros2 launch rmf_demos_gz_classic hotel.launch.xml"
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-5\. **Launch** `rmf_demos_gz_classic` ROS 2 package:
+5\. Open the following link in your browser to access the RMF Panel which you can use to send requests to robots in simulation:
 
-{% capture code %}{% raw %}ros2 launch rmf_demos_gz_classic hotel.launch.xml
-{% endraw %}{% endcapture %}
-{% include code.html code=code lang="bash" %}
-
-6\. Open the following link in your browser to access the RMF Panel which you can use to send requests to robots in simulation:
-
-**Link**: [https://open-rmf.github.io/rmf-panel-js/](https://open-rmf.github.io/rmf-panel-js/)
+**Link**: [http://localhost:3000/dashboards](http://localhost:3000/dashboard)
 
 ## **Verify** ✅
 
-1\. **Download** `hotel_tasks.json` using the command below:
+1\. **Run** RMF Patrol and Clean tasks using the command below:
 
-{% capture code %}{% raw %}wget https://github.com/open-rmf/rmf_demos/blob/main/rmf_demos_panel/task_lists/hotel_tasks.json
-{% endraw %}{% endcapture %}
+{% capture code %}{% raw %}docker exec -it ros2_rmf bash -c "source /ros_entrypoint.sh && ros2 run rmf_demos_tasks dispatch_patrol -p restaurant  L3_master_suite -n 1 --use_sim_time"{% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-2\. **Upload** `hotel_tasks.json` to RMF Panel:
+{% capture code %}{% raw %}
+docker exec -it ros2_rmf bash -c "source /ros_entrypoint.sh && ros2 run rmf_demos_tasks dispatch_clean -cs clean_lobby --use_sim_time"{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
-![](/img/2024_05_23/upload_hotel_tasks.jpg)
-
-3\. Upon uploading, you should then see `tinyrobot_1` robot in Gazebo moving. 
+2\. Upon uploading, you should then see the robots moving in Gazebo similar to what is shown below. 
 
 ![](/img/2024_05_23/tinybot_1_actions_rmf_hotel_spedup.gif)
 
