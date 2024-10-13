@@ -51,11 +51,13 @@ docker run -it --rm \
 
 5\. Open the following link in your browser to access the RMF Panel which you can use to send requests to robots in simulation:
 
-**Link**: [http://localhost:3000/dashboards](http://localhost:3000/dashboard)
+**Link**: [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
+
+![](/img/2024_05_23/rmf_dashboard.png)
 
 ## **Verify** ✅
 
-1\. **Run** RMF Patrol and Clean tasks using the command below:
+1\. **Run** RMF Patrol and Clean tasks using the commands below:
 
 {% capture code %}{% raw %}docker exec -it ros2_rmf bash -c "source /ros_entrypoint.sh && ros2 run rmf_demos_tasks dispatch_patrol -p restaurant  L3_master_suite -n 1 --use_sim_time"{% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
