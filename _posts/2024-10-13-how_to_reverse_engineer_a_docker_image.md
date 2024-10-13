@@ -9,12 +9,13 @@ This article aims to provide easily accessible commands you could use to underst
 
 ## **Why**
 
-D
+To determine verified ways of building docker images more efficiently from restrictive docker images.
 
 ## **Instructions**
 
-D
+{% capture code %}{% raw %}docker history --format "{{.CreatedBy}}" <docker_image_name> --no-trunc | tac{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
 ## **References**
 
-- D
+- [Generating a Dockerfile From an Image](https://www.baeldung.com/ops/dockerfile-image-generate)
