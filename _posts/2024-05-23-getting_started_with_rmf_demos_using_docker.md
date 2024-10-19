@@ -49,7 +49,27 @@ docker run -it --rm \
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-5\. Open the following link in your browser to access the RMF Panel which you can use to send requests to robots in simulation:
+6\. Run `rmf_dashboard` using the command below:
+
+{% capture code %}{% raw %}
+docker run -it --rm \
+ --name rmf_web_dashboard_demo_c \
+ --net=host \
+ ghcr.io/open-rmf/rmf_deployment_template/rmf-web-dashboard-local:humble"
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+7\. Run `rmf_api_server` using the command below:
+
+{% capture code %}{% raw %}
+docker run -it --rm \
+ --name rmf_web_dashboard_demo_c \
+ --net=host \
+ ghcr.io/open-rmf/rmf_deployment_template/rmf-web-rmf-server:humble"
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+8\. Open the following link in your browser to access the RMF Panel which you can use to send requests to robots in simulation:
 
 **Link**: [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
 
