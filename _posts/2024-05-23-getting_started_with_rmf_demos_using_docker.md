@@ -63,7 +63,7 @@ docker run -it --rm \
 
 {% capture code %}{% raw %}
 docker run -it --rm \
- --name rmf_web_dashboard_demo_c \
+ --name rmf_web_rmf_server_demo_c \
  --net=host \
  ghcr.io/open-rmf/rmf_deployment_template/rmf-web-rmf-server:humble
 {% endraw %}{% endcapture %}
