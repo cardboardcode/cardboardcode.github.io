@@ -55,7 +55,7 @@ docker run -it --rm \
 docker run -it --rm \
  --name rmf_web_dashboard_demo_c \
  --net=host \
- ghcr.io/open-rmf/rmf_deployment_template/rmf-web-dashboard-local:humble"
+ ghcr.io/open-rmf/rmf_deployment_template/rmf-web-dashboard-local:humble
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
@@ -65,7 +65,7 @@ docker run -it --rm \
 docker run -it --rm \
  --name rmf_web_dashboard_demo_c \
  --net=host \
- ghcr.io/open-rmf/rmf_deployment_template/rmf-web-rmf-server:humble"
+ ghcr.io/open-rmf/rmf_deployment_template/rmf-web-rmf-server:humble
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
