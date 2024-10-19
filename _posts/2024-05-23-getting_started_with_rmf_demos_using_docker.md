@@ -54,7 +54,7 @@ docker run -it --rm \
 {% capture code %}{% raw %}
 docker run -it --rm \
  --name rmf_web_dashboard_demo_c \
- --net=host \
+ -p 3000:80 \
  ghcr.io/open-rmf/rmf_deployment_template/rmf-web-dashboard-local:humble
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
