@@ -41,6 +41,18 @@ xhost +local:docker
 {% capture code %}{% raw %}
 docker run -it --rm \
  --name ros2_rmf \
+ -e DISPLAY=$DISPLAY \
+ -v /tmp/.X11-unix:/tmp/.X11-unix \
+ --net=host \
+ rmf:latest /bin/bash -c "ros2 launch rmf_demos_gz_classic hotel.launch.xml"
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
+
+If a GPU (Graphical Processing Unit) is available, you can run the following command instead:
+
+{% capture code %}{% raw %}
+docker run -it --rm \
+ --name ros2_rmf \
  --runtime=nvidia \
  -e DISPLAY=$DISPLAY \
  -v /tmp/.X11-unix:/tmp/.X11-unix \
