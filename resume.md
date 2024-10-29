@@ -4,4 +4,5 @@ title: Résumé
 permalink: /resume/
 ---
 
-![](img/20230126_resume.jpg)
+![](img/20241029_resume_1.jpg)
+![](img/20241029_resume_2.jpg)
