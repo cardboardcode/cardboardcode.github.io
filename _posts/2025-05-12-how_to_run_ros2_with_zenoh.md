@@ -27,9 +27,8 @@ Note that Zenoh is only official supported for ROS 2 Jazzy.
 
 To get your ROS 2 components running with Zenoh, there are 2 critical steps to do as follows:
 
-- Start a Zenoh server.
-- Ensure your custom ROS package is communicating with `RMW_IMPLEMENTATION` set to `rmw_zenoh_cpp`.
-
+- **Start** a Zenoh server.
+- **Ensure** your custom ROS package is communicating with `RMW_IMPLEMENTATION` set to `rmw_zenoh_cpp`.
 
 These instructions assumes that you are running on a Linux operating system such as Ubuntu:
 
@@ -49,6 +48,19 @@ These instructions assumes that you are running on a Linux operating system such
 {% include code.html code=code lang="bash" %}
 
 3\. **Run** your ROS 2 package.
+
+Here is a quick and easy way of starting up a ROS 2 Jazzy-based Zenoh Server:
+
+{% capture code %}{% raw %}
+
+docker run -it --rm \
+	--name zenoh_server_c \
+	-e RMW_IMPLEMENTATION=rmw_zenoh_cpp \
+	--network host \
+cardboardcode/zenoh_server:jazzy bash -c "source /ros_entrypoint.sh && ros2 run rmw_zenoh_cpp rmw_zenohd"
+
+{% endraw %}{% endcapture %}
+{% include code.html code=code lang="bash" %}
 
 ## **References**
 
