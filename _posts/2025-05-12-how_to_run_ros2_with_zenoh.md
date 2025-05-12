@@ -2,7 +2,7 @@
 layout: post
 title:  "How To Run ROS 2 with Zenoh DDS" 
 permalink: /HowToRunROS2WithZenoh/
-categories: zenoh
+categories: zenoh, ros2, jazzy, server, dds
 ---
 
 This document provides instructions on how to easily set up and use Zenoh DDS as the underlying middleware.
