@@ -5,7 +5,9 @@ permalink: /SettingUpFileSharingBetweenHostU22AndVirtU22/
 categories: file-sharing, kvm, virtual machine
 ---
 
-Here are quick instructions on how to set up **sambashare** in order to easily share files between a Host Ubuntu `22.04` and Virtual Ubuntu `22.04`.
+Here are quick instructions on how to set up **sambashare** in order to easily share files between a Host Ubuntu `22.04` and Virtual Ubuntu `22.04`. 
+
+This has also been verified to work with a Virtual Ubuntu `24.04`.
 
 ## **What Is This?**
 Unlike the caveat faced when setting up file-sharing for host Ubuntu `20.04`, `enable_shared-memory` is allowed for host Ubuntu `22.04`. 
