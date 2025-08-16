@@ -11,9 +11,9 @@ layout: home
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/cardboardvoice)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/cardboardcode/)
 
-## **A Robotic Vision Researcher, ...**
-Specialized in **ROS2** (Robot Operating System) and **Computer Vision**. 
-## **Also a Concept Artist. Cartoonist**
+## **A Roboticist, ...**
+Specialized in **ROS 1/2** (Robot Operating System), **Computer Vision**, **Robot-Lift** Integration and **Heterogenuous Robotic Fleet Management (Open-RMF)**. 
+## **Also a Concept Artist & Cartoonist**
 
 Support me with a cup of coffee, either as a donation or an actual cup of coffee. Always down to chill and talk over drinks.
 
