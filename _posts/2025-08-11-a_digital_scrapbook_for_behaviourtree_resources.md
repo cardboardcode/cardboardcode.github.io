@@ -40,3 +40,7 @@ Useful when getting `behaviortree_ros` **ROS 1** package for BT-driven interacti
 ### **White Papers**
 
 - [Behavior Trees in Robotics and AI: An Introduction](https://arxiv.org/abs/1709.00084)
+
+### **Tools**
+
+- [Online BT Editor](https://behaviourtree.github.io/)
