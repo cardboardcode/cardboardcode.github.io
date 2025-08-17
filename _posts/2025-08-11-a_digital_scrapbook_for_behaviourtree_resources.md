@@ -33,7 +33,8 @@ Useful for understanding the specific CPP function calls to the `BehaviourTree.C
 
 Useful when getting `behaviortree_ros2` **ROS 2** package for BT-driven interaction via ROS 2 actions and services which have non-trivial implementations.
 
-- [BehaviourTree.ROS1](https://github.com/BehaviorTree/BehaviorTree.ROS)
+- [BehaviourTree.ROS1 - v3](https://github.com/BehaviorTree/BehaviorTree.ROS)
+- [BehaviourTree.ROS1 - v4](https://github.com/renan028/BehaviorTree.ROS/tree/rs/bt_v4)
 
 Useful when getting `behaviortree_ros` **ROS 1** package for BT-driven interaction via ROS 1 actions and services.
 
