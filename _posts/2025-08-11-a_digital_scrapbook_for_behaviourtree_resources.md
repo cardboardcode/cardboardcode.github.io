@@ -19,6 +19,7 @@ Useful for reading up quickly on what BehaviourTree.CPP is all about and get sta
 
 ### **API Documentations**
 
+#### **CPP**
 - [BehaviourTree.CPP V4 API Documentations](https://behaviortree.github.io/BehaviorTree.CPP/)
 
 Useful for understanding the specific CPP function calls to the `BehaviourTree.CPPv4` library.
@@ -26,6 +27,16 @@ Useful for understanding the specific CPP function calls to the `BehaviourTree.C
 - [BehaviourTree.CPP V3 API Documentations](https://cardboardcode.github.io/HowToSetUpBehaviourTreeCPPv3APIDocs/)
 
 Useful for understanding the specific CPP function calls to the `BehaviourTree.CPPv3` library.
+
+#### **Rust**
+- [bonsai](https://github.com/Sollimann/bonsai)
+
+Useful for understanding specific Rust function calls for use of behaviour tree in rust-based applications.
+
+#### **Python**
+- [py_trees](https://github.com/splintered-reality/py_trees)
+
+Useful for understanding specific python function calls for use of behaviour tree in ROS applications.
 
 ### **ROS-based Examples**
 
