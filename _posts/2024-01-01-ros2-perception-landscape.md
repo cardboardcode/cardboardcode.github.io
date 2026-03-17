@@ -69,22 +69,14 @@ Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2
 |:----------|:----------|
 | <img src="https://m3-markdown-badges.vercel.app/stars/3/2/IntelRealSense/realsense-ros"> | [![GitHub last commit](https://img.shields.io/github/last-commit/IntelRealSense/realsense-ros.svg?style=flat)]() |
 
-[![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=IntelRealSense/realsense-ros)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=IntelRealSense/realsense-ros)
-
-
 | [ensenso/ros_driver](https://github.com/ensenso/ros_driver) | Official ROS driver for **Ensenso** stereo cameras. |
 |:----------|:----------|
 | <img src="https://m3-markdown-badges.vercel.app/stars/3/2/ensenso/ros_driver"> | [![GitHub last commit](https://img.shields.io/github/last-commit/ensenso/ros_driver.svg?style=flat)]() |
 
 
-[![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=ensenso/ros_driver)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=ensenso/ros_driver)
-
-
 | [zed-ros2-wrapper](https://github.com/stereolabs/zed-ros2-wrapper) | ROS 2 wrapper for the **ZED** SDK  |
 |:----------|:----------|
 | <img src="https://m3-markdown-badges.vercel.app/stars/3/2/stereolabs/zed-ros2-wrapper"> | [![GitHub last commit](https://img.shields.io/github/last-commit/stereolabs/zed-ros2-wrapper.svg?style=flat)]() |
-
-[![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=stereolabs/zed-ros2-wrapper)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=stereolabs/zed-ros2-wrapper)
 
 ## **Lidar Drivers** 📷
 
@@ -92,25 +84,17 @@ Going beyond the archived [awesome-ros2](https://github.com/fkromer/awesome-ros2
 |:----------|:----------|
 | <img src="https://m3-markdown-badges.vercel.app/stars/3/2/PepperlFuchs/pf_lidar_ros2_driver"> | [![GitHub last commit](https://img.shields.io/github/last-commit/PepperlFuchs/pf_lidar_ros2_driver.svg?style=flat)]() |
 
-[![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=PepperlFuchs/pf_lidar_ros2_driver)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=PepperlFuchs/pf_lidar_ros2_driver)
-
 | [sick_scan_xd](https://github.com/SICKAG/sick_scan_xd) | ROS2 driver for **SICK lidars laser scanners**  |
 |:----------|:----------|
 | <img src="https://m3-markdown-badges.vercel.app/stars/3/2/SICKAG/sick_scan_xd"> | [![GitHub last commit](https://img.shields.io/github/last-commit/SICKAG/sick_scan_xd.svg?style=flat)]() |
 
-[![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=SICKAG/sick_scan_xd)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=SICKAG/sick_scan_xd)
-
 | [sick_scan_xd](https://github.com/SICKAG/sick_scan_xd) | ROS2 driver for **SICK lidars laser scanners**  |
 |:----------|:----------|
 | <img src="https://m3-markdown-badges.vercel.app/stars/3/2/SICKAG/sick_scan_xd"> | [![GitHub last commit](https://img.shields.io/github/last-commit/SICKAG/sick_scan_xd.svg?style=flat)]() |
-
-[![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=SICKAG/sick_scan_xd)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=SICKAG/sick_scan_xd)
 
 | [ros2_ouster_drivers](https://github.com/ros-drivers/ros2_ouster_drivers) | ROS2 driver for **Ouster OS-0, OS-1, and OS-2 Lidars**  |
 |:----------|:----------|
 | <img src="https://m3-markdown-badges.vercel.app/stars/3/2/ros-drivers/ros2_ouster_drivers"> | [![GitHub last commit](https://img.shields.io/github/last-commit/ros-drivers/ros2_ouster_drivers.svg?style=flat)]() |
-
-[![Contributors over time](https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=ros-drivers/ros2_ouster_drivers)](https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=ros-drivers/ros2_ouster_drivers)
 
 ## **References**
 1. [awesome-ros2](https://github.com/fkromer/awesome-ros2/)
