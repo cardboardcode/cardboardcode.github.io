@@ -12,4 +12,3 @@ categories: concept art, character design
 ## **References**
 
 - [A Comprehensive Guide to Character Design in Video Games](https://www.juegostudio.com/blog/video-game-character-design)
-- []()
