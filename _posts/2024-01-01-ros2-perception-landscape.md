@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "ROS2 Perception Landscape At A Glance [ Ongoing ] 🧿"
-permalink: /ROS2PerceptionLandscapeAtAGlance/
+title:  "ROS 2 Perception Landscape Survey🧿"
+permalink: /ROS2PerceptionLandscapeSurvey/
 categories: ros2, perception, computer vision
 ---
 
