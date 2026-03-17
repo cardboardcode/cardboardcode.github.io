@@ -10,6 +10,7 @@ layout: home
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/cardboardvoice/)
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/cardboardvoice)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/cardboardcode/)
+[![ArtStation](https://a11ybadges.com/badge?logo=artstation)]()
 
 ## **A Roboticist**
 Specialized in **ROS** (Robot Operating System), **Computer Vision**, **Robot-Infrastructure** Integration and **Heterogenuous Robotic Fleet Management (Open-RMF)**.
