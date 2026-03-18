@@ -3,10 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas Circle</title>
+    <title>Top-Down Pyramid Web</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a;
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="myCanvas" width="900" height="800"></canvas>
-    <script src="../assets/scripts/ternaryPlot.js"></script>
+
+    <canvas id="myCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        let width, height;
+        const nodes = [];
+        
+        const CONFIG = {
+            fighter: { color: '#ff4757', radius: 10 }, 
+            mage:    { color: '#2ed573', radius: 10 }, 
+            rogue:   { color: '#1e90ff', radius: 10 }, 
+            generic: { color: '#747d8c', radius: 7 }  
+        };
+
+        // Note: I have placed Rogue at the top index to satisfy the visual requirement
+        const classData = [
+            { role: 'rogue', name: 'ROGUE' }, // TOP NODE
+            { role: 'mage', name: 'MAGE' },
+            { role: 'fighter', name: 'FIGHTER' },
+            { role: 'generic', name: 'Thief' }, { role: 'generic', name: 'Cat Burglar' }, { role: 'generic', name: 'Stalker' }, { role: 'generic', name: 'Trickster' }, { role: 'generic', name: 'Shadowmancer' }, { role: 'generic', name: 'Binder' }, { role: 'generic', name: 'Illusionist' }, { role: 'generic', name: 'Stuv' }, { role: 'generic', name: 'Witch' }, { role: 'generic', name: 'Wizard' },
+            { role: 'generic', name: 'Infiltrator' }, { role: 'generic', name: 'Philanderer' }, { role: 'generic', name: 'Chemiston' }, { role: 'generic', name: 'Magician' }, { role: 'generic', name: 'Alchemist' }, { role: 'generic', name: 'Conjurer' }, { role: 'generic', name: 'Shaman' }, { role: 'generic', name: 'Arsonist' }, { role: 'generic', name: 'Sorcerer' },
+            { role: 'generic', name: 'Highway Man' }, { role: 'generic', name: 'Spy' }, { role: 'generic', name: 'Trap Master' }, { role: 'generic', name: 'Gambler' }, { role: 'generic', name: 'Tinker' }, { role: 'generic', name: 'Animist' }, { role: 'generic', name: 'Dreamwalker' }, { role: 'generic', name: 'Sage' }, { role: 'generic', name: 'Warlock' },
+            { role: 'generic', name: 'Ballistician' }, { role: 'generic', name: 'Poisoner' }, { role: 'generic', name: 'Dark Delver' }, { role: 'generic', name: 'Mentalist' }, { role: 'generic', name: 'Technomancer' }, { role: 'generic', name: 'Geomancer' }, { role: 'generic', name: 'Channeler' }, { role: 'generic', name: 'Theurge' },
+            { role: 'generic', name: 'Cat Purse' }, { role: 'generic', name: 'Hunter' }, { role: 'generic', name: 'Beastmaster' }, { role: 'generic', name: 'Serider' }, { role: 'generic', name: 'Enchanter' }, { role: 'generic', name: 'Psion' }, { role: 'generic', name: 'Necromancer' }, { role: 'generic', name: 'Acolyte' },
+            { role: 'generic', name: 'Scout' }, { role: 'generic', name: 'Explorer' }, { role: 'generic', name: 'Horizon Walker' }, { role: 'generic', name: 'Lore Master' }, { role: 'generic', name: 'Summoner' }, { role: 'generic', name: 'Elementalist' }, { role: 'generic', name: 'Druid' },
+            { role: 'generic', name: 'Bandit' }, { role: 'generic', name: 'Assassin' }, { role: 'generic', name: 'Ninja' }, { role: 'generic', name: 'Bard' }, { role: 'generic', name: 'Arcane Archer' }, { role: 'generic', name: 'Blue Mage' }, { role: 'generic', name: 'Battle Priest' },
+            { role: 'generic', name: 'Gunslinger' }, { role: 'generic', name: 'Ranger' }, { role: 'generic', name: 'Merchant' }, { role: 'generic', name: 'Dancer' }, { role: 'generic', name: 'Red Mage' }, { role: 'generic', name: 'Clerk' },
+            { role: 'generic', name: 'Marksman' }, { role: 'generic', name: 'Marauder' }, { role: 'generic', name: 'Adventurer' }, { role: 'generic', name: 'Diplomat' }, { role: 'generic', name: 'Spellsword' }, { role: 'generic', name: 'Battle Mage' },
+            { role: 'generic', name: 'Duelist' }, { role: 'generic', name: 'Raider' }, { role: 'generic', name: 'Strategist' }, { role: 'generic', name: 'Templar' }, { role: 'generic', name: 'Death Knight' },
+            { role: 'generic', name: 'Archer' }, { role: 'generic', name: 'Beast Rider' }, { role: 'generic', name: 'Warlord' }, { role: 'generic', name: 'Inquisitor' }, { role: 'generic', name: 'Paladin' },
+            { role: 'generic', name: 'Corsair' }, { role: 'generic', name: 'Ronin' }, { role: 'generic', name: 'Herald' }, { role: 'generic', name: 'Blade Singer' },
+            { role: 'generic', name: 'Fencer' }, { role: 'generic', name: 'Samurai' }, { role: 'generic', name: 'Monk' }, { role: 'generic', name: 'Dark Knight' },
+            { role: 'generic', name: 'Soldier' }, { role: 'generic', name: 'Martial Artist' }, { role: 'generic', name: 'Dragon Knight' },
+            { role: 'generic', name: 'Pugilist' }, { role: 'generic', name: 'Weapon Master' }, { role: 'generic', name: 'Sentinel' },
+            { role: 'generic', name: 'Shield Bearer' }, { role: 'generic', name: 'Dragoon' },
+            { role: 'generic', name: 'Cavalier' }, { role: 'generic', name: 'Berserker' }, { role: 'generic', name: 'Knight' }, { role: 'generic', name: 'Warrior' },
+        ];
+
+        class Node {
+            constructor(label, colorKey, x, y) {
+                this.label = label;
+                this.baseX = x;
+                this.baseY = y;
+                this.col = 0;
+                this.row = 0;
+            }
+
+            update(time) {
+                // Wave animation
+                const xOffset = Math.sin(time * 0.002 + this.row * 0.5) * 5; 
+                const yOffset = Math.cos(time * 0.003 + this.col * 0.5) * 3;
+                this.x = this.baseX + xOffset;
+                this.y = this.baseY + yOffset;
+            }
+
+            draw() {
+                const config = CONFIG[this.colorKey] || CONFIG.generic;
+                
+                // Node
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, config.radius, 0, Math.PI * 2);
+                ctx.fillStyle = config.color;
+                ctx.fill();
+
+                // Label
+                ctx.font = '10px Segoe UI';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillStyle = '#ffffff';
+                ctx.shadowColor = "rgba(0,0,0,0.9)";
+                ctx.shadowBlur = 3;
+                ctx.fillText(this.label, this.x, this.y + config.radius + 12);
+                ctx.shadowColor = "transparent";
+            }
+        }
+
+        function init() {
+            resizeCanvas();
+            buildPyramid();
+            animate();
+        }
+
+        function resizeCanvas() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        }
+
+        function buildPyramid() {
+            nodes.length = 0;
+            
+            const totalNodes = classData.length;
+            const rows = getGridRows(totalNodes);
+            const cols = rows; 
+
+            const spacing = 55;
+            const startY = 100; // Top margin
+            const totalHeight = (rows - 1) * spacing;
+            const triangleY = startY + (totalHeight / 2);
+
+            let dataIndex = 0;
+            for (let i = 0; i < rows; i++) {
+                const rowWidth = (2 * i) + 1; 
+                const rowCenter = (cols - 1) / 2;
+                const rowY = triangleY - (i * spacing); // Invert Y for top-down
+                
+                // Center the row X
+                const rowXBase = width / 2;
+                
+                for (let j = 0; j < rowWidth; j++) {
+                    if (dataIndex >= totalNodes) break;
+                    
+                    const item = classData[dataIndex];
+                    const offset = j - rowCenter;
+                    const absX = rowXBase + (offset * spacing);
+                    const absY = rowY;
+
+                    const n = new Node(item.name, item.role, absX, absY);
+                    n.row = i;
+                    n.col = j;
+                    nodes.push(n);
+                    dataIndex++;
+                }
+            }
+        }
+
+        function getGridRows(cols) {
+            const T = classData.length;
+            return Math.floor((-1 + Math.sqrt(1 + 8 * T)) / 2);
+        }
+
+        function drawConnections() {
+            const cols = nodes.length > 0 ? (nodes[0].col * 2 + 1) : 1; 
+            
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+
+            for (let i = 0; i < nodes.length; i++) {
+                const current = nodes[i];
+
+                // 1. Connect to Right Neighbor
+                const nextIndex = i + 1;
+                if (nextIndex < nodes.length && nodes[nextIndex].row === current.row) {
+                    ctx.moveTo(current.x, current.y);
+                    ctx.lineTo(nodes[nextIndex].x, nodes[nextIndex].y);
+                }
+
+                // 2. Connect to Down-Left Neighbor
+                const downLeftIndex = i + cols;
+                // Check if moving down to next row
+                if (downLeftIndex < nodes.length && nodes[downLeftIndex].row === current.row + 1) {
+                    // If col is 0, it connects straight down to the next row's first node
+                    if (current.col === 0) {
+                        ctx.moveTo(current.x, current.y);
+                        ctx.lineTo(nodes[downLeftIndex].x, nodes[downLeftIndex].y);
+                    } else {
+                        // If col > 0, it connects to the node to the left of the one below it
+                        const downLeft = nodes[i + cols - 1];
+                        ctx.moveTo(current.x, current.y);
+                        ctx.lineTo(downLeft.x, downLeft.y);
+                    }
+                }
+
+                // 3. Connect to Down-Right Neighbor (New for complete web)
+                const downRightIndex = i + cols + 1;
+                if (downRightIndex < nodes.length && nodes[downRightIndex].row === current.row + 1) {
+                     // If col is last in row, it connects straight down to the next row's last node
+                     // Otherwise, check if the neighbor exists
+                     const downRight = nodes[i + cols + 1];
+                     ctx.moveTo(current.x, current.y);
+                     ctx.lineTo(downRight.x, downRight.y);
+                }
+            }
+            ctx.stroke();
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            const time = Date.now();
+            drawConnections();
+
+            nodes.forEach(node => {
+                node.update(time);
+                node.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            buildPyramid();
+        });
+
+        init();
+
+    </script>
 </body>
 </html>
