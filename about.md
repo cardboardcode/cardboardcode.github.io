@@ -8,6 +8,6 @@ permalink: /about/
 
 Hi, I am **Bey Hao Yun** but just call me **Gary**.
 
-I am both a **Computer Vision Research Engineer** and **Concept Artist**. 
+I am both a **Roboticist** and **Concept Artist**. 
 
-My passions are in programming and cartooning.
+My passions are in programming and comic arts.
