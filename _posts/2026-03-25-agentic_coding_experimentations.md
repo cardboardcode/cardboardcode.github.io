@@ -51,7 +51,7 @@ Below you will see a list of tasks I assigned to the Agentic Coder and their res
 | **Task Outcome** | ✅ **SUCCESS** |
 | **Outcome Description** | This task is fairly straightforward, allowing me the user to set a clear goal on what the goal should look like and, consequently, the agentic coder to execute without issues and constant supervision or repeated prompting. |
 
-| **Task Description** | Create a simple python script that would allow me to deduce, without paid X API, whether a X post has a video or an image. |
+| **Task Description** | Create a simple python script that would allow me to deduce, without paid X API, whether a X post has a video or not. |
 |:----------|:----------|
 | **Task Outcome** | ❌ **FAIL** |
 | **Outcome Description** | This task, despite having a clear goal in mind, spiralled into failure with the agentic coder generating multiple python scripts, all of which did not work. Even when it did work for a specific set of test cases, it failed when introduced with a newer test cases. |
