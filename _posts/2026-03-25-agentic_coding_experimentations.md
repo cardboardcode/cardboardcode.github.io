@@ -11,8 +11,7 @@ With the introduction of agentic coding platforms such as **Claude Code**, **Ope
 
 It goes by many names these days. The best terminology I saw is **Agentic Coding**. It refers to allowing an Large Language Model (LLM) to not just respond to textual prompts but also have control over reading and writing of files within a developer's workstation as well as executing terminal commands. This added layer of autonomy has, in my experience thus far, saved me the need to constantly copy-paste between a terminal output and a chatbot web interface. However, there are still many limitations which you will see below as I attempt to delegate certain types of tasks to these coding agents.
 
-> If you wish to quickly get started using, be sure to follow the instructions in my latest gist below:
-> **Link**: https://gist.github.com/cardboardcode/5282e7e794b6d7757d4c8c983167f5db
+> If you wish to quickly get started using, be sure to follow the instructions in [my latest gist](https://gist.github.com/cardboardcode/5282e7e794b6d7757d4c8c983167f5db).
 
 ## **Why Run Localised?**
 
@@ -45,7 +44,7 @@ agentic coding is stretched to its limits before evaluating its results.
 
 Below you will see a list of tasks I assigned to the Agentic Coder and their respective results:
 
-> Note that this list will be updated as and when I run more experiments.
+> Note that this list will be updated as and when I run more experiments. Last updated on `25th March 2026`.
 
 | **Task Description** | Standardise naming within a folder containing sub-folders whose labels contain fragmented naming conventions but adhere to human-understandable numerical sequence |
 |:----------|:----------|
