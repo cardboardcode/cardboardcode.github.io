@@ -61,4 +61,7 @@ Below you will see a list of tasks I assigned to the Agentic Coder and their res
 | **Task Outcome** |  ✅ **SUCCESS** |
 | **Outcome Description** | The success of this task surprised me the most. The agentic coder (at least Claude Code) was able to understand the context that it needs to always run bash commands on a remote PC. After having given it `ssh` access to the laptop, the task took about 45 minutes to resolve with the agentic coder re-installing various versions of nvidia-drivers on the laptop while ensuring that the existing operating system continued to function. It knew to restart and observe for when the laptop came online again after each new install of drivers. However, on further inspection, better constraints could be set to ensure it did not leave the laptop in an unrecoverable state. This was a risky attempt. |
 
-
+| **Task Description** | Summarise code changes, commit and push code to a GitHub repository |
+|:----------|:----------|
+| **Task Outcome** |  ✅ **SUCCESS** |
+| **Outcome Description** | Straightforward and simple. The agentic coder, being able to automate this tedious task, has been the most helpful in this aspect while leaving detailed commit messages, useful for debugging using version control. |
