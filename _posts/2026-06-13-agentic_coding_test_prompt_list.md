@@ -5,7 +5,6 @@ permalink: /AgenticCodeTestPromptList/
 categories: agentic, vibe-coding, privacy, self-host
 ---
 
-[!NOTE]
 Below is a list of test prompts you can use for evaluating whether or not your agent can conduct basic tool-calling that would be useful for general tasks:
 
 | **Agentic Function** | **Prompt** |
