@@ -1,0 +1,79 @@
+/* Lightbox overlay for post images. Paired with assets/scripts/lightbox.js */
+
+html.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 4vw;
+}
+
+.lightbox-overlay[hidden] {
+  display: none;
+}
+
+.lightbox-overlay figure {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lightbox-overlay img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  background: #1b1b1b;
+}
+
+.lightbox-overlay figcaption {
+  color: #e7e7e7;
+  font-size: 0.95rem;
+  max-width: 60ch;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+  background: rgba(255, 255, 255, 0.28);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Affordance: clicking post images opens the lightbox */
+.post-content img {
+  cursor: zoom-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox-close {
+    transition: none;
+  }
+}
