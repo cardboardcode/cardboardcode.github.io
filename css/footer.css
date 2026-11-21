@@ -1,0 +1,17 @@
+/* Center the site footer tagline and social links.
+   Overrides the minima theme's left-aligned flex footer (loaded before this file). */
+
+.site-footer .footer-col-wrapper {
+  display: block;
+}
+
+.site-footer .footer-col {
+  width: auto;
+  padding: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.site-footer .social-links {
+  text-align: center;
+}
