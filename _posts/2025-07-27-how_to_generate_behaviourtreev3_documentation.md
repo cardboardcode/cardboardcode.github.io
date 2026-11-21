@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "How To Set Up BehaviourTree.CPP v3.8.7 API Documentation"
-permalink: /HowToSetUpBehaviourTreeCPPv3APIDocs/
+permalink: /posts/2025/07/27/how_to_generate_behaviourtreev3_documentation/
+redirect_from:
+  - "/HowToSetUpBehaviourTreeCPPv3APIDocs/"
 categories: behaviour-tree, robotics, api, documentations
 ---
 

@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "PyAutoGUI Design Pattern"
-permalink: /PyAutoGUIDesignPattern/
+permalink: /posts/2024/03/02/pyautogui_design_patterns/
+redirect_from:
+  - "/PyAutoGUIDesignPattern/"
 categories: pyautogui, python
 ---
 

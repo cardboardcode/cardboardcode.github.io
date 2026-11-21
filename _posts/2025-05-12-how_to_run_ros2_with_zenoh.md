@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "How To Run ROS 2 with Zenoh DDS" 
-permalink: /HowToRunROS2WithZenoh/
+permalink: /posts/2025/05/12/how_to_run_ros2_with_zenoh/
+redirect_from:
+  - "/HowToRunROS2WithZenoh/"
 categories: zenoh, ros2, jazzy, server, dds
 ---
 

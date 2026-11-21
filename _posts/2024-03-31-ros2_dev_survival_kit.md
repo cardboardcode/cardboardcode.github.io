@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "A ROS 2 Developer's Survival Kit 🧰"
-permalink: /ROS2DevSurvivalKit/
+permalink: /posts/2024/03/31/ros2_dev_survival_kit/
+redirect_from:
+  - "/ROS2DevSurvivalKit/"
 categories: ROS 2
 ---
 

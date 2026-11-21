@@ -29,10 +29,10 @@ plugins:
   - jekyll-remote-theme
   - jekyll-last-modified-at
   - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-redirect-from
 minima:
   skin: dark
-plugins:
-  - jekyll-feed
 
 google_analytics: UA-NNNNNNNN-N
 show_excerpts: false
@@ -43,11 +43,17 @@ last-modified-at:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - docs/
+  - AGENTS.md
+  - README.md
+  - tmp/
+  - .github/
+  - run_local.bash

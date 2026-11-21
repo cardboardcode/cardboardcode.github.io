@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "A Docker-Centric Approach to Software Development 🐳"
-permalink: /ADockerCentricApproachToSoftwareDevelopment/
+permalink: /posts/2024/03/06/docker-centre-workflow/
+redirect_from:
+  - "/ADockerCentricApproachToSoftwareDevelopment/"
 categories: pyautogui, python
 ---
 

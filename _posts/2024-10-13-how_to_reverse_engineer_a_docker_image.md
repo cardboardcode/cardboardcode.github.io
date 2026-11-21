@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "How To Reverse Engineer A Docker Image" 
-permalink: /HowToReverseEngineerADockerImage/
+permalink: /posts/2024/10/13/how_to_reverse_engineer_a_docker_image/
+redirect_from:
+  - "/HowToReverseEngineerADockerImage/"
 categories: docker, 
 ---
 

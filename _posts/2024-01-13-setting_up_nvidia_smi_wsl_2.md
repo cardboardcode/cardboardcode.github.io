@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Setting up nvidia-smi on WSL 2"
-permalink: /SettingUpNvidiaSMIonWSL2/
+permalink: /posts/2024/01/13/setting_up_nvidia_smi_wsl_2/
+redirect_from:
+  - "/SettingUpNvidiaSMIonWSL2/"
 categories: nvidia
 ---
 

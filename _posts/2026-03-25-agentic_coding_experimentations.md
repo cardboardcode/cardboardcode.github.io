@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Localised Agentic Coding Experimentations"
-permalink: /LocalisedAgenticCodingExperimentations/
+permalink: /posts/2026/03/25/agentic_coding_experimentations/
+redirect_from:
+  - "/LocalisedAgenticCodingExperimentations/"
 categories: claude-code, agentic, vibe-coding, privacy, self-host
 ---
 

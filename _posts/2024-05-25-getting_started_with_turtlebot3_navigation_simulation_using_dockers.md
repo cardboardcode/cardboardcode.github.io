@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Getting Started with Turtlebot3 Navigation Simulation using Docker 🐢🐳" 
-permalink: /GettingStartedWithTurtlebot3NavigationSimulationUsingDocker/
+permalink: /posts/2024/05/25/getting_started_with_turtlebot3_navigation_simulation_using_dockers/
+redirect_from:
+  - "/GettingStartedWithTurtlebot3NavigationSimulationUsingDocker/"
 categories: docker, rmf, ROS 2, humble, tutorial
 ---
 

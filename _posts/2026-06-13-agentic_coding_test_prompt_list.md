@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Agentic Code Test Prompt List"
-permalink: /AgenticCodeTestPromptList/
+permalink: /posts/2026/06/13/agentic_coding_test_prompt_list/
+redirect_from:
+  - "/AgenticCodeTestPromptList/"
 categories: agentic, vibe-coding, privacy, self-host
 ---
 

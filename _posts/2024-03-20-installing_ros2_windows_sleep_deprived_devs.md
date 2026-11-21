@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Sleepy Guide: How To Install ROS 2 on Windows 10"
-permalink: /InstallingROS2OnWindowsSleepyGuide/
+permalink: /posts/2024/03/20/installing_ros2_windows_sleep_deprived_devs/
+redirect_from:
+  - "/InstallingROS2OnWindowsSleepyGuide/"
 categories: ROS 2, windows, Windows 10
 ---
 

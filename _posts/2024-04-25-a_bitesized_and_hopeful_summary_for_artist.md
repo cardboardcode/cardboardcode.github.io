@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "A Bite-Sized Hope for The Modern Concept Artists In A Hurry"
-permalink: /ABiteSizedHopeForTheModernConceptArtists/
+permalink: /posts/2024/04/25/a_bitesized_and_hopeful_summary_for_artist/
+redirect_from:
+  - "/ABiteSizedHopeForTheModernConceptArtists/"
 categories: concept art, ai
 ---
 

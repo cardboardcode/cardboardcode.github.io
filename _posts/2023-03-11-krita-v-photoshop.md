@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Krita V Photoshop"
-permalink: /KritaVPhotoshop/
+permalink: /posts/2023/03/11/krita-v-photoshop/
+redirect_from:
+  - "/KritaVPhotoshop/"
 categories: krita
 ---
 

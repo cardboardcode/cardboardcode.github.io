@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "How to Create A Concept Brief 🗺️"
-permalink: /HowToCreateAConceptBrief/
+permalink: /posts/2024/04/05/how_to_create_a_concept_brief/
+redirect_from:
+  - "/HowToCreateAConceptBrief/"
 categories: concept artist
 ---
 

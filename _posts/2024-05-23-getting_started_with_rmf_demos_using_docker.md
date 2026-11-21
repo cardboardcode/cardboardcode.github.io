@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Getting Started with RMF Demos using Docker"
-permalink: /GettingStartedWithRMFDemosUsingDocker/
+permalink: /posts/2024/05/23/getting_started_with_rmf_demos_using_docker/
+redirect_from:
+  - "/GettingStartedWithRMFDemosUsingDocker/"
 categories: docker, rmf, ROS 2, humble, tutorial
 ---
 

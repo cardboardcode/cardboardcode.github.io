@@ -2,7 +2,9 @@
 layout: post
 title:  "Hello World"
 date:   2023-01-25 20:31:49 +0800
-permalink: /HelloWorld/
+permalink: /posts/2023/01/25/hello-world/
+redirect_from:
+  - "/HelloWorld/"
 categories: hello
 ---
 

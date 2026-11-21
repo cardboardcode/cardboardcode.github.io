@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Difference between Dockerfile and docker compose 🐳"
-permalink: /DifferenceBetweenDockerfileAndDockerCompose/
+permalink: /posts/2023/02/09/difference-between-dockerfile-dockercompose/
+redirect_from:
+  - "/DifferenceBetweenDockerfileAndDockerCompose/"
 categories: docker
 ---
 

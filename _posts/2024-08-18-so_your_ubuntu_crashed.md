@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "So Your Ubuntu Crashed After An Update...⛓️‍💥" 
-permalink: /SoYourUbuntuCrashedAfterAnUpdate/
+permalink: /posts/2024/08/18/so_your_ubuntu_crashed/
+redirect_from:
+  - "/SoYourUbuntuCrashedAfterAnUpdate/"
 categories: ubuntu, tty, crash, 
 ---
 

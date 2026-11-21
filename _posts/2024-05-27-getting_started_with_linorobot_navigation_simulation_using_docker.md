@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Getting Started with LinoRobot2 Navigation Simulation using Docker 🐳" 
-permalink: /GettingStartedWithLinoRobot2NavigationSimulationUsingDocker/
+permalink: /posts/2024/05/27/getting_started_with_linorobot_navigation_simulation_using_docker/
+redirect_from:
+  - "/GettingStartedWithLinoRobot2NavigationSimulationUsingDocker/"
 categories: docker, ROS 2, humble, tutorial
 ---
 

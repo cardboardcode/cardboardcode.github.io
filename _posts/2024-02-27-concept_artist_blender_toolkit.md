@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Concept Artist Blender Tool Kit"
-permalink: /ConceptArtistBlenderToolKit/
+permalink: /posts/2024/02/27/concept_artist_blender_toolkit/
+redirect_from:
+  - "/ConceptArtistBlenderToolKit/"
 categories: blender
 ---
 

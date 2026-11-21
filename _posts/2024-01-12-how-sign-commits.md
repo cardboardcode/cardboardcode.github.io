@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "How To Sign or Sign Off on Git Commits 🔏"
-permalink: /HowToSignorSignOffOnGitCommits/
+permalink: /posts/2024/01/12/how-sign-commits/
+redirect_from:
+  - "/HowToSignorSignOffOnGitCommits/"
 categories: git
 ---
 

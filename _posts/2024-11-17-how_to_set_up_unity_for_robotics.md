@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "How To Set Up Unity for Robotics" 
-permalink: /HowToSetUpUnityForRobotics/
+permalink: /posts/2024/11/17/how_to_set_up_unity_for_robotics/
+redirect_from:
+  - "/HowToSetUpUnityForRobotics/"
 categories: docker, unity
 ---
 

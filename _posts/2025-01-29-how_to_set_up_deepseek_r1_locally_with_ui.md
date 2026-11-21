@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "How To Set Up DeepSeek R1 Locally with UI" 
-permalink: /HowToSetUpDeepSeekR1LocallyWithUI/
+permalink: /posts/2025/01/29/how_to_set_up_deepseek_r1_locally_with_ui/
+redirect_from:
+  - "/HowToSetUpDeepSeekR1LocallyWithUI/"
 categories: llm, deepseek, ai, ollama
 ---
 

@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "A Digital Scrapbook for Behaviour Tree Resources"
-permalink: /ADigitalScrapBookForBehaviourTreeResources/
+permalink: /posts/2025/08/11/a_digital_scrapbook_for_behaviourtree_resources/
+redirect_from:
+  - "/ADigitalScrapBookForBehaviourTreeResources/"
 categories: behaviour-tree, robotics, api, documentations
 ---
 
