@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  {% seo %}
+  {%- include head.html -%}
+
+  <head>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #0a0a0f;
+      }
+      #game-root {
+        position: fixed;
+        inset: 0;
+      }
+      #game-root canvas {
+        display: block;
+      }
+      #menu {
+        position: fixed;
+        left: 50%;
+        bottom: 8vh;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 24px;
+        z-index: 10;
+      }
+      #menu button {
+        appearance: none;
+        border: 1px solid #3c3f4a;
+        background: #15161d;
+        color: #dde0ea;
+        font: 500 1rem/1 inherit;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 14px 42px;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: border-color 0.2s, background 0.2s;
+      }
+      #menu button:hover {
+        border-color: #7a81a0;
+        background: #1d1f2a;
+      }
+      #menu button:active {
+        background: #232534;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="game-root"></div>
+
+    <div id="menu" role="group" aria-label="Door menu">
+      <button id="btn-open" type="button">Open</button>
+      <button id="btn-close" type="button">Close</button>
+    </div>
+
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script>
+    (function () {
+      if (typeof THREE === 'undefined') {
+        document.getElementById('game-root').textContent = 'Failed to load the 3D engine.';
+        return;
+      }
+
+      var root = document.getElementById('game-root');
+
+      var scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x0a0a0f);
+      scene.fog = new THREE.Fog(0x0a0a0f, 8, 18);
+
+      var camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.1, 100);
+      camera.position.set(0, 1.3, 6.2);
+      camera.lookAt(0, 1.0, 0);
+
+      var renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+      renderer.setSize(innerWidth, innerHeight);
+      root.appendChild(renderer.domElement);
+
+      // Lighting
+      scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+      var key = new THREE.DirectionalLight(0xbfd0ff, 1.1);
+      key.position.set(2, 4, 5);
+      scene.add(key);
+      var rim = new THREE.PointLight(0x445588, 1.2, 20);
+      rim.position.set(-3, 2, 3);
+      scene.add(rim);
+
+      // Floor
+      var floor = new THREE.Mesh(
+        new THREE.PlaneGeometry(60, 60),
+        new THREE.MeshStandardMaterial({ color: 0x111218, roughness: 0.95, metalness: 0.0 })
+      );
+      floor.rotation.x = -Math.PI / 2;
+      scene.add(floor);
+
+      // Door group
+      var doorGroup = new THREE.Group();
+      scene.add(doorGroup);
+
+      var frameMat = new THREE.MeshStandardMaterial({ color: 0x2a2d38, roughness: 0.7, metalness: 0.2 });
+      var slabMat  = new THREE.MeshStandardMaterial({ color: 0x5a6584, roughness: 0.55, metalness: 0.35 });
+      var handleMat = new THREE.MeshStandardMaterial({ color: 0xc9cede, roughness: 0.25, metalness: 0.9 });
+
+      var W = 1.6, H = 3.0, T = 0.18; // door slab dims
+
+      // Frame: two uprights + lintel, slightly proud of the slab
+      var frameUpT = new THREE.Mesh(new THREE.BoxGeometry(0.22, H + 0.22, 0.34), frameMat);
+      frameUpT.position.set(-(W / 2 + 0.11), (H + 0.22) / 2, 0);
+      var frameUpR = frameUpT.clone();
+      frameUpR.position.x = W / 2 + 0.11;
+      var frameLintel = new THREE.Mesh(new THREE.BoxGeometry(W + 0.44, 0.22, 0.34), frameMat);
+      frameLintel.position.set(0, H + 0.11, 0);
+      doorGroup.add(frameUpT, frameUpR, frameLintel);
+
+      // Slab (hinged at left edge)
+      var slabPivot = new THREE.Group();
+      slabPivot.position.set(-W / 2, 0, 0);
+      var slab = new THREE.Mesh(new THREE.BoxGeometry(W, H, T), slabMat);
+      slab.position.set(W / 2, H / 2, 0);
+      slabPivot.add(slab);
+
+      // Handle on right edge of the slab
+      var handle = new THREE.Mesh(new THREE.CylinderGeometry(0.045, 0.045, 0.42, 16), handleMat);
+      handle.rotation.x = Math.PI / 2;
+      handle.position.set(W - 0.28, H / 2, T / 2 + 0.05);
+      slabPivot.add(handle);
+
+      doorGroup.add(slabPivot);
+
+      // Placeholder buttons (real behavior goes here later)
+      document.getElementById('btn-open').addEventListener('click', function () {
+        // TODO: open the door
+        console.log('open pressed');
+      });
+      document.getElementById('btn-close').addEventListener('click', function () {
+        // TODO: close the door
+        console.log('close pressed');
+      });
+
+      // Subtle idle animation: gentle breathing rim light
+      var clock = new THREE.Clock();
+      function tick() {
+        requestAnimationFrame(tick);
+        var t = clock.getElapsedTime();
+        rim.intensity = 1.2 + Math.sin(t * 0.8) * 0.25;
+        renderer.render(scene, camera);
+      }
+      tick();
+
+      addEventListener('resize', function () {
+        camera.aspect = innerWidth / innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(innerWidth, innerHeight);
+      });
+    })();
+    </script>
+  </body>
+</html>
