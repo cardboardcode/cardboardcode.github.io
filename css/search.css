@@ -3,7 +3,8 @@
 /* Search trigger: sits inline with the minima .trigger page-links,
    styled like a page-link so it blends into the header nav. */
 .site-header .trigger .search-trigger,
-.site-header .nav-list .search-trigger {
+.site-header .nav-list .search-trigger,
+.site-header .site-nav .nav-items .search-trigger {
   display: inline-flex;
   align-items: center;
   margin: 0;
@@ -17,6 +18,14 @@
   opacity: 0.75;
 }
 
+/* In the minima master header (.site-nav > .nav-items) the other nav links are
+   a flat grey with no dimming — match that so the search glyph blends in. */
+.site-header .site-nav .nav-items .search-trigger {
+  color: #959595;
+  opacity: 1;
+  padding: 0;
+}
+
 .site-header li.search-trigger-item {
   list-style: none;
   display: inline-flex;
@@ -25,6 +34,7 @@
 /* The dropdown panel. Anchored below the header when open. */
 .site-header .trigger .search-trigger:hover,
 .site-header .nav-list .search-trigger:hover,
+.site-header .site-nav .nav-items .search-trigger:hover,
 .site-header .search-trigger:focus-visible {
   color: var(--global-variable-accent-color, #6f42c1);
   opacity: 1;

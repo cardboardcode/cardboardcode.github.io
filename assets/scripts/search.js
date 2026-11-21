@@ -45,10 +45,14 @@
   }
 
   // ---- Locate the header nav to inject the trigger into ---------------
-  // Works with the minima theme (gem) header: .site-nav > .trigger holds the
-  // page-link anchors; we append the search icon there so it aligns with the
-  // other nav links and stays visible in the mobile (checkbox) nav too.
+  // Supports the minima master branch (remote_theme) header, where
+  // .site-nav > .nav-items holds the nav-item anchors, plus the older
+  // minima gem headers (.site-nav > .trigger, .nav-list). Appending the
+  // button here keeps it inline with the other nav links and inside the
+  // mobile (checkbox) dropdown too.
+  if (document.querySelector(".search-trigger")) return; // already injected
   const navTrigger =
+    document.querySelector(".site-header .site-nav .nav-items") ||
     document.querySelector(".site-header .site-nav .trigger") ||
     document.querySelector(".site-header .nav-list");
   if (!navTrigger) {
@@ -56,6 +60,7 @@
     return;
   }
   const navIsList = navTrigger.classList.contains("nav-list");
+  const navIsItems = navTrigger.classList.contains("nav-items");
 
   const ICON_SVG =
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" ' +
@@ -65,10 +70,10 @@
     '<line x1="20" y1="20" x2="16.2" y2="16.2"></line>' +
     "</svg>";
 
-  // Trigger button, styled like a page-link via .search-trigger.
+  // Trigger button, styled like a page-link/nav-item via .search-trigger.
   const btn = document.createElement("button");
   btn.type = "button";
-  btn.className = "search-trigger";
+  btn.className = navIsItems ? "nav-item search-trigger" : "search-trigger";
   btn.setAttribute("aria-haspopup", "true");
   btn.setAttribute("aria-expanded", "false");
   btn.setAttribute("aria-controls", "search-dropdown");
