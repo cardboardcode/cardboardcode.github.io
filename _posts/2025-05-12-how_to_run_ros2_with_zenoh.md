@@ -25,7 +25,7 @@ For general ROS 2 development best practices, Zenoh offers a rust-based and memo
 
 Note that Zenoh is only official supported for ROS 2 Jazzy.
 
-## **Instructions**
+## **Instructions** 📘
 
 To get your ROS 2 components running with Zenoh, there are 2 critical steps to do as follows:
 

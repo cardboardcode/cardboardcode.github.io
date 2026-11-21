@@ -9,7 +9,7 @@ categories: docker, unity
 
 This tutorial runs you through how to quickly a Unity project that interacts with ROS.
 
-## **Instructions**
+## **Instructions** 📘
 
 {% capture code %}{% raw %}cd $HOME
 {% endraw %}{% endcapture %}

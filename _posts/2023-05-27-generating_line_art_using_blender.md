@@ -18,7 +18,7 @@ Having traced over 3d models countless times manually, the process of creating g
 1. [Blender `3.3.0`](https://www.blender.org/download/releases/3-3/)
 2. Windows 10/Ubuntu 22.04 (Operating System)
 
-## **Instructions**
+## **Instructions** 📘
 
 ### **Step 1**. Create **Override** material.
 Create a `Cube` and select its **Material** tab:

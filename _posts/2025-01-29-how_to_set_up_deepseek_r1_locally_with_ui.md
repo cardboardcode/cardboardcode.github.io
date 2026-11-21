@@ -17,7 +17,7 @@ The model has been proven to host performance rivalling that of OpenAI's o1 and 
 ## **Why Set This Up?**
 This particular LLM presents itself as a win for open-source technologies. Allowing for better data privacy since the model with its trained weights is accessible and can be hosted locally for use. 
 
-## **Instructions**
+## **Instructions** 📘
 
 
 These instructions assumes that you are running on a Linux operating system such as Ubuntu:
