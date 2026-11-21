@@ -6,3 +6,7 @@ _site/
 
 # Agent configuration (local only)
 AGENTS.md
+
+# Local analysis / docs (not published)
+docs/
+
