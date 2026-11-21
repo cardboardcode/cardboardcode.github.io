@@ -1,0 +1,77 @@
+/*
+ * How-To Guides right-rail panel.
+ *
+ * Layout: content-with-sidebar is a flex row; main-content takes the middle
+ * (flexible) column and .howto-guides pins a fixed-width column on the right.
+ * Falls back to a stacked layout below 1100px so the middle column is never
+ * squeezed on small screens.
+ */
+
+.content-with-sidebar {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.content-with-sidebar .main-content {
+  flex: 1 1 auto;
+  min-width: 0; /* allow long code lines/pre to wrap normally in the middle column */
+}
+
+.howto-guides {
+  flex: 0 0 220px;
+  position: sticky;
+  top: 1rem;
+  align-self: flex-start;
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border-radius: 0.5em;
+  background: var(--global-variable-background-color, #222);
+  border: 1px solid var(--global-variable-border-color, #444);
+  color: var(--global-variable-text-color, #f2f2f2);
+  font-size: 0.9em;
+}
+
+.howto-guides-title {
+  margin: 0 0 0.6em;
+  font-size: 1.05em;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.howto-guides-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.howto-guides-list li {
+  margin: 0.45em 0;
+  line-height: 1.4;
+}
+
+.howto-guides-list a {
+  color: var(--global-variable-text-color, #f2f2f2);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+}
+
+.howto-guides-list a:hover,
+.howto-guides-list a:focus {
+  color: var(--global-variable-accent-color, #6f42c1);
+  border-bottom-color: var(--global-variable-accent-color, #6f42c1);
+}
+
+/* On narrow screens, stack the panel below the content instead of the right. */
+@media (max-width: 1100px) {
+  .content-with-sidebar {
+    display: block;
+  }
+
+  .howto-guides {
+    position: static;
+    flex: none;
+    margin-top: 2rem;
+    max-width: 40rem;
+  }
+}

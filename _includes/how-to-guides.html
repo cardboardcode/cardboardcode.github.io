@@ -1,0 +1,18 @@
+{%- comment -%}
+  Right-rail quick-access panel listing every post whose title starts with
+  "How To" (case-insensitive). The list is built dynamically at Jekyll build
+  time from site.posts, so future "How To ..." posts appear automatically.
+{%- endcomment -%}
+<aside class="howto-guides" aria-label="How-To Guides">
+  <h2 class="howto-guides-title">🗂️ How-To Guides</h2>
+  <ul class="howto-guides-list">
+    {%- for post in site.posts -%}
+      {%- comment -%} Built-in-only prefix check (works on GitHub Pages / no custom plugin):
+           match titles whose first 6 chars (case-insensitive) equal "how to". {%- endcomment -%}
+      {%- assign lc_prefix = post.title | downcase | slice: 0, 6 -%}
+      {%- if lc_prefix == 'how to' -%}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</aside>
