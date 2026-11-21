@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Search UI Preview</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #1a1a1a; color: #f2f2f2; }
+  .site-header { background: #222; border-bottom: 1px solid #333; padding: 0.75rem 0; text-align: center; min-height: 3rem; display:flex; align-items:center; justify-content:center; }
+  .site-header .site-title { font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; color: #f2f2f2; margin: 0; text-decoration:none; }
+  .nav-list { list-style:none; display:inline-flex; gap: 1rem; margin: 0 1rem 0 0; padding: 0; }
+  .nav-list a, .nav-list button { color: #ccc; text-decoration:none; font-size: 0.9rem; background: none; border:none; cursor: pointer; }
+  .nav-list a:hover, .nav-list button:hover { color: #6f42c1; }
+</style>
+<link rel="stylesheet" type="text/css" href="/css/search.css">
+<link rel="stylesheet" type="text/css" href="/css/lightbox.css">
+</head>
+<body>
+<header class="site-header" role="banner">
+  <nav class="site-nav" role="navigation">
+    <ul class="nav-list" role="list">
+      <li class="nav-item"><a href="#">Home</a></li>
+      <li class="nav-item"><a href="#">Blog</a></li>
+      <li class="nav-item"><a href="#">About</a></li>
+      <li class="nav-item"><a href="#">Resume</a></li>
+    </ul>
+  </nav>
+  <a class="site-title" href="#">Gary — Art, Programming, Humor</a>
+</header>
+<main>
+  <p style="padding: 2rem 3rem">Use the magnifying-glass icon in the header — it's the search trigger. Click it and type "blender", "ros", "docker", etc. to test the results.</p>
+</main>
+
+<!-- Test data: 6 sample posts to exercise the search engine -->
+<script type="application/json" id="search-data">
+[
+  {
+    "title": "Generating Line Art in Blender ✒️",
+    "url": "/generating-line-art-using-blender/",
+    "categories": ["blender", "line art"],
+    "date": "2023-05-27T00:00:00+00:00",
+    "excerpt": "Walkthrough of turning a rough sketch into a clean line art using Blender's grease pencil and stroke-based tools. Covers brush settings, stabilizer, and export."
+  },
+  {
+    "title": "ROS 2 Perception Landscape Survey🧿",
+    "url": "/ros2-perception-landscape/",
+    "categories": ["ros2", "perception", "computer vision"],
+    "date": "2024-01-01T00:00:00+00:00",
+    "excerpt": "A survey of ROS 2 perception stacks, from raw camera drivers through ROS 2 message types, common patterns, and tooling for multi-sensor fusion."
+  },
+  {
+    "title": "How To Sign or Sign Off on Git Commits 🔏",
+    "url": "/how-sign-commits/",
+    "categories": ["git"],
+    "date": "2024-01-12T00:00:00+00:00",
+    "excerpt": "A practical guide to signing GPG commits and signing off on them, including key setup, editor config, and verifying signatures in GitHub."
+  },
+  {
+    "title": "A Docker-Centric Approach to Software Development 🐳",
+    "url": "/a-docker-centric-approach/",
+    "categories": ["docker", "pyautogui", "python"],
+    "date": "2024-03-06T00:00:00+00:00",
+    "excerpt": "Building around Docker: images as contracts, layers as a deployment unit, and a repeatable workflow for local + CI + production."
+  },
+  {
+    "title": "Getting Started With TurtleBot3 Navigation Simulation Using Dockers",
+    "url": "/getting-started-turtlebot3/",
+    "categories": ["ros2", "navigation", "simulation"],
+    "date": "2025-05-25T00:00:00+00:00",
+    "excerpt": "Set up a TurtleBot3 nav simulation in Docker using ros2-foxy + gazebo, with a reproducible compose file and common gotchas."
+  },
+  {
+    "title": "How To Set Up Unity For Robotics",
+    "url": "/how-to-set-up-unity-for-robotics/",
+    "categories": ["unity", "robotics"],
+    "date": "2024-11-17T00:00:00+00:00",
+    "excerpt": "A minimal Unity 2022 setup for robotics, covering asset layout, input handling, and a clean scene/asset split for robotics projects."
+  }
+]
+</script>
+
+<script src="/assets/scripts/vendor/lunr.min.js"></script>
+<script src="/assets/scripts/search.js"></script>
+</body>
+</html>

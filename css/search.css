@@ -1,0 +1,173 @@
+/* ---- Search box (header dropdown) ---- */
+
+/* Search trigger: sits inline with the minima .trigger page-links,
+   styled like a page-link so it blends into the header nav. */
+.site-header .trigger .search-trigger,
+.site-header .nav-list .search-trigger {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.25rem 0.15rem;
+  border: 0;
+  background: none;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  color: var(--global-variable-text-color, #f2f2f2);
+  opacity: 0.75;
+}
+
+.site-header li.search-trigger-item {
+  list-style: none;
+  display: inline-flex;
+}
+
+/* The dropdown panel. Anchored below the header when open. */
+.site-header .trigger .search-trigger:hover,
+.site-header .nav-list .search-trigger:hover,
+.site-header .search-trigger:focus-visible {
+  color: var(--global-variable-accent-color, #6f42c1);
+  opacity: 1;
+}
+
+.site-header .search-trigger svg,
+.site-header .trigger .search-trigger svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+}
+
+/* The dropdown panel. Anchored below the trigger when open. */
+.search-dropdown {
+  position: fixed;
+  left: 50%;
+  top: 3.5rem;
+  width: min(30rem, calc(100% - 2rem));
+  max-height: min(70vh, 32rem);
+  margin: 0;
+  padding: 0.6rem 0 0.4rem;
+  background: var(--global-variable-background-color, #222);
+  border: 1px solid var(--global-variable-border-color, #444);
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-dropdown[hidden] {
+  display: none;
+}
+
+.search-dropdown form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.15rem 0.75rem 0.55rem;
+  border-bottom: 1px solid var(--global-variable-border-color, #444);
+}
+
+.search-dropdown form svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  stroke: var(--global-variable-text-color, #f2f2f2);
+  opacity: 0.7;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--global-variable-text-color, #f2f2f2);
+  font-family: inherit;
+}
+
+.search-input::placeholder {
+  color: var(--global-variable-text-color, #f2f2f2);
+  opacity: 0.5;
+}
+
+.search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0.35rem 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.search-results li {
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+}
+
+.search-results li.active,
+.search-results li:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.search-results .result-title {
+  display: block;
+  font-weight: 600;
+  color: var(--global-variable-text-color, #f2f2f2);
+  line-height: 1.3;
+}
+
+.search-results .result-meta {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.78rem;
+  color: var(--global-variable-text-color, #f2f2f2);
+  opacity: 0.55;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-results li.selected .result-title,
+.search-results li.selected .result-meta {
+  outline: none;
+}
+
+.search-results .result-title mark,
+.search-results .result-excerpt mark {
+  background: rgba(255, 235, 59, 0.35);
+  color: inherit;
+  border-radius: 2px;
+}
+
+.search-results .result-excerpt {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--global-variable-text-color, #f2f2f2);
+  opacity: 0.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.search-empty,
+.search-loading {
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+  color: var(--global-variable-text-color, #f2f2f2);
+  opacity: 0.6;
+}
+
+.kbd-hint {
+  font-family: monospace;
+  font-size: 0.7rem;
+  border: 1px solid var(--global-variable-border-color, #555);
+  border-radius: 3px;
+  padding: 0 0.35rem;
+  opacity: 0.6;
+  margin-left: 0.4rem;
+}

@@ -1,5 +1,7 @@
 # Directories to be ignored
-vendor/
+# Root-anchored: ignore the local Ruby `vendor/bundle` tree only, NOT nested
+# assets like assets/scripts/vendor (e.g. the vendored lunr.min.js used by search).
+/vendor/
 _site/
 
 # Agent configuration (local only)
