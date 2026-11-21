@@ -1,9 +1,7 @@
----
----
-{% comment %}
+{%- comment -%}
   Emits a JSON search index of all posts. Consumed by assets/scripts/search.js.
   Kept in its own include so the layout stays clean.
-{% endcomment %}
+{%- endcomment -%}
 [
   {%- for post in site.posts -%}
   {
