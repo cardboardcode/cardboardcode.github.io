@@ -10,7 +10,7 @@
         padding: 0;
         height: 100%;
         overflow: hidden;
-        background: #0a0a0f;
+        background: #000000;
       }
       #game-root {
         position: fixed;
@@ -69,8 +69,8 @@
       var root = document.getElementById('game-root');
 
       var scene = new THREE.Scene();
-      scene.background = new THREE.Color(0x0a0a0f);
-      scene.fog = new THREE.Fog(0x0a0a0f, 8, 18);
+      scene.background = new THREE.Color(0x000000);
+      scene.fog = new THREE.Fog(0x000000, 8, 18);
 
       var camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.1, 100);
       camera.position.set(0, 1.3, 6.2);
@@ -93,7 +93,7 @@
       // Floor
       var floor = new THREE.Mesh(
         new THREE.PlaneGeometry(60, 60),
-        new THREE.MeshStandardMaterial({ color: 0x111218, roughness: 0.95, metalness: 0.0 })
+        new THREE.MeshBasicMaterial({ color: 0x000000 })
       );
       floor.rotation.x = -Math.PI / 2;
       scene.add(floor);
