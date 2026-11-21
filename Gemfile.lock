@@ -1,3 +1,8 @@
+PATH
+  remote: jekyll-github-callouts
+  specs:
+    jekyll-github-callouts (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -264,6 +269,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 227)
   jekyll-feed (~> 0.6)
+  jekyll-github-callouts!
   jekyll-last-modified-at
   jekyll-seo-tag
   kramdown-parser-gfm

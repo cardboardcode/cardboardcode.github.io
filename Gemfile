@@ -22,6 +22,11 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-last-modified-at"
   gem "jekyll-seo-tag"
+
+  # Local (repo-vendored) Jekyll plugin: renders GitHub `> [!NOTE]` markdown
+  # as styled callout boxes. Bundler installs it from the path, so it is
+  # available both locally and in the GitHub Pages CI build.
+  gem "jekyll-github-callouts", path: "jekyll-github-callouts"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

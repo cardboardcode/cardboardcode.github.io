@@ -7,27 +7,23 @@ redirect_from:
 categories: file-sharing, kvm, virtual machine
 ---
 
-Here are quick instructions on how to set up **sambashare** in order to easily share files between a Host Ubuntu `22.04` and Virtual Ubuntu `22.04`. 
+> [!NOTE]
+> Here are quick instructions on how to set up **sambashare** in order to easily share files between a Host Ubuntu `22.04` and Virtual Ubuntu `22.04`. This has also been verified to work with a Virtual Ubuntu `24.04`.
 
-This has also been verified to work with a Virtual Ubuntu `24.04`.
-
-## **What Is This?**
-Unlike the caveat faced when setting up file-sharing for host Ubuntu `20.04`, `enable_shared-memory` is allowed for host Ubuntu `22.04`. 
-
-This article offers a quick-cut manner of mounting shared folders for quick file-sharing between Host and Virtual Ubuntus with the extra step of persistent mounting after restarting Virtual Ubuntu on KVM.
-
+> [!NOTE]
+> Unlike the caveat faced when setting up file-sharing for host Ubuntu `20.04`, `enable_shared-memory` is allowed for host Ubuntu `22.04`. This article offers a quick-cut manner of mounting shared folders for quick file-sharing between Host and Virtual Ubuntus with the extra step of persistent mounting after restarting Virtual Ubuntu on `KVM`.
 
 ## **Steps**
 
-1\. **Ensure** your Virtual **Ubuntu** `22.04` via `KVM's virt-manager` is **powered off**.
+1\. **Ensure** your Virtual **Ubuntu** `22.04` via `KVM's virt-manager` is powered **off**.
 
 2\. **Navigate** to `Memory` in Virtual **Ubuntu** `22.04` KVM Configuration as shown below:
 
 ![](/img/2025_07_06/1_enable_shared_memory.png)
 
-3\. Set `Enable shared memory` to true.
+3\. **Set** `Enable shared memory` to true.
 
-4\. Add a `Filesystem` by pressing `Add hardware` as shown below:
+4\. **Add** a `Filesystem` by pressing `Add hardware` as shown below:
 
 ![](/img/2025_07_06/2_add_hardware.png)
 
@@ -35,7 +31,7 @@ This article offers a quick-cut manner of mounting shared folders for quick file
 
 ![](/img/2025_07_06/3_configure_filesystem.png)
 
-6\. **Turn** on your Virtual **Ubuntu** `22.04` via `KVM's virt-manager
+6\. **Turn** on your Virtual **Ubuntu** `22.04` via `KVM's virt-manager`.
 
 7\. **Open** a terminal in Virtual **Ubuntu** `22.04`.
 
@@ -50,15 +46,13 @@ This article offers a quick-cut manner of mounting shared folders for quick file
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-9\. **Configure** mount to be persistent for subsequent system bootup:
+10\. **Configure** mount to be persistent for subsequent system bootup:
 
 {% capture code %}{% raw %}echo "mount_host /mnt/host virtiofs defaults 0 0" | sudo tee -a /etc/fstab
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-10\. **Reboot** your Virtual **Ubuntu** `22.04`.
-
-11\. You should then be able to see files on your host path accessible via `/mnt/host`.
+11\. **Verify** that files on your host path are accessible via `/mnt/host`.
 
 ## **References**
 

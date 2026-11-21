@@ -3,6 +3,10 @@
 # assets like assets/scripts/vendor (e.g. the vendored lunr.min.js used by search).
 /vendor/
 _site/
+_test_site/
+_verify_site/
+_verify_out/
+_debug_site/
 
 # Agent configuration (local only)
 AGENTS.md

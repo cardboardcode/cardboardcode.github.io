@@ -7,7 +7,8 @@ redirect_from:
 categories: docker, 
 ---
 
-> ℹ️ **Note** This article provides easily accessible commands to inspect underlying Docker base images, aiming to determine verified ways of building Docker images more efficiently from restrictive ones.
+> [!NOTE]
+> This article provides easily accessible commands to inspect underlying Docker base images, aiming to determine verified ways of building Docker images more efficiently from restrictive ones.
 
 ## **Instructions** 📘
 
