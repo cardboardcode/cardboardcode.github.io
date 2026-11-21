@@ -7,19 +7,15 @@ redirect_from:
 categories: docker, 
 ---
 
-This article aims to provide easily accessible commands you could use to understand underlying docker base images: 
-
-## **Why**
-
-To determine verified ways of building docker images more efficiently from restrictive docker images.
+> ℹ️ **Note** This article provides easily accessible commands to inspect underlying Docker base images, aiming to determine verified ways of building Docker images more efficiently from restrictive ones.
 
 ## **Instructions** 📘
 
-Use the command below to retrieve the build history of a Docker image, formatting each step by who created it without truncating any lines.
+**Run** command below to retrieve the build history of a Docker image, formatting each step by who created it without truncating any lines.
 {% capture code %}{% raw %}docker history --format "{{.CreatedBy}}" <docker_image_name> --no-trunc | tac{% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-Use the command below to export a running docker container as a `.zip` file:
+**Run** command below to export a running docker container as a `.zip` file:
 {% capture code %}{% raw %}docker export <docker_container_name/id> > latest.tar
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
