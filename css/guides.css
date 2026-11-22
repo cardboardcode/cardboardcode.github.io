@@ -96,6 +96,11 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  /* Cap the list and scroll it in place, same as the Gists panel below;
+     short lists keep their natural height (overflow only appears when
+     content exceeds the cap). */
+  max-height: 21rem;
+  overflow-y: auto;
 }
 
 .howto-guides li {
