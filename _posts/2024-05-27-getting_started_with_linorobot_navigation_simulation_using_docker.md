@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting Started with LinoRobot2 Navigation Simulation using Docker 🐳" 
+title:  "How To Get Started with LinoRobot2 Navigation Simulation using Docker 🐳" 
 permalink: /posts/2024/05/27/getting_started_with_linorobot_navigation_simulation_using_docker/
 redirect_from:
   - "/GettingStartedWithLinoRobot2NavigationSimulationUsingDocker/"

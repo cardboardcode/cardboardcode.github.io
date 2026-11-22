@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting Started with Turtlebot3 Navigation Simulation using Docker 🐢🐳" 
+title:  "How To Get Started with Turtlebot3 Navigation Simulation using Docker 🐢🐳" 
 permalink: /posts/2024/05/25/getting_started_with_turtlebot3_navigation_simulation_using_dockers/
 redirect_from:
   - "/GettingStartedWithTurtlebot3NavigationSimulationUsingDocker/"

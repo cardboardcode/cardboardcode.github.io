@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setting up sambashare between Host Ubuntu 20.04 and Virtual Machine Ubuntu 22.04"
+title:  "How To Set Up sambashare between Host Ubuntu 20.04 and Virtual Machine Ubuntu 22.04"
 permalink: /posts/2024/05/19/setting_sambashare_for_host_u20_virt_u22/
 redirect_from:
   - "/SettingUpSambaShareBetweenHostU20AndVirtU22/"

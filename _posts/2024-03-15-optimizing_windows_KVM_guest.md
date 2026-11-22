@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Optimizing Windows 10 when using inside KVM 🪟"
+title:  "How To Optimize Windows 10 when using inside KVM 🪟"
 permalink: /posts/2024/03/15/optimizing_windows_KVM_guest/
 redirect_from:
   - "/OptimizingWindows10WhenInKVM/"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting Started with RMF Demos using Docker"
+title:  "How To Get Started with RMF Demos using Docker"
 permalink: /posts/2024/05/23/getting_started_with_rmf_demos_using_docker/
 redirect_from:
   - "/GettingStartedWithRMFDemosUsingDocker/"

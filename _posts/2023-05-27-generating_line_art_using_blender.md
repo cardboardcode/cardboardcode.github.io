@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Generating Line Art in Blender ✒️"
+title:  "How To Generate Line Art in Blender ✒️"
 permalink: /posts/2023/05/27/generating_line_art_using_blender/
 redirect_from:
   - "/GeneratingLineArtInBlender/"
