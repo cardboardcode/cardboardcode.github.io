@@ -7,7 +7,8 @@
  * - Injects a magnifying-glass button into the site header nav and a
  *   dropdown panel with a ranked result list.
  * - Keyboard: Enter selects the highlighted result, ArrowUp/Down move the
- *   highlight, Escape closes. Tab is preserved.
+ *   highlight, Escape closes. Tab is preserved. Pressing g then f (chord,
+ *   ~800 ms window) opens the search from anywhere on the page.
  * - Clicking outside closes the dropdown.
  * - Respects prefers-reduced-motion (no transitions).
  *
@@ -202,6 +203,7 @@
     '<input class="search-input" type="search" ' +
     'placeholder="Search posts & gists…" aria-label="Search posts and gists" ' +
     'spellcheck="false" />' +
+    '<span class="kbd-hint" title="Press g then f to open search">gf</span>' +
     '<span class="kbd-hint">Esc</span>' +
     "</form>" +
     '<ul class="search-results" role="listbox"></ul>' +
@@ -409,6 +411,47 @@
     if (!isOpen) return;
     if (dropdown.contains(e.target) || btn === e.target) return;
     close(false);
+  });
+
+  // ---- g then f -> open search (Vim-style chord) ------------------------
+  // Only fires when the user is not already typing (active element is not
+  // an input/textarea/contenteditable) and no modifier is held, so browser
+  // shortcuts like Ctrl+G are left alone. The chord window is short so a
+  // stale g cannot trigger it later.
+  let gPressedAt = 0;
+  const CHORD_WINDOW_MS = 800;
+
+  function isTypingTarget() {
+    const el = document.activeElement;
+    if (!el || el === document.body) return false;
+    const tag = el.tagName;
+    return (
+      tag === "INPUT" ||
+      tag === "TEXTAREA" ||
+      el.isContentEditable ||
+      (typeof el.closest === "function" && el.closest("form, .search-dropdown"))
+    );
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey || e.altKey || e.metaKey) return;
+    const k = e.key.toLowerCase();
+    if (isTypingTarget()) {
+      gPressedAt = 0;
+      return;
+    }
+    if (k === "g") {
+      gPressedAt = Date.now();
+      return;
+    }
+    if (k === "f" && gPressedAt && Date.now() - gPressedAt < CHORD_WINDOW_MS) {
+      e.preventDefault();
+      gPressedAt = 0;
+      open();
+      if (results.length === 0) runSearch(input.value);
+      return;
+    }
+    gPressedAt = 0;
   });
 
 
