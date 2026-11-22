@@ -20,7 +20,7 @@
 /* Single source of truth for the panel's layout. Kept on :root so the
    wrapper rule (an ANCESTOR of the panel) can read them via var(). */
 :root {
-  --howto-panel-width: 220px;
+  --howto-panel-width: 320px;
   --howto-gap: 2rem;
   --howto-mid-floor: 58em;   /* 60em wrapper - 2rem side padding = middle column's natural text width */
   --howto-side-pad: 1rem;    /* minima's wrapper side padding */
@@ -182,7 +182,7 @@
 
 /* Stack the panel below the post list when the full two-column arrangement
    no longer fits. The threshold is DERIVED from the same custom properties
-   above (it equals 60em + 2rem gap + 220px panel + 2rem side padding). */
+   above (it equals 60em + 2rem gap + 320px panel + 2rem side padding). */
 @media (max-width: calc(
     2 * var(--howto-side-pad)
   + var(--howto-mid-floor)
