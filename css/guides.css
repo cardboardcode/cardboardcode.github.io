@@ -77,10 +77,10 @@
   line-height: 1.5;
 }
 
-.howto-guides__title {
+.howto-guides .howto-guides-title {
   margin: 0 0 0.6em;
-  font-size: 1em;
-  font-weight: 600;
+  font-size: 1.5em;
+  font-weight: bold;
   padding-bottom: 0.5em;
   border-bottom: 1px solid var(--global-variable-border-color, #444);
 }
@@ -137,8 +137,10 @@
 
 .gists .gists-title {
   margin: 0 0 0.6em;
-  font-size: 1em;
-  font-weight: 600;
+  /* Match the How-To panel title (both set explicitly) so the two
+     right-rail panel headings look identical. */
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .gists ul {
