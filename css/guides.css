@@ -1,77 +1,150 @@
-/*
- * How-To Guides right-rail panel.
+/* How-To Guides — home-page sidebar panel.
  *
- * Layout: content-with-sidebar is a flex row; main-content takes the middle
- * (flexible) column and .howto-guides pins a fixed-width column on the right.
- * Falls back to a stacked layout below 1100px so the middle column is never
- * squeezed on small screens.
+ * Intended end state (per user):
+ *   - the panel sits in its own RIGHT column next to the post list;
+ *   - the middle (post list) column keeps its ORIGINAL width and wrapping,
+ *     exactly as if the panel weren't there (60em wrapper minus minima's
+ *     1rem side padding = 58em of text);
+ *   - the panel only drops below the list once the viewport can no longer
+ *     hold the full two-column arrangement.
+ *
+ * Mechanism: minima hard-codes `.page-content .wrapper { max-width: 60em }`,
+ * so any panel inside that box steals width from the middle column. We use
+ * `:has()` to target the page wrapper from CSS alone and widen the HOME
+ * PAGE's wrapper by exactly (panel + gap + side padding = its natural extra),
+ * then let flex lay out the two columns inside. Every layout quantity comes
+ * from the custom properties below — no magic-number thresholds
+ * (the old hand-tuned threshold was `max-width: 1100px`).
  */
 
+/* Single source of truth for the panel's layout. Kept on :root so the
+   wrapper rule (an ANCESTOR of the panel) can read them via var(). */
+:root {
+  --howto-panel-width: 220px;
+  --howto-gap: 2rem;
+  --howto-mid-floor: 58em;   /* 60em wrapper - 2rem side padding = middle column's natural text width */
+  --howto-side-pad: 1rem;    /* minima's wrapper side padding */
+}
+
+/* Widen the home page's container (the .page-content .wrapper ancestor of
+   .home) by exactly the panel's extra footprint, so the middle column keeps
+   its full natural width instead of being flexed down.
+   :has() is what fixes the "panel steals from the middle column" problem —
+   it reaches the ancestor from CSS only.
+   Browsers without :has() simply keep minima's 60em wrapper (panel flexes
+   inside it, middle slightly narrower) — same as the pre-fix behavior. */
+.page-content .wrapper:has(.content-with-sidebar) {
+  max-width: calc(
+    var(--howto-mid-floor) + var(--howto-gap)
+    + var(--howto-panel-width) + 2 * var(--howto-side-pad)
+  );
+}
+
+/* Two-column row: post list (middle) + How-To panel (right). */
 .content-with-sidebar {
   display: flex;
-  gap: 2rem;
+  gap: var(--howto-gap);
   align-items: flex-start;
 }
 
 .content-with-sidebar .main-content {
   flex: 1 1 auto;
-  min-width: 0; /* allow long code lines/pre to wrap normally in the middle column */
+  min-width: 0;
 }
 
 .howto-guides {
-  flex: 0 0 220px;
+  flex: 0 0 var(--howto-panel-width);
+  width: var(--howto-panel-width);
   position: sticky;
   top: 1rem;
-  align-self: flex-start;
-  margin: 0;
+  margin: 0 0 0 auto;
   padding: 1rem 1.1rem;
   border-radius: 0.5em;
   background: var(--global-variable-background-color, #222);
   border: 1px solid var(--global-variable-border-color, #444);
   color: var(--global-variable-text-color, #f2f2f2);
   font-size: 0.9em;
+  line-height: 1.5;
 }
 
-.howto-guides-title {
+.howto-guides__title {
   margin: 0 0 0.6em;
-  font-size: 1.05em;
+  font-size: 1em;
   font-weight: 600;
-  line-height: 1.3;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--global-variable-border-color, #444);
 }
 
-.howto-guides-list {
+.howto-guides ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.howto-guides-list li {
-  margin: 0.45em 0;
-  line-height: 1.4;
+.howto-guides li {
+  margin: 0 0 0.45em;
 }
 
-.howto-guides-list a {
-  color: var(--global-variable-text-color, #f2f2f2);
+.howto-guides li::before {
+  content: "→ ";
+  opacity: 0.55;
+}
+
+.howto-guides a {
+  color: inherit;
   text-decoration: none;
-  border-bottom: 1px dotted transparent;
+  overflow-wrap: anywhere;
 }
 
-.howto-guides-list a:hover,
-.howto-guides-list a:focus {
-  color: var(--global-variable-accent-color, #6f42c1);
-  border-bottom-color: var(--global-variable-accent-color, #6f42c1);
+.howto-guides a:hover,
+.howto-guides a:focus {
+  color: #58a6ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-/* On narrow screens, stack the panel below the content instead of the right. */
-@media (max-width: 1100px) {
+/* Stack the panel below the post list when the full two-column arrangement
+   no longer fits. The threshold is DERIVED from the same custom properties
+   above (it equals 60em + 2rem gap + 220px panel + 2rem side padding). */
+@media (max-width: calc(
+    2 * var(--howto-side-pad)
+  + var(--howto-mid-floor)
+  + var(--howto-gap)
+  + var(--howto-panel-width)
+)) {
   .content-with-sidebar {
     display: block;
   }
-
   .howto-guides {
     position: static;
     flex: none;
-    margin-top: 2rem;
+    width: auto;
+    margin: 2rem 0 0;
     max-width: 40rem;
   }
+}
+
+/* ---- Header title alignment (home page) -----------------------------
+ * On every page the site header (header.site-header > .wrapper) and the
+ * content box (main.page-content > .wrapper) are SIBLINGS under <body> and both
+ * inherit the theme's centered `.wrapper { max-width: 800px; margin: 0 auto;
+ * padding: 0 30px }`. The header's `.site-title` is `float:left`, so its left
+ * edge == the (centered 800px) wrapper's padded left edge.
+ *
+ * The home page's CONTENT wrapper is widened above (via :has()) to fit the
+ * How-To panel, but the header wrapper was left at the theme's 800px — so the
+ * "Gary Bey" title and the profile image no longer share a left edge.
+ *
+ * Fix: give the header wrapper the SAME max-width as the widened content box on
+ * the home page. Because both wrappers keep `margin: 0 auto` + identical
+ * `padding-left`, they center identically and their padded left edges coincide —
+ * so the title lines up with the image at every viewport width, with no
+ * hardcoded per-breakpoint left values (the 30px / 18px padding still adapts on
+ * its own). `:has(.main-content)` scopes this to the home page only, leaving
+ * post/other pages on the theme default. */
+body:has(.page-content .main-content) .site-header .wrapper {
+  max-width: calc(
+    var(--howto-mid-floor) + var(--howto-gap)
+    + var(--howto-panel-width) + 2 * var(--howto-side-pad)
+  );
 }
