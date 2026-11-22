@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setting up file-sharing between Host Ubuntu 22.04 and Virtual Machine Ubuntu 22.04"
+title:  "How to set up file-sharing between Host Ubuntu 22.04 and Virtual Machine Ubuntu 22.04"
 permalink: /posts/2025/07/06/setting_file_sharing_for_host_virt/
 redirect_from:
   - "/SettingUpFileSharingBetweenHostU22AndVirtU22/"
