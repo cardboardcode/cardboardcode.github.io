@@ -1,54 +1,35 @@
-// Gists panel — client-side fetch of cardboardcode's public Gists.
+// Gists panel — homepage right-rail panel listing cardboardcode's public Gists.
 // Runs only on the homepage (.gists-list guard). No-op on all other pages.
-// GitHub Pages constraint: owner name is a JS literal (Liquid is NOT processed
-// in .assets/ files at build time).
+// The fetch + sessionStorage cache live in gists-data.js (shared with search.js);
+// this file only owns the panel rendering.
 
 (function () {
   'use strict';
 
-  var GITHUB_OWNER = 'cardboardcode';
-  var API_URL = 'https://api.github.com/users/' + GITHUB_OWNER + '/gists';
-
-  document.querySelectorAll('.gists-list').forEach(function (list) {
-    fetch(API_URL)
-      .then(function (res) {
-        if (!res.ok) {
-          throw new Error('HTTP ' + res.status);
-        }
-        return res.json();
-      })
-      .then(function (gists) {
-        if (!Array.isArray(gists) || gists.length === 0) {
-          setPlaceholder(list, 'No Gists yet.', false);
-          return;
-        }
-        gists.sort(function (a, b) {
-          var titleA = gistTitle(a);
-          var titleB = gistTitle(b);
-          return titleA.localeCompare(titleB, undefined, { sensitivity: 'base' });
-        });
-        renderGists(list, gists);
-      })
-      .catch(function () {
-        setPlaceholder(list, 'Gists unavailable.', true);
-      });
-  });
-
-  // Resolve a human-readable title for a gist. The Gists API does not return a
-  // `name` for file-based gists — the human-readable title lives in `description`
-  // (set when you save a gist). Fall back to the first filename, then the id.
-  function gistTitle(gist) {
-    if (gist.description && gist.description.trim()) {
-      return gist.description.trim();
-    }
-    if (gist.files) {
-      var keys = Object.keys(gist.files);
-      if (keys.length > 0) {
-        return keys[0];
-      }
-    }
-    return gist.id;
+  var lists = document.querySelectorAll('.gists-list');
+  if (!lists.length) return;
+  if (typeof window.__gistsData !== 'function') {
+    // gists-data.js missing — degrade to the placeholder.
+    lists.forEach(function (list) { setPlaceholder(list, 'Gists unavailable.', true); });
+    return;
   }
+
+  window.__gistsData()
+    .then(function (gists) {
+      if (!Array.isArray(gists) || gists.length === 0) {
+        lists.forEach(function (list) { setPlaceholder(list, 'No Gists yet.', false); });
+        return;
+      }
+      gists.sort(function (a, b) {
+        var titleA = a.title;
+        var titleB = b.title;
+        return titleA.localeCompare(titleB, undefined, { sensitivity: 'base' });
+      });
+      lists.forEach(function (list) { renderGists(list, gists); });
+    })
+    .catch(function () {
+      lists.forEach(function (list) { setPlaceholder(list, 'Gists unavailable.', true); });
+    });
 
   function setPlaceholder(list, text, isError) {
     list.innerHTML = '';
@@ -63,10 +44,10 @@
     gists.forEach(function (gist) {
       var li = document.createElement('li');
       var a = document.createElement('a');
-      a.href = gist.html_url;
+      a.href = gist.url;
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
-      a.textContent = gistTitle(gist);
+      a.textContent = gist.title;
       li.appendChild(a);
       list.appendChild(li);
     });
