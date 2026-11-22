@@ -52,12 +52,22 @@
   min-width: 0;
 }
 
-.howto-guides {
+/* Right-rail vertical flex container: stacks the How-To and Gists panels so
+   they share width and sticky behavior. Sits in the SAME flex slot the
+   How-To panel used to occupy (width, sticky, right-margined). */
+.sidebar-rail {
   flex: 0 0 var(--howto-panel-width);
   width: var(--howto-panel-width);
   position: sticky;
   top: 1rem;
   margin: 0 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.howto-guides {
   padding: 1rem 1.1rem;
   border-radius: 0.5em;
   background: var(--global-variable-background-color, #222);
@@ -73,6 +83,13 @@
   font-weight: 600;
   padding-bottom: 0.5em;
   border-bottom: 1px solid var(--global-variable-border-color, #444);
+}
+
+.panel-divider {
+  border: 0;
+  border-top: 1px solid var(--global-variable-border-color, #444);
+  margin: 0.5em 0 0.6em;
+  border-radius: 1px;
 }
 
 .howto-guides ul {
@@ -103,6 +120,66 @@
   text-underline-offset: 2px;
 }
 
+.gists {
+  padding: 1rem 1.1rem;
+  border-radius: 0.5em;
+  background: var(--global-variable-background-color, #222);
+  border: 1px solid var(--global-variable-border-color, #444);
+  color: var(--global-variable-text-color, #f2f2f2);
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.gists .gists-title {
+  margin: 0 0 0.6em;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.gists ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Cap the (long) Gists list and scroll it in place; the How-To panel above
+     stays fully visible. No visual change for short lists (empty/error
+     placeholders), since overflow only appears when content exceeds the cap. */
+  max-height: 21rem;
+  overflow-y: auto;
+}
+
+.gists li {
+  margin: 0 0 0.45em;
+}
+
+.gists li::before {
+  content: "→ ";
+  opacity: 0.55;
+}
+
+.gists a {
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.gists a:hover,
+.gists a:focus {
+  color: #58a6ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.gists-placeholder {
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.gists-placeholder.gists-error {
+  color: #f85149;
+  opacity: 1;
+  font-style: normal;
+}
+
 /* Stack the panel below the post list when the full two-column arrangement
    no longer fits. The threshold is DERIVED from the same custom properties
    above (it equals 60em + 2rem gap + 220px panel + 2rem side padding). */
@@ -115,12 +192,16 @@
   .content-with-sidebar {
     display: block;
   }
-  .howto-guides {
+  .sidebar-rail {
     position: static;
     flex: none;
     width: auto;
     margin: 2rem 0 0;
     max-width: 40rem;
+  }
+  .howto-guides,
+  .gists {
+    width: auto;
   }
 }
 

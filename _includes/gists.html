@@ -1,0 +1,13 @@
+{%- comment -%}
+  Gists panel — homepage right-rail panel listing cardboardcode's public Gists.
+  Populated client-side by assets/scripts/gists.js from the GitHub Gists API.
+  The <li class="gists-placeholder"> in the <ul> serves as a Loading/fallback
+  state; gists.js replaces the list on success or updates the placeholder on failure.
+{%- endcomment -%}
+<aside class="gists" aria-label="Gists">
+  <h2 class="gists-title">📁 Gists</h2>
+  <div class="panel-divider" role="presentation"></div>
+  <ul class="gists-list">
+    <li class="gists-placeholder">Loading…</li>
+  </ul>
+</aside>
