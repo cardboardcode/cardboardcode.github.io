@@ -1,0 +1,14 @@
+/* Rendering for client-side diagrams (assets/scripts/mermaid.js). */
+
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}

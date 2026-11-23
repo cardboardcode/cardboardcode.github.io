@@ -13,6 +13,28 @@ This document provides instructions on how to easily set up and use Zenoh DDS as
 
 Zenoh is a pub/sub/query protocol that unifies data in motion, data at rest and computations. That said, one way of thinking about Zenoh is to imagine it as a data liberator protocol. Zenoh liberates data in several dimensions.
 
+The diagram below shows how this setup fits together: your ROS 2 nodes no longer talk directly to each other over the DDS network, but instead (de)serialize their messages and pass them to their local `rmw_zenoh_cpp` layer, which routes them through the Zenoh server. The server then relays messages between the local and remote `rmw_zenoh_cpp` layers, and each node's layer reconstructs them before handoff to the node. The whole stack is coordinated by `RMW_IMPLEMENTATION=rmw_zenoh_cpp`, which tells every node's middleware runtime to use the Zenoh backend.
+
+```mermaid
+flowchart TB
+  subgraph Pub["Publisher side"]
+    direction TB
+    A["ROS 2 node (publisher)"] -->|"serialize message"| B["rmw_zenoh_cpp\n(local layer)"]
+  end
+
+  subgraph Zenoh["Zenoh protocol"]
+    S[("Zenoh server\n(relay / router)")]
+  end
+
+  subgraph Sub["Subscriber side"]
+    direction TB
+    D["rmw_zenoh_cpp\n(local layer)"] -->|"deserialize message"| C["ROS 2 node (subscriber)"]
+  end
+
+  B <-->|"put (data in motion)"| S
+  S <-->|"get / query (data at rest, compute)"| D
+```
+
 ## **Why Set This Up?**
 
 In the context of Robot Middleware Framework (RMF), it has been strongly hinted by maintainers that the Zenoh DDS will be de-facto DDS used for RMF-enabled components going forward.
