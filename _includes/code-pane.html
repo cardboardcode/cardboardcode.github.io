@@ -1,0 +1,16 @@
+{%- comment -%}
+  code-pane.html — renders ONE code snippet as kramdown/rouge-style markup
+  for use inside HTML tab panes (where markdown code fences are not
+  processed). The copy button lives in tabbed-code.html's bar row.
+  Params:
+    code — the snippet. Use ";;" between multi-line commands.
+    lang — syntax language (default: bash).
+{%- endcomment -%}
+{%- assign lang = include.lang | default: "bash" -%}
+{%- assign lines = include.code | split: ";;" -%}
+<div class="language-{{ lang }} highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>{% for line in lines %}{{ line | escape }}{% unless forloop.last %}
+{% endunless %}{% endfor %}</code></pre>
+  </div>
+</div>

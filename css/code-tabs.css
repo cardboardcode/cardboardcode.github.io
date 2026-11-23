@@ -1,0 +1,125 @@
+/* code-tabs.css — tabbed code blocks (paired with _includes/tabbed-code.html).
+   Structure:
+     .code-tabs
+       .code-tabs-bar   <label data-index=N>            (all labels, stable row)
+       .code-tabs-body  <input.radio[data-index=N]>      (hidden, in DOM order)
+                        <div.code-tab-pane data-index=N>
+   Panes are stacked in flow (not absolutely positioned) so the tallest
+   snippet defines the shared height. Labels never change position; only
+   the visible pane below switches. No JavaScript. */
+
+.code-tabs {
+  display: block;
+  width: 100%;
+  margin: 0.5em 0;
+  border: 1px solid #515151;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #2b2b2b;
+}
+
+/* --- stable bar of tab labels (always one row, never reflows) --- */
+.code-tabs-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background: #515151;
+  padding: 0.15em 0.15em 0 0.15em;
+}
+
+/* --- tab labels --- */
+.code-tabs-label {
+  display: inline-block;
+  margin: 0 2px 0 0;
+  padding: 0.45em 0.9em;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9em;
+  line-height: 1.4;
+  background: #515151;
+  color: #d5d5d5;
+  border-bottom: 3px solid transparent;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.code-tabs-label:hover {
+  background: #5c5c5c;
+  color: #ffffff;
+}
+
+/* --- Copy button: same row as the tab labels, right-aligned,
+   vertically centered --- */
+.code-tabs-copy {
+  margin-left: auto;
+  align-self: center;
+  font-size: 0.8rem;
+}
+
+/* Active label highlight driven by JavaScript for synced groups
+   (mirrors the :has() rule below for tabbed groups). */
+.code-tabs-label.code-tabs-label-active {
+  background: #2b2b2b;
+  color: #ffffff;
+  border-bottom-color: #2f9e44;
+}
+
+/* --- hidden radio inputs (drive the :checked selectors) --- */
+.code-tabs-radio {
+  display: none;
+}
+
+.code-tabs-body {
+  display: block;
+}
+
+/* --- panes: show only the one whose radio is checked (no JS) ---
+   In .code-tabs-body the element children are [radio1, pane1, radio2, pane2, ...]
+   so pane N sits at nth-child(2N) and radio N at nth-child(2N-1).
+   Show pane N when radio N is checked, using the general-sibling combinator. */
+.code-tab-pane {
+  display: none;
+  width: 100%;
+}
+
+.code-tabs-body .code-tabs-radio:nth-child(1):checked ~ .code-tab-pane:nth-child(2)  { display: block; }
+.code-tabs-body .code-tabs-radio:nth-child(3):checked ~ .code-tab-pane:nth-child(4)  { display: block; }
+.code-tabs-body .code-tabs-radio:nth-child(5):checked ~ .code-tab-pane:nth-child(6)  { display: block; }
+.code-tabs-body .code-tabs-radio:nth-child(7):checked ~ .code-tab-pane:nth-child(8)  { display: block; }
+.code-tabs-body .code-tabs-radio:nth-child(9):checked ~ .code-tab-pane:nth-child(10) { display: block; }
+.code-tabs-body .code-tabs-radio:nth-child(11):checked ~ .code-tab-pane:nth-child(12) { display: block; }
+
+/* Synced groups (same sync name) share a radio `name`, so the browser
+   unchecks a group's own radio when another synced group's radio is
+   selected. While its own radio is unchecked the group must still show
+   the pane the user asked for: the inline script (tabbed-code.html)
+   mirrors the selection onto every synced group with .code-tab-pane-shown. */
+.code-tab-pane.code-tab-pane-shown {
+  display: block;
+}
+
+/* Active label highlight (progressive enhancement — needs :has()).
+   Scope from the shared .code-tabs ancestor: when radio[data-index=N] is
+   checked, highlight the matching label[data-index=N] in the bar. */
+.code-tabs:has(.code-tabs-radio[data-index="1"]:checked) .code-tabs-label[data-index="1"],
+.code-tabs:has(.code-tabs-radio[data-index="2"]:checked) .code-tabs-label[data-index="2"],
+.code-tabs:has(.code-tabs-radio[data-index="3"]:checked) .code-tabs-label[data-index="3"],
+.code-tabs:has(.code-tabs-radio[data-index="4"]:checked) .code-tabs-label[data-index="4"] {
+  background: #2b2b2b;
+  color: #ffffff;
+  border-bottom-color: #2f9e44;
+}
+
+/* code-pane.html mirrors kramdown/rouge markup:
+   div.language-* > div.highlight > pre.highlight > code */
+.code-tab-pane .highlighter-rouge {
+  margin: 0;
+}
+
+.code-tab-pane .highlight {
+  margin: 0;
+  padding-top: 0.75em;
+  background: #2b2b2b;
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.95em;
+  line-height: 1.45;
+}

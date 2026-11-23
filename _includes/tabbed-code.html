@@ -1,0 +1,63 @@
+{%- comment -%}
+  tabbed-code.html — switchable code blocks (one snippet per ROS 2 distro).
+  Pure CSS tab switching (radio inputs + :checked). No JavaScript needed.
+  Layout: a stable .code-tabs-bar holds ALL labels in one row on top,
+  with the Copy button right-aligned; below sit the hidden radios
+  followed by the panes. Selectors in css/code-tabs.css match a label
+  and its pane by a shared data-index so the bar never reflows when the
+  visible pane changes.
+  Params:
+    group  — unique id/base-name for this tab group (must be unique per
+             group on the page).
+    sync   — optional lockstep sync name. Groups sharing a sync name
+             use the SAME radio name, so the browser keeps them in
+             lockstep automatically: clicking "Lyrical" in one block
+             switches every synced block to the same-index tab. Pure
+             browser behavior — no JavaScript. (Every synced group
+             should offer the same labels at the same positions.)
+    items  — "LABEL|CODE||LABEL|CODE||...". First tab checked by
+             default. CODE on one line; use ";;" between multi-line
+             commands.
+    lang   — syntax language passed to code-pane.html (default: bash).
+    copy   — "false" hides the bar's Copy button (default: shown,
+             copies the first/default snippet; the button sits in the
+             bar next to the labels).
+{%- endcomment -%}
+{%- assign lang    = include.lang  | default: "bash" -%}
+{%- assign group   = include.group | default: "code" | strip -%}
+{%- assign sync    = include.sync  | default: "" | strip -%}
+{%- assign copy    = include.copy  | default: "true" | strip -%}
+{%- if include.items == nil -%}
+  {%- assign raw_items = "" -%}
+{%- else -%}
+  {%- assign raw_items = include.items -%}
+{%- endif -%}
+{%- assign raw_items = raw_items | strip -%}
+{%- if raw_items == "" -%}
+  <div class="code-tabs-empty"><em>Empty tabbed-code include.</em></div>
+{%- else -%}
+  {%- assign tab_definitions = raw_items | split: "||" -%}
+  {%- assign copy_raw = tab_definitions | first | split: "|" | last | escape | replace: ";;", "&#10;" -%}
+<div class="code-tabs">
+  <div class="code-tabs-bar">
+{%- for definition in tab_definitions -%}
+    {%- assign parts = definition | split: "|" -%}
+    {%- assign label = parts[0] | strip -%}
+    <label class="code-tabs-label" for="{{ group }}-tab-{{ forloop.index }}" data-index="{{ forloop.index }}">{{ label }}</label>
+{%- endfor -%}
+{%- if copy != "false" -%}
+    <button type="button" class="copy-code-button code-tabs-copy" aria-label="Copy code block to your clipboard" data-code="{{ copy_raw }}"></button>
+{%- endif -%}
+  </div>
+  <div class="code-tabs-body">
+{%- for definition in tab_definitions -%}
+    {%- assign parts = definition | split: "|" -%}
+    {%- assign code  = parts[1] | strip -%}
+    <input type="radio" class="code-tabs-radio" id="{{ group }}-tab-{{ forloop.index }}"{% if sync %} name="{{ sync }}"{% endif %} data-index="{{ forloop.index }}"{% if forloop.first %} checked{% endif %}>
+    <div class="code-tab-pane" data-index="{{ forloop.index }}">
+      {%- include code-pane.html code=code lang=lang -%}
+    </div>
+{%- endfor -%}
+  </div>
+</div>
+{%- endif -%}

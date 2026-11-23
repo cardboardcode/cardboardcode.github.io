@@ -21,9 +21,10 @@ For general ROS 2 development best practices, Zenoh offers a rust-based and memo
 
 ## **Dependencies**
 
-- ROS 2 Jazzy
+- A ROS 2-based distribution
 
-Note that Zenoh is only official supported for ROS 2 Jazzy.
+> [!NOTE]
+> Zenoh DDS is only officially supported on ROS 2 Jazzy, but `rmw_zenoh_cpp` is also packaged for later distros. Each of the following instructions shows per-distro variants in switchable tabs.
 
 ## **Instructions** 📘
 
@@ -32,37 +33,41 @@ To get your ROS 2 components running with Zenoh, there are 2 critical steps to d
 - **Start** a Zenoh server.
 - **Ensure** your custom ROS package is communicating with `RMW_IMPLEMENTATION` set to `rmw_zenoh_cpp`.
 
-These instructions assumes that you are running on a Linux operating system such as Ubuntu:
+These instructions assumes that you are running on a Linux operating system such as Ubuntu. **Use** the tabs above each code block to pick your ROS 2 distro:
 
-1\. **Install** `rmw_zenoh_cpp`:
-{% capture code %}{% raw %}sudo apt-get update && sudo apt-get install ros-jazzy-rmw-zenoh-cpp
-{% endraw %}{% endcapture %}
-{% include code.html code=code lang="bash" %}
+1\. **Install** `rmw_zenoh_cpp` for your distro:
+
+> [!TIP]
+> **Switch** between distros with the tabs before any of the code blocks below.
+
+{% capture items %}{% raw %}Jazzy|sudo apt-get update && sudo apt-get install ros-jazzy-rmw-zenoh-cpp||Lyrical|sudo apt-get update && sudo apt-get install ros-lyrical-rmw-zenoh-cpp{% endraw %}{% endcapture %}
+{% include tabbed-code.html group="install" sync="zenoh-distro" items=items lang="bash" %}
 
 2\. **Start** the Zenoh server:
-{% capture code %}{% raw %}source /opt/ros/jazzy/setup.bash && ros2 run rmw_zenoh_cpp rmw_zenohd
-{% endraw %}{% endcapture %}
-{% include code.html code=code lang="bash" %}
+
+{% capture items %}{% raw %}Jazzy|source /opt/ros/jazzy/setup.bash && ros2 run rmw_zenoh_cpp rmw_zenohd||Lyrical|source /opt/ros/lyrical/setup.bash && ros2 run rmw_zenoh_cpp rmw_zenohd{% endraw %}{% endcapture %}
+{% include tabbed-code.html group="server" sync="zenoh-distro" items=items lang="bash" %}
 
 3\. **Switch** the default DDS to `rmw_zenoh_cpp`:
+
 {% capture code %}{% raw %}export RMW_IMPLEMENTATION=rmw_zenoh_cpp
 {% endraw %}{% endcapture %}
 {% include code.html code=code lang="bash" %}
 
-3\. **Run** your ROS 2 package.
+4\. **Run** your ROS 2 package.
 
-Here is a quick and easy way of starting up a ROS 2 Jazzy-based Zenoh Server:
+Here is a quick and easy way of starting up a Zenoh-based Server:
 
-{% capture code %}{% raw %}
-
-docker run -it --rm \
-	--name zenoh_server_c \
-	-e RMW_IMPLEMENTATION=rmw_zenoh_cpp \
-	--network host \
-cardboardcode/zenoh_server:jazzy bash -c "source /ros_entrypoint.sh && ros2 run rmw_zenoh_cpp rmw_zenohd"
-
-{% endraw %}{% endcapture %}
-{% include code.html code=code lang="bash" %}
+{% capture items %}{% raw %}Jazzy|docker run -it --rm \
+;;	--name zenoh_server_c \
+;;	-e RMW_IMPLEMENTATION=rmw_zenoh_cpp \
+;;	--network host \
+;;	cardboardcode/zenoh_server:jazzy bash -c "source /ros_entrypoint.sh && ros2 run rmw_zenoh_cpp rmw_zenohd"||Lyrical|docker run -it --rm \
+;;	--name zenoh_server_c \
+;;	-e RMW_IMPLEMENTATION=rmw_zenoh_cpp \
+;;	--network host \
+;;	cardboardcode/zenoh_server:lyrical bash -c "source /ros_entrypoint.sh && ros2 run rmw_zenoh_cpp rmw_zenohd"{% endraw %}{% endcapture %}
+{% include tabbed-code.html group="docker" sync="zenoh-distro" items=items lang="bash" %}
 
 ## **References**
 
