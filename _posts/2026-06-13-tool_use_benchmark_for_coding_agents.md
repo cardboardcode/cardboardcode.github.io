@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "Agentic Code Test Prompt List"
-permalink: /posts/2026/06/13/agentic_coding_test_prompt_list/
+title:  "Tool-Use Benchmark for Coding Agents"
+permalink: /posts/2026/06/13/tool_use_benchmark_for_coding_agents/
 redirect_from:
   - "/AgenticCodeTestPromptList/"
+  - "/posts/2026/06/13/agentic_coding_test_prompt_list/"
 categories: agentic, vibe-coding, privacy, self-host
 ---
 
