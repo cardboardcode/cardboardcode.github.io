@@ -131,6 +131,16 @@
       var doorGroup = new THREE.Group();
       scene.add(doorGroup);
 
+      // ─────────────────────────────────────────────────────────────────────────
+      // DOOR ART — to change the door image later, either:
+      //   1. replace the PNG at the path below (no code edit), or
+      //   2. point this constant at any other image URL (same-origin or https).
+      // A load failure silently falls back to the flat slab color — the door
+      // still works, the art just doesn't appear.
+      // ─────────────────────────────────────────────────────────────────────────
+      var DOOR_ART_URL = 'img/door/patch-art.png';   // ← ONE-LINE SWAP POINT
+      var DOOR_ART_MARGIN = 0.04;  // fraction of slab size kept clear around art
+
       var frameMat = new THREE.MeshStandardMaterial({ color: 0x2a2d38, roughness: 0.7, metalness: 0.2 });
       var slabMat  = new THREE.MeshStandardMaterial({ color: 0x5a6584, roughness: 0.55, metalness: 0.35 });
       var handleMat = new THREE.MeshStandardMaterial({ color: 0xc9cede, roughness: 0.25, metalness: 0.9 });
@@ -159,68 +169,129 @@
       handle.position.set(W - 0.28, H / 2, T / 2 + 0.05);
       slabPivot.add(handle);
 
+      // ── Door art (transparent, contain-fitted, centered on the slab face) ──
+      // Loaded async; a 1×1 placeholder is swapped to the true size in the
+      // on-load callback. On failure it stays invisible — the slab's flat color
+      // shows (graceful fallback: door, frame, handle, animation all unchanged).
+      //
+      // Swap: overwrite img/door/patch-art.png (any PNG with transparent
+      // background), or point DOOR_ART_URL at a new image. Aspect is read at
+      // runtime — the art is contain-fitted to the slab no matter the aspect.
+
+      var artMaxW = W * (1 - DOOR_ART_MARGIN);   // 0.92 * 1.6
+      var artMaxH = H * (1 - DOOR_ART_MARGIN);   // 0.92 * 3.0
+      var art = new THREE.Mesh(
+        new THREE.PlaneGeometry(1, 1),            // re-sized in onLoad
+        new THREE.MeshStandardMaterial({
+          transparent: true,
+          alphaTest: 0.05,                        // kills sorting shimmer vs slab
+          roughness: 0.6,
+          metalness: 0.1
+        })
+      );
+      art.visible = false;                        // flipped true when the texture is ready
+      art.position.set(W / 2, H / 2, T / 2 + 0.005); // centered on slab face, 5mm proud
+
+      function applyDoorArt(texture) {
+        texture.colorSpace = THREE.SRGBColorSpace; // correct color in r160
+        var aspect = texture.image.width / texture.image.height;
+        var targetAspect = artMaxW / artMaxH;
+        var w, h;
+        if (aspect > targetAspect) { w = artMaxW; h = artMaxW / aspect; }
+        else                       { h = artMaxH; w = artMaxH * aspect; }
+        art.geometry.dispose();
+        art.geometry = new THREE.PlaneGeometry(w, h);
+        art.material.map = texture;
+        art.visible = true;
+      }
+
+      new THREE.TextureLoader().load(
+        DOOR_ART_URL,
+        applyDoorArt,
+        undefined,
+        function (err) {
+          art.visible = false;
+          console.warn('[door-art] failed to load', DOOR_ART_URL, err);
+        }
+      );
+      slabPivot.add(art);
+
       doorGroup.add(slabPivot);
 
       // Menu overlay fades out when entering
       var menu = document.getElementById('menu');
 
-      // Door state
-      var state = 'idle'; // 'idle' | 'opening' | 'entered'
-      var doorAngle = 0;
-      var DOOR_OPEN = -Math.PI * 0.65; // fully open angle
-      var OPEN_DURATION = 1.2;   // seconds
-      var ZOOM_DURATION = 1.4;   // seconds
-      var MSG_DELAY = 3.0;       // seconds after the pan completes
-      var openT = 0;
-      var zoomT = 0;
+      // Animation clock. Per-frame advance is capped at 1/30s of animation
+      // time so a browser hitch can't deliver a forward leap.
+      //
+      // The critical fix: easeInOut below is now CONTINUOUS — the original
+      // had a 2x value jump at t=0.5 (0.25 on the left side, 0.50 on the
+      // right side), which is what you saw as "leaped forward in time" at
+      // the two transition points.
+      var DOOR_OPEN = -Math.PI * 0.65;
+      var OPEN_DURATION = 1.5;
+      var ZOOM_DURATION = 1.8;
+      var MSG_DELAY = 3.0;
+      var MAX_DT = 1 / 30;
+
+      var phase = 'idle';
+      var openE = 0;
+      var enteredE = 0;
       var msgShown = false;
       var voidMsg = document.getElementById('void-msg');
       var camStart = { x: 0, y: 1.3, z: 6.2 };
       var camLook = { x: 0, y: 1.0, z: 0 };
+      var prevT = null;
 
+      // Smoothstep: 3t^2 - 2t^3. Continuous value AND C1 continuous slope.
+      // Velocity is 0 at t=0 and t=1 (graceful start/stop), max at t=0.5.
+      // No discontinuity anywhere in (0,1).
       function easeInOut(t) {
-        return t < 0.5 ? t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        if (t <= 0) return 0;
+        if (t >= 1) return 1;
+        return t * t * (3 - 2 * t);
       }
 
       document.getElementById('btn-enter').addEventListener('click', function () {
-        if (state !== 'idle') return;
-        state = 'opening';
+        if (phase !== 'idle') return;
+        phase = 'opening';
+        prevT = null;
         menu.style.transition = 'opacity 0.4s';
         menu.style.opacity = '0';
         menu.style.pointerEvents = 'none';
       });
 
-      // Idle: breathing rim light. On "enter": door swings open, then camera zooms into the void.
       var clock = new THREE.Clock();
-      var last = clock.getElapsedTime();
       function tick() {
         requestAnimationFrame(tick);
-        var t = clock.getElapsedTime();
-        var dt = Math.min(t - last, 0.1);
-        last = t;
+        var now = clock.getElapsedTime();
+        if (prevT === null) { prevT = now; }
+        var dt = now - prevT;
+        prevT = now;
+        if (dt < 0) dt = 0;
+        if (dt > MAX_DT) dt = MAX_DT;
 
-        if (state === 'opening') {
-          openT += dt;
-          var p = easeInOut(Math.min(openT / OPEN_DURATION, 1));
-          doorAngle = DOOR_OPEN * p;
-          slabPivot.rotation.y = doorAngle;
-          if (p >= 1) state = 'entered';
-        } else if (state === 'entered') {
-          zoomT += dt;
-          var z = easeInOut(Math.min(zoomT / ZOOM_DURATION, 1));
+        if (phase === 'opening') {
+          openE = Math.min(openE + dt, OPEN_DURATION);
+          slabPivot.rotation.y = DOOR_OPEN * easeInOut(openE / OPEN_DURATION);
+          if (openE >= OPEN_DURATION) { phase = 'entered'; }
+        } else if (phase === 'entered') {
+          enteredE += dt;                                    // grows unbounded, for the MSG_DELAY
+          var zoomE = Math.min(enteredE, ZOOM_DURATION);     // clamped for the camera math
+          var z = easeInOut(zoomE / ZOOM_DURATION);
           camera.position.set(
             camStart.x,
             camStart.y - z * 0.3,
             camStart.z - z * (camStart.z - 0.3)
           );
           camera.lookAt(camLook.x, camLook.y, 0);
-          if (!msgShown && zoomT >= ZOOM_DURATION + MSG_DELAY) {
-            msgShown = true;
-            voidMsg.classList.add('show');
-          }
         }
 
-        rim.intensity = 1.2 + Math.sin(t * 0.8) * 0.25;
+        if (!msgShown && phase === 'entered' && enteredE >= ZOOM_DURATION + MSG_DELAY) {
+          msgShown = true;
+          voidMsg.classList.add('show');
+        }
+
         renderer.render(scene, camera);
       }
       tick();
